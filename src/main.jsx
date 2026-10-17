@@ -44,18 +44,20 @@ function Navigation() {
 
 function Hero() {
   const videoRef = useRef(null)
+  const [intro, setIntro] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   useEffect(() => {
     const video = videoRef.current
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
     const syncPlayback = () => {
-      if (motionPreference.matches) video.pause()
+      if (motionPreference.matches) { video.pause(); setIntro(false) }
       else video.play().catch(() => {})
     }
     syncPlayback()
     motionPreference.addEventListener('change', syncPlayback)
-    return () => motionPreference.removeEventListener('change', syncPlayback)
+    const introTimer = motionPreference.matches ? null : window.setTimeout(() => setIntro(false), 2000)
+    return () => { motionPreference.removeEventListener('change', syncPlayback); if (introTimer) window.clearTimeout(introTimer) }
   }, [])
-  return <section className="hero" id="top"><Navigation /><div className="hero-content">
+  return <section className={`hero ${intro ? 'hero--intro' : ''}`} id="top"><Navigation /><div className="hero-content">
   <video ref={videoRef} className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/assets/hero-film.mp4" type="video/mp4" /></video><div className="hero-shade" aria-hidden="true" />
   <img className="hero-doodle" src="/assets/sonia-doodle.png" alt="Sonia doodle logo" />
   <a className="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>

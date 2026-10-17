@@ -28,3 +28,25 @@
 /* Progress fills the tab boxes in sequence; no separate bar or active-tab marker. */
 .nav{grid-template-columns:repeat(5,minmax(0,1fr))}.nav:before,.nav:after{display:none}.brand,.nav-links a{background:linear-gradient(90deg,var(--primary) 0 var(--tab-fill,0%),rgb(243 247 246 / .78) var(--tab-fill,0%) 100%);color:var(--text);transition:background .08s linear,filter .2s}.nav-links a:nth-child(1){grid-column:2}.nav-links a:nth-child(2){grid-column:3}.nav-links a:nth-child(3){grid-column:4}.nav-links a:nth-child(4){grid-column:5}.nav-links a:hover,.brand:hover{filter:brightness(.97)}
 @media(max-width:700px){.nav:before,.nav:after{display:none}.nav .brand{background:linear-gradient(90deg,var(--primary) 0 var(--scroll-progress),rgb(243 247 246 / .78) var(--scroll-progress) 100%)}.nav-links a,.nav-links a:nth-child(4){background:linear-gradient(90deg,var(--primary) 0 var(--tab-fill,0%),var(--background) var(--tab-fill,0%) 100%)}}
+
+/* Apply the DLS type family and scale consistently. Component rules may size headings responsively. */
+body,button,input,select,textarea{font-family:'Raleway',sans-serif}h1,h2,h3,h4,h5{font-family:'Raleway',sans-serif;font-weight:700}h1{font-size:var(--type-h1)}h2{font-size:var(--type-h2)}h3{font-size:var(--type-h3)}h4{font-size:var(--type-h4)}h5{font-size:var(--type-h5)}small{font-size:var(--type-small)}
+
+/* Laptop and tablet fit: keep the segmented header readable as its cells narrow. */
+@media(min-width:701px) and (max-width:900px){.nav{gap:6px}.brand,.nav-links a{font-size:.65rem;letter-spacing:.025em;padding-inline:6px}.project-link{gap:24px}.project-details h3{overflow-wrap:anywhere}.contact-copy h2{overflow-wrap:anywhere}}
+/* Small-phone fit and protection against accidental horizontal page scrolling. */
+html,body,#root{max-width:100%;min-width:320px}body{overflow-x:clip}img,video{max-width:100%}
+@media(max-width:380px){.section-grid{padding-inline:16px}.nav{left:8px;width:calc(100% - 16px)}.nav .brand{font-size:.65rem;letter-spacing:.02em}.hero-doodle{right:4vw;width:68vw}.about-item{gap:10px;grid-template-columns:1fr 1fr}.about-image{min-height:128px}.about-image span{font-size:.5rem;overflow-wrap:anywhere}.about-text p{font-size:.7rem}.mobile-projects .project-link{padding-inline:16px}.mobile-projects .project-details h3{font-size:2.5rem}.orbit-image span{font-size:.45rem;padding:4px}.contact-copy h2{font-size:2.55rem}}
+
+/* Place the doodle in the padded upper-right corner of the hero video. */
+.hero-doodle{right:clamp(24px,5vw,80px);top:clamp(96px,14vh,160px);transform:none;width:min(31vw,500px)}
+@media(max-width:700px){.hero-doodle{right:20px;top:88px;width:min(52vw,260px)}}
+@media(max-width:380px){.hero-doodle{right:16px;top:84px;width:min(52vw,220px)}}
+.nav .brand,.nav .nav-links a{color:var(--accent)}
+/* Compact the contact footer while retaining its full-width image and contact details. */
+.contact{padding-block:clamp(48px,6vw,80px) 12px}.contact-photo{aspect-ratio:3.4}.footer-meta{margin-top:clamp(40px,6vw,80px)}
+@media(max-width:700px){.contact{row-gap:12px;padding-block:48px 12px}.contact-photo{aspect-ratio:1.8}.footer-meta{margin-top:28px}}
+@media(min-width:701px){.nav .brand,.nav .nav-links a{font-size:.625rem;min-height:22px;padding-block:4px}}
+.hero-video{transition:opacity .55s ease}.hero--intro{background:#0A0F0E}.hero--intro .hero-video{opacity:0}.hero--intro .hero-shade{background:#0A0F0E}.hero--intro .nav,.hero--intro .scroll-cue{opacity:0;pointer-events:none}.nav,.scroll-cue{transition:opacity .45s ease}.hero--intro .hero-doodle{animation:heroSoniaDrift 2s cubic-bezier(.65,0,.35,1) both}
+@keyframes heroSoniaDrift{from{right:65vw;top:calc(94vh - 10vw)}to{right:clamp(24px,5vw,80px);top:clamp(96px,14vh,160px)}}
+@media(max-width:700px){@keyframes heroSoniaDrift{from{right:44vw;top:calc(94vh - 17.3vw)}to{right:20px;top:88px}}}
