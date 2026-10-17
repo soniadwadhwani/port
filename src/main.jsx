@@ -23,30 +23,22 @@ function Navigation() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [active, setActive] = useState('#top')
   useEffect(() => {
     const update = () => {
       setScrolled(window.scrollY > 20)
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
       setProgress(maxScroll > 0 ? window.scrollY / maxScroll : 0)
-      const sections = ['top', 'about', 'skills', 'journey', 'work', 'explorations', 'contact']
-      let current = '#top'
-      for (const id of sections) {
-        const node = document.getElementById(id)
-        if (node && node.getBoundingClientRect().top <= window.innerHeight * .4) current = `#${id}`
-      }
-      setActive(current)
     }
     update(); window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update)
     return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
   }, [])
-  const links = [['About', '#about'], ['Projects', '#work'], ['Skills', '#skills'], ['Journey', '#journey'], ['Graphics', '#explorations'], ['Contact', '#contact']]
-  const tabStyle = (index) => ({ '--tab-fill': `${Math.max(0, Math.min(1, progress * 7 - index)) * 100}%` })
+  const links = [['About', '#about'], ['Projects', '#work'], ['Graphics', '#explorations'], ['Contact', '#contact']]
+  const tabStyle = (index) => ({ '--tab-fill': `${Math.max(0, Math.min(1, progress * 5 - index)) * 100}%` })
   return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`} aria-label="Main navigation" style={{ '--scroll-progress': `${progress * 100}%` }}>
-    <a className={`brand ${active === '#top' ? 'active' : ''}`} style={tabStyle(0)} href="#top">SONIA WADHWANI</a>
+    <a className="brand" style={tabStyle(0)} href="#top">SONIA WADHWANI</a>
     <button className="menu-toggle" aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}><span className="sr-only">Toggle navigation</span><i /><i /></button>
-    <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={tabStyle(index + 1)} className={active === href ? 'active' : ''} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
+    <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={tabStyle(index + 1)} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
   </nav>
 }
 
@@ -72,7 +64,7 @@ function Hero() {
 
 function AboutPreview() { return <section className="about section-grid" id="about">
   <p className="eyebrow section-index">01 — ABOUT ME IN A GIST</p><h2 className="about-title">A little about Sonia.</h2>
-  <div className="about-layout" id="skills">{aboutDetails.map((item, i) => <article id={i === 3 ? 'journey' : undefined} className={`about-item about-item--${i + 1}`} key={item.label}><div className="about-image" role="img" aria-label={item.image}><span>{item.image}</span></div><div className="about-text"><span>{item.label}</span><p>{item.text}</p></div></article>)}</div>
+  <div className="about-layout" id="skills">{aboutDetails.map((item, i) => <article className={`about-item about-item--${i + 1}`} key={item.label}><div className="about-image" role="img" aria-label={item.image}><span>{item.image}</span></div><div className="about-text"><span>{item.label}</span><p>{item.text}</p></div></article>)}</div>
   <a className="button about-cta" href="#about">Get to Know Me <Arrow /></a><p className="temporary about-temporary">Temporary destination: this homepage introduction until an About page is available.</p>
 </section> }
 
