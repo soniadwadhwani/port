@@ -50,3 +50,62 @@ html,body,#root{max-width:100%;min-width:320px}body{overflow-x:clip}img,video{ma
 .hero-video{transition:opacity .55s ease}.hero--intro{background:#0A0F0E}.hero--intro .hero-video{opacity:0}.hero--intro .hero-shade{background:#0A0F0E}.hero--intro .nav,.hero--intro .scroll-cue{opacity:0;pointer-events:none}.nav,.scroll-cue{transition:opacity .45s ease}.hero--intro .hero-doodle{animation:heroSoniaDrift 2s cubic-bezier(.65,0,.35,1) both}
 @keyframes heroSoniaDrift{from{right:65vw;top:calc(94vh - 10vw)}to{right:clamp(24px,5vw,80px);top:clamp(96px,14vh,160px)}}
 @media(max-width:700px){@keyframes heroSoniaDrift{from{right:44vw;top:calc(94vh - 17.3vw)}to{right:20px;top:88px}}}
+
+/* Scroll-led graphics orbit: the cards rotate continuously while the pinned stage expands with page scroll. */
+.creative{background:var(--primary-100);margin:0;min-height:0;overflow:visible;padding:0;position:relative;z-index:2}
+.graphics-track{height:220svh;position:relative}
+.graphics-stage{--orbit-scale:.72; height:100svh;isolation:isolate;overflow:hidden;position:sticky;top:0}
+.graphics-stage .section-index{left:clamp(24px,5vw,80px);position:absolute;top:clamp(96px,14vh,160px);z-index:2}
+.graphics-stage .creative-heading{left:50%;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%);width:min(90%,640px);z-index:2}
+.graphics-stage .creative-heading h2{font-size:clamp(3rem,7vw,7rem)}
+.graphics-stage .creative-heading .placeholder{font-size:.85rem;margin:20px auto 0;max-width:340px}
+.orbit{aspect-ratio:1;border:0;grid-column:auto;left:50%;margin:0;position:absolute;top:64%;transform:translate(-50%,-50%) scale(var(--orbit-scale));transform-origin:center;width:min(64vw,760px);will-change:transform}
+.orbit-rotation{animation:graphics-orbit-turn 48s linear infinite;inset:0;position:absolute}
+.orbit-item{height:26%;left:37%;position:absolute;top:-13%;transform:rotate(calc(var(--i)*60deg));transform-origin:50% calc(50% + min(32vw,380px));width:26%}
+.orbit-image{animation:graphics-orbit-counter 48s linear infinite;background:var(--secondary-100);border:6px solid var(--primary-100);height:100%;overflow:hidden;position:relative;transform:none;width:100%}
+.orbit-item:nth-child(3n + 1) .orbit-image{border-radius:50%}
+.orbit-item:nth-child(3n + 2) .orbit-image{border-radius:12px}
+.orbit-image span{align-items:center;background:linear-gradient(145deg,var(--secondary-100),var(--accent-100));color:var(--text-700);display:flex;font-size:clamp(.5rem, .8vw, .7rem);font-weight:700;height:100%;justify-content:center;letter-spacing:.04em;padding:10px;text-align:center}
+.orbit-centre{display:none}
+.graphics-more{background:var(--background);padding:clamp(64px,10vw,144px) clamp(24px,5vw,80px) clamp(80px,12vw,160px);position:relative}
+.graphics-more>.eyebrow{margin-bottom:32px}
+.graphics-grid{display:grid;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.graphics-tile{align-items:flex-end;aspect-ratio:1.15;background:linear-gradient(145deg,var(--primary-200),var(--secondary-100));display:flex;overflow:hidden;padding:16px;position:relative}
+.graphics-tile:before,.graphics-tile:after{border:1px solid rgb(10 15 14 / .18);content:'';height:65%;left:18%;position:absolute;top:10%;transform:rotate(-10deg);width:65%}
+.graphics-tile:after{left:26%;top:18%;transform:rotate(8deg)}
+.graphics-tile span{background:var(--background);font-size:.6875rem;font-weight:700;letter-spacing:.05em;padding:9px 12px;position:relative;z-index:1}
+.graphics-tile--2,.graphics-tile--5{background:linear-gradient(145deg,var(--accent-100),var(--primary-200))}
+.graphics-tile--3,.graphics-tile--6{background:linear-gradient(145deg,var(--secondary-100),var(--accent-100))}
+@keyframes graphics-orbit-turn{to{transform:rotate(360deg)}}
+@keyframes graphics-orbit-counter{to{transform:rotate(-360deg)}}
+@media(max-width:900px) and (min-width:701px){.orbit{width:min(76vw,650px)}.orbit-item{transform-origin:50% calc(50% + min(38vw,325px))}}
+@media(max-width:700px){.graphics-track{height:auto}.graphics-stage{height:auto;min-height:100svh;padding:100px 20px 52px;position:relative}.graphics-stage .section-index{left:20px;top:82px}.graphics-stage .creative-heading{left:auto;margin:50px auto 0;position:relative;text-align:left;top:auto;transform:none;width:100%}.graphics-stage .creative-heading h2{font-size:clamp(3rem,13vw,5rem)}.graphics-stage .creative-heading .placeholder{font-size:.8rem;margin:18px 0 0}.orbit{left:auto;margin:48px auto 0;position:relative;top:auto;transform:none;width:min(82vw,420px)}.orbit-item{transform-origin:50% calc(50% + min(41vw,210px))}.orbit-image{border-width:4px}.orbit-image span{font-size:.48rem;padding:5px}.graphics-more{padding:64px 20px 88px}.graphics-more>.eyebrow{margin-bottom:22px}.graphics-grid{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}.graphics-tile{aspect-ratio:.9;padding:10px}.graphics-tile span{font-size:.55rem;padding:7px 8px}}
+@media(prefers-reduced-motion:reduce){.orbit-rotation,.orbit-image{animation:none!important}.orbit{will-change:auto}}
+
+/* Keep the page canvas consistent across sections. */
+html,body,#root{background:#F3F7F6}
+.about,.work,.creative,.graphics-more,.contact{background:#F3F7F6;color:var(--text)}
+.hero{background:#F3F7F6}
+
+/* Match the supplied Graphics reference: a centered invitation inside an expanding image wheel. */
+.graphics-stage .section-index{display:none}
+.graphics-stage .creative-heading{top:50%;width:min(92%,760px)}
+.graphics-kicker{font-size:clamp(.7rem,1vw,.95rem);letter-spacing:.12em;margin-bottom:24px}
+.graphics-stage .creative-heading h2{font-size:clamp(4.4rem,10vw,9rem);font-weight:400;letter-spacing:-.085em;line-height:.88}
+.graphics-cta{background:var(--primary);border-radius:6px;color:var(--accent-700);display:inline-block;font-size:clamp(.72rem,1vw,.9rem);letter-spacing:.03em;margin-top:28px;padding:12px 16px;transition:transform .2s ease,background .2s ease}
+.graphics-cta:hover{background:var(--primary-200);transform:translateY(-2px)}
+.orbit{border:0;left:50%;top:50%;width:min(72vw,920px)}
+.orbit-item{height:25%;left:37.5%;top:-12.5%;transform:rotate(calc(var(--i)*22.5deg));transform-origin:50% calc(50% + min(33vw,460px));width:25%}
+.orbit-image{animation:none;background:var(--primary-100);border:0;border-radius:18px!important;box-shadow:0 10px 28px rgb(10 15 14 / .08);transform:rotate(calc(var(--i)*-22.5deg))}
+.orbit-image span{background:linear-gradient(145deg,var(--secondary-100),var(--accent-100));color:rgb(10 15 14 / .5);font-size:clamp(.65rem,1.1vw,1rem);letter-spacing:.08em}
+.orbit-item:nth-child(4n + 1) .orbit-image span{background:linear-gradient(145deg,var(--primary-200),var(--secondary-100))}
+.orbit-item:nth-child(4n + 2) .orbit-image span{background:linear-gradient(145deg,var(--accent-100),var(--background-200))}
+.orbit-item:nth-child(4n + 3) .orbit-image span{background:linear-gradient(145deg,var(--secondary-100),var(--primary-100))}
+.orbit-item:nth-child(4n) .orbit-image span{background:linear-gradient(145deg,var(--background-200),var(--accent-100))}
+.graphics-more{display:none}
+@media(max-width:900px) and (min-width:701px){.orbit{width:min(82vw,760px)}.orbit-item{transform-origin:50% calc(50% + min(38vw,380px))}}
+@media(max-width:700px){.graphics-stage{min-height:100svh;padding:100px 20px 52px}.graphics-stage .creative-heading{left:auto;margin:0;position:absolute;text-align:center;top:44%;transform:translate(-50%,-50%);width:94%}.graphics-kicker{margin-bottom:18px}.graphics-stage .creative-heading h2{font-size:clamp(3.6rem,15vw,6rem)}.graphics-cta{margin-top:22px;padding:10px 13px}.orbit{left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%) scale(.78);width:min(92vw,480px)}.orbit-item{height:25%;left:37.5%;top:-12.5%;transform:rotate(calc(var(--i)*22.5deg));transform-origin:50% calc(50% + min(42vw,240px));width:25%}.orbit-image{border-radius:10px!important}}
+
+/* Final scroll state: the oversized arc meets the next section like the reference. */
+@media(min-width:701px){.creative{margin-bottom:-36svh}.contact{position:relative;z-index:3}.graphics-stage .creative-heading{opacity:var(--center-opacity,1)}.orbit{width:min(88vw,1200px)}.orbit-item{height:18%;left:41%;top:-9%;transform:rotate(calc(var(--i)*22.5deg));transform-origin:50% calc(50% + min(41vw,560px));width:18%}.orbit-image{transform:none}}
+@media(max-width:700px){.creative{margin-bottom:0}.graphics-stage .creative-heading{opacity:1}}

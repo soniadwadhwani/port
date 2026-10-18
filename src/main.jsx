@@ -102,8 +102,40 @@ function SelectedProjects() {
   </section>
 }
 
-function CircularOrbit() { return <div className="orbit" aria-label="Orbit of creative exploration image placeholders">{explorations.map((item, i) => <div className="orbit-item" key={item} style={{ '--i': i }}><div className="orbit-image" role="img" aria-label={item}><span>{item}</span></div></div>)}<div className="orbit-centre">PROCESS<br />& PLAY</div></div> }
-function CreativeExplorations() { return <section className="creative section-grid" id="explorations"><p className="eyebrow section-index">03 — CREATIVE EXPLORATIONS</p><div className="creative-heading"><h2>Curiosity<br />in orbit.</h2><p className="placeholder">Sketches, experiments, and process work will live here.</p></div><CircularOrbit /></section> }
+const orbitPlaceholders = Array.from({ length: 16 }, (_, i) => `Graphic placeholder ${String(i + 1).padStart(2, '0')}`)
+function CircularOrbit() { return <div className="orbit" aria-label="Circular arrangement of graphic placeholders"><div className="orbit-rotation">{orbitPlaceholders.map((item, i) => <div className="orbit-item" key={item} style={{ '--i': i }}><div className="orbit-image" role="img" aria-label={item}><span>{String(i + 1).padStart(2, '0')}</span></div></div>)}</div></div> }
+function CreativeExplorations() {
+  const trackRef = useRef(null)
+  useEffect(() => {
+    const track = trackRef.current
+    const stage = track?.querySelector('.graphics-stage')
+    if (!track || !stage || window.matchMedia('(max-width: 700px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let frame = 0
+    const update = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const rect = track.getBoundingClientRect()
+        const distance = Math.max(1, track.offsetHeight - window.innerHeight)
+        const progress = Math.max(0, Math.min(1, -rect.top / distance))
+        stage.style.setProperty('--graphics-progress', progress.toFixed(3))
+        stage.style.setProperty('--orbit-scale', (0.72 + progress * 0.9).toFixed(3))
+        stage.style.setProperty('--center-opacity', Math.max(0, 1 - progress * 1.8).toFixed(3))
+      })
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
+  }, [])
+  return <section className="creative" id="explorations" aria-labelledby="graphics-title">
+    <div className="graphics-track" ref={trackRef}><div className="graphics-stage">
+      <p className="eyebrow section-index">03 — GRAPHICS</p>
+      <div className="creative-heading"><p className="graphics-kicker">START A FIRE</p><h2 id="graphics-title">We’ll see<br />the smoke</h2><a className="graphics-cta" href="#contact">SEND SMOKE</a></div>
+      <CircularOrbit />
+    </div></div>
+    <div className="graphics-more"><p className="eyebrow">MORE GRAPHICS · PLACEHOLDERS</p><div className="graphics-grid">{explorations.map((item, i) => <div className={`graphics-tile graphics-tile--${i + 1}`} role="img" aria-label={`Additional graphic placeholder ${String(i + 1).padStart(2, '0')}`} key={`more-${item}`}><span>GRAPHIC PLACEHOLDER {String(i + 1).padStart(2, '0')}</span></div>)}</div></div>
+  </section>
+}
 
 function ContactFooter() { return <footer className="contact section-grid" id="contact"><p className="eyebrow section-index">04 — CONTACT</p><div className="contact-photo" role="img" aria-label="Contact photograph placeholder"><span>CONTACT PHOTOGRAPH PLACEHOLDER</span></div><div className="contact-copy"><h2>Have a thought?<br /><a href={CONTACT_EMAIL ? `mailto:${CONTACT_EMAIL}` : '#contact'}>Let’s talk <Arrow /></a></h2><p>Get in touch to start a conversation.</p>{CONTACT_EMAIL ? <a className="contact-email" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> : <p className="contact-email">[Email address to be supplied]</p>}{LINKEDIN_URL ? <a className="contact-social" href={LINKEDIN_URL}>LinkedIn</a> : <p className="contact-social">[LinkedIn link to be supplied]</p>}</div><div className="footer-meta"><span>SONIA WADHWANI</span><span>EXPERIENCE DESIGN · FLAME UNIVERSITY</span><a href="#top">BACK TO TOP ↑</a></div></footer> }
 
