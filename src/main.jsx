@@ -33,7 +33,8 @@ function Navigation() {
     window.addEventListener('resize', update)
     return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
   }, [])
-  const links = [['About', '#about'], ['Projects', '#work'], ['Graphics', '#explorations'], ['Contact', '#contact']]
+  const onAboutPage = window.location.pathname.endsWith('/about.html')
+  const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/#work'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
   const tabStyle = (index) => ({ '--tab-fill': `${Math.max(0, Math.min(1, progress * 5 - index)) * 100}%` })
   return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`} aria-label="Main navigation" style={{ '--scroll-progress': `${progress * 100}%` }}>
     <a className="brand" style={tabStyle(0)} href="#top">SONIA WADHWANI</a>
@@ -67,8 +68,32 @@ function Hero() {
 function AboutPreview() { return <section className="about section-grid" id="about">
   <p className="eyebrow section-index">01 — ABOUT ME IN A GIST</p><h2 className="about-title">A little about Sonia.</h2>
   <div className="about-layout" id="skills">{aboutDetails.map((item, i) => <article className={`about-item about-item--${i + 1}`} key={item.label}><div className="about-image" role="img" aria-label={item.image}><span>{item.image}</span></div><div className="about-text"><span>{item.label}</span><p>{item.text}</p></div></article>)}</div>
-  <a className="button about-cta" href="#about">Get to Know Me <Arrow /></a><p className="temporary about-temporary">Temporary destination: this homepage introduction until an About page is available.</p>
+  <a className="button about-cta" href="/about.html">Get to Know Me <Arrow /></a>
 </section> }
+
+const aboutPageNotes = [
+  'I look at the small details that shape how an experience feels, and bring them together into something clear and useful.',
+  'I use observation, research, and thoughtful questions to understand people and the worlds they move through.',
+  'My background in Psychology helps me consider the needs, motivations, and emotions behind each interaction.',
+]
+function AboutPage() {
+  return <main className="about-page" id="about-page-top">
+    <Navigation />
+    <section className="about-page-intro" aria-label="Introduction">
+      <h1 className="sr-only">About Sonia Wadhwani</h1>
+      <div className="about-collage" aria-label="Portrait placeholder composition">
+        <div className="about-collage-photo" role="img" aria-label="Portrait image placeholder"><span>PORTRAIT PLACEHOLDER</span></div>
+        <div className="about-collage-accent" aria-hidden="true" />
+      </div>
+      <p className="about-intro-copy">I’m Sonia Wadhwani, an experience designer with a minor in Psychology. I’m curious about how people think, feel, and move through the world—and I use that curiosity to shape thoughtful experiences.</p>
+    </section>
+    <section className="about-page-story" aria-label="About Sonia">
+      <div className="about-wide-image" role="img" aria-label="Wide image placeholder"><span>WIDE IMAGE PLACEHOLDER</span></div>
+      <div className="about-note-grid">{aboutPageNotes.map((note, index) => <p key={note}><span>0{index + 1}</span>{note}</p>)}</div>
+    </section>
+    <div className="about-closing-image" role="img" aria-label="Closing image placeholder"><span>IMAGE PLACEHOLDER</span></div>
+  </main>
+}
 
 function ProjectCard({ project, active }) { return <article className={`project-card ${active ? 'is-active' : ''}`} aria-hidden={!active}>
   <a href={project.destination} tabIndex={active ? 0 : -1} aria-label={`${project.name}: case study placeholder`} className="project-link">
@@ -139,6 +164,6 @@ function CreativeExplorations() {
 
 function ContactFooter() { return <footer className="contact section-grid" id="contact"><p className="eyebrow section-index">04 — CONTACT</p><div className="contact-photo" role="img" aria-label="Contact photograph placeholder"><span>CONTACT PHOTOGRAPH PLACEHOLDER</span></div><div className="contact-copy"><h2>Have a thought?<br /><a href={CONTACT_EMAIL ? `mailto:${CONTACT_EMAIL}` : '#contact'}>Let’s talk <Arrow /></a></h2><p>Get in touch to start a conversation.</p>{CONTACT_EMAIL ? <a className="contact-email" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> : <p className="contact-email">[Email address to be supplied]</p>}{LINKEDIN_URL ? <a className="contact-social" href={LINKEDIN_URL}>LinkedIn</a> : <p className="contact-social">[LinkedIn link to be supplied]</p>}</div><div className="footer-meta"><span>SONIA WADHWANI</span><span>EXPERIENCE DESIGN · FLAME UNIVERSITY</span><a href="#top">BACK TO TOP ↑</a></div></footer> }
 
-function App() { return <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main> }
+function App() { return window.location.pathname.endsWith('/about.html') ? <AboutPage /> : <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main> }
 
 createRoot(document.getElementById('root')).render(<App />)

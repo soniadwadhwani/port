@@ -109,3 +109,21 @@ html,body,#root{background:#F3F7F6}
 /* Final scroll state: the oversized arc meets the next section like the reference. */
 @media(min-width:701px){.creative{margin-bottom:-36svh}.contact{position:relative;z-index:3}.graphics-stage .creative-heading{opacity:var(--center-opacity,1)}.orbit{width:min(88vw,1200px)}.orbit-item{height:18%;left:41%;top:-9%;transform:rotate(calc(var(--i)*22.5deg));transform-origin:50% calc(50% + min(41vw,560px));width:18%}.orbit-image{transform:none}}
 @media(max-width:700px){.creative{margin-bottom:0}.graphics-stage .creative-heading{opacity:1}}
+
+/* About page layout based on the supplied phone wireframe. */
+.about-page{background:#F3F7F6;color:var(--text);min-height:100vh;overflow:hidden;padding-top:110px}
+.about-page-intro{align-items:end;display:grid;gap:clamp(36px,8vw,120px);grid-template-columns:minmax(250px,.8fr) minmax(320px,1.2fr);margin:0 auto;max-width:1240px;min-height:430px;padding:0 clamp(32px,8vw,120px) 56px}
+.about-collage{height:300px;position:relative;width:100%}
+.about-collage-photo{align-items:center;background:#D9D9D9;display:flex;height:190px;justify-content:center;left:0;position:absolute;top:76px;width:72%}
+.about-collage-photo span,.about-wide-image span,.about-closing-image span{background:rgb(243 247 246 / .78);font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:10px 12px}
+.about-collage-accent{background:rgb(226 207 211 / .55);height:110px;left:46%;position:absolute;top:24px;transform:rotate(-5deg);width:82%}
+.about-intro-copy{font-size:clamp(.95rem,1.3vw,1.125rem);line-height:1.55;max-width:620px;padding-bottom:10px}
+.about-page-story{margin:0 auto;max-width:1240px;padding:0 clamp(32px,8vw,120px) clamp(180px,24vw,340px)}
+.about-wide-image{align-items:center;aspect-ratio:2.54;background:#D9D9D9;display:flex;justify-content:center;width:100%}
+.about-note-grid{display:grid;gap:clamp(16px,3vw,40px);grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px}
+.about-note-grid p{font-size:clamp(.8rem,1vw,.95rem);line-height:1.45}
+.about-note-grid p span{color:var(--accent);display:block;font-size:.67rem;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
+.about-closing-image{align-items:center;background:#D9D9D9;display:flex;justify-content:center;margin:0 10px;min-height:260px}
+@media(max-width:700px){.about-page{padding-top:0}.about-page-intro{display:block;margin:0;padding:158px 9vw 0;min-height:0}.about-collage{height:150px;width:100%}.about-collage-photo{height:98px;top:40px;width:38%}.about-collage-accent{height:66px;left:26%;top:4px;width:46%}.about-intro-copy{font-size:.78rem;line-height:1.38;margin-top:18px;max-width:none;padding:0}.about-page-story{margin-top:62px;padding:0 9vw 0}.about-wide-image{aspect-ratio:2.54}.about-note-grid{gap:20px 16px;margin-top:26px}.about-note-grid p{font-size:.72rem;line-height:1.35}.about-note-grid p span{font-size:.6rem;margin-bottom:8px}.about-closing-image{margin:320px 10px 0;min-height:0;aspect-ratio:2.02}.about-collage-photo span,.about-wide-image span,.about-closing-image span{font-size:.56rem;padding:7px 8px}}
+@media(max-width:380px){.about-page-intro{padding-inline:7vw}.about-collage-photo{width:42%}.about-collage-accent{left:29%;width:50%}.about-page-story{padding-inline:7vw}.about-note-grid{gap:12px}.about-note-grid p{font-size:.67rem}.about-closing-image{margin-top:260px}}
+@media(min-width:701px){.nav{grid-template-columns:repeat(5,minmax(0,1fr))}.nav-links a:nth-child(4){background:rgb(207 229 223 / .92);color:var(--text);grid-column:5}}
