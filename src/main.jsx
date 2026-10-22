@@ -5,7 +5,7 @@ import './styles.css'
 const projects = Array.from({ length: 5 }, (_, i) => ({
   number: String(i + 1).padStart(2, '0'), name: `Project ${String(i + 1).padStart(2, '0')}`,
   category: 'Category placeholder', year: 'Year placeholder', description: 'Project description to be added.',
-  imageAlt: `Project ${String(i + 1).padStart(2, '0')} image placeholder`, destination: '#contact',
+  imageAlt: `Project ${String(i + 1).padStart(2, '0')} image placeholder`, destination: `/project.html?project=${String(i + 1).padStart(2, '0')}`,
 }))
 const explorations = ['Sketch placeholder', 'Concept placeholder', 'Process placeholder', 'Experiment placeholder', 'Study placeholder', 'Idea placeholder']
 const aboutDetails = [
@@ -34,10 +34,11 @@ function Navigation() {
     return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
   }, [])
   const onAboutPage = window.location.pathname.endsWith('/about.html')
+  const onProjectPage = window.location.pathname.endsWith('/project.html')
   const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/#work'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
   const tabStyle = (index) => ({ '--tab-fill': `${Math.max(0, Math.min(1, progress * 5 - index)) * 100}%` })
   return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`} aria-label="Main navigation" style={{ '--scroll-progress': `${progress * 100}%` }}>
-    <a className="brand" style={tabStyle(0)} href="#top">SONIA WADHWANI</a>
+    <a className="brand" style={tabStyle(0)} href={onAboutPage ? '/' : onProjectPage ? '/' : '#top'}>SONIA WADHWANI</a>
     <button className="menu-toggle" aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}><span className="sr-only">Toggle navigation</span><i /><i /></button>
     <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={tabStyle(index + 1)} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
   </nav>
@@ -100,6 +101,36 @@ function ProjectCard({ project, active }) { return <article className={`project-
     <div className="project-image" role="img" aria-label={project.imageAlt}><span>{project.imageAlt}</span></div>
     <div className="project-details"><div><p className="eyebrow">{project.number} / {project.category}</p><h3>{project.name}</h3><p>{project.description}</p></div><div className="project-end"><span>{project.year}</span><span aria-hidden="true">↗</span></div></div>
   </a></article> }
+
+function ProjectDetailsPage() {
+  const requestedProject = new URLSearchParams(window.location.search).get('project')
+  const project = projects.find((item) => item.number === requestedProject) ?? projects[0]
+  return <main className="project-details-page" id="project-page-top">
+    <Navigation />
+    <header className="project-page-intro">
+      <h1>Name</h1>
+      <p className="project-page-type">Type</p>
+      <p className="project-page-summary">A short introduction to the project, the people it serves, and the challenge it set out to solve.</p>
+    </header>
+    <div className="project-detail-content">
+      <div className="project-detail-image project-detail-hero" role="img" aria-label="Project hero image placeholder"><span>PROJECT HERO IMAGE</span></div>
+      <section className="project-research" aria-labelledby="research-title">
+        <div><h2 id="research-title">Research synthesis</h2><p>Summarize the research, key observations, and the opportunity they revealed.</p></div>
+        <div className="project-detail-image project-research-image" role="img" aria-label="Research image placeholder"><span>RESEARCH IMAGE</span></div>
+      </section>
+      <div className="project-detail-image project-detail-image--wide" role="img" aria-label="Project image placeholder"><span>PROJECT IMAGE</span></div>
+      <section className="project-approach" aria-label="Design approach">
+        <div className="project-detail-image project-approach-image" role="img" aria-label="Design approach image placeholder"><span>PROCESS IMAGE</span></div>
+        <p>Describe the design approach, the decisions made along the way, and what changed through iteration.</p>
+      </section>
+      <div className="project-detail-image project-detail-image--wide project-detail-image--second" role="img" aria-label="Project outcome image placeholder"><span>OUTCOME IMAGE</span></div>
+      <div className="project-detail-image project-detail-image--inset" role="img" aria-label="Additional project image placeholder"><span>ADDITIONAL IMAGE</span></div>
+      <p className="project-page-reflection">Add a concise reflection on the outcome, what was learned, and what could come next.</p>
+      <a className="project-back-link" href="/#work">← Back to projects</a>
+    </div>
+    <div className="project-detail-footer" role="img" aria-label="Closing project image placeholder"><span>CLOSING IMAGE PLACEHOLDER</span></div>
+  </main>
+}
 
 function SelectedProjects() {
   const [active, setActive] = useState(0)
@@ -164,6 +195,10 @@ function CreativeExplorations() {
 
 function ContactFooter() { return <footer className="contact section-grid" id="contact"><p className="eyebrow section-index">04 — CONTACT</p><div className="contact-photo" role="img" aria-label="Contact photograph placeholder"><span>CONTACT PHOTOGRAPH PLACEHOLDER</span></div><div className="contact-copy"><h2>Have a thought?<br /><a href={CONTACT_EMAIL ? `mailto:${CONTACT_EMAIL}` : '#contact'}>Let’s talk <Arrow /></a></h2><p>Get in touch to start a conversation.</p>{CONTACT_EMAIL ? <a className="contact-email" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> : <p className="contact-email">[Email address to be supplied]</p>}{LINKEDIN_URL ? <a className="contact-social" href={LINKEDIN_URL}>LinkedIn</a> : <p className="contact-social">[LinkedIn link to be supplied]</p>}</div><div className="footer-meta"><span>SONIA WADHWANI</span><span>EXPERIENCE DESIGN · FLAME UNIVERSITY</span><a href="#top">BACK TO TOP ↑</a></div></footer> }
 
-function App() { return window.location.pathname.endsWith('/about.html') ? <AboutPage /> : <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main> }
+function App() {
+  if (window.location.pathname.endsWith('/about.html')) return <AboutPage />
+  if (window.location.pathname.endsWith('/project.html')) return <ProjectDetailsPage />
+  return <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main>
+}
 
 createRoot(document.getElementById('root')).render(<App />)

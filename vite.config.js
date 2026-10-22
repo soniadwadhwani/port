@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         about: fileURLToPath(new URL('./about.html', import.meta.url)),
+        project: fileURLToPath(new URL('./project.html', import.meta.url)),
       },
     },
   },
