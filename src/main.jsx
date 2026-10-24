@@ -96,11 +96,11 @@ function AboutPage() {
   </main>
 }
 
-function ProjectCard({ project, active }) { return <article className={`project-card ${active ? 'is-active' : ''}`} aria-hidden={!active}>
-  <a href={project.destination} tabIndex={active ? 0 : -1} aria-label={`${project.name}: case study placeholder`} className="project-link">
-    <div className="project-image" role="img" aria-label={project.imageAlt}><span>{project.imageAlt}</span></div>
-    <div className="project-details"><div><p className="eyebrow">{project.number} / {project.category}</p><h3>{project.name}</h3><p>{project.description}</p></div><div className="project-end"><span>{project.year}</span><span aria-hidden="true">↗</span></div></div>
-  </a></article> }
+function ProjectCard({ project, selected }) { return <article className={`project-card project-card--${project.number}${selected ? ' is-selected' : ''}`}>
+  <div className="project-image" role="img" aria-label={project.imageAlt}>
+    <span className="project-image-placeholder">PROJECT IMAGE {project.number}</span>
+  </div>
+</article> }
 
 function ProjectDetailsPage() {
   const requestedProject = new URLSearchParams(window.location.search).get('project')
@@ -133,27 +133,42 @@ function ProjectDetailsPage() {
 }
 
 function SelectedProjects() {
-  const [active, setActive] = useState(0)
-  useEffect(() => {
-    const track = document.querySelector('.project-track')
+  const trackRef = useRef(null)
+  const [activeProject, setActiveProject] = useState(0)
+  const selectProject = () => {
+    const track = trackRef.current
     if (!track) return
-    let frame = 0
-    const update = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        if (window.matchMedia('(max-width: 700px)').matches) return
-        const rect = track.getBoundingClientRect()
-        const distance = Math.max(1, track.offsetHeight - window.innerHeight)
-        const progress = Math.max(0, Math.min(1, -rect.top / distance))
-        setActive(Math.min(projects.length - 1, Math.floor(progress * projects.length)))
-      })
-    }
-    update(); window.addEventListener('scroll', update, { passive: true }); window.addEventListener('resize', update)
-    return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
-  }, [])
-  return <section className="work" id="work" aria-labelledby="work-title"><header className="section-grid work-heading"><p className="eyebrow section-index">02 — SELECTED PROJECTS</p><h2 id="work-title">Selected<br /><em>projects.</em></h2><p className="work-intro">Five projects. Case study content and imagery to be supplied.</p></header>
-    <div className="project-track"><div className="project-stage" aria-live="polite">{projects.map((project, i) => <ProjectCard key={project.number} project={project} active={i === active} />)}<p className="project-progress" aria-label={`Project ${active + 1} of ${projects.length}`}>{String(active + 1).padStart(2, '0')} <span>/</span> {String(projects.length).padStart(2, '0')}</p></div>
-      <div className="mobile-projects">{projects.map((project) => <ProjectCard key={project.number} project={project} active />)}</div>
+    const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2
+    const cards = [...track.querySelectorAll('.project-card')]
+    const closestIndex = cards.reduce((closest, card, index) => {
+      const rect = card.getBoundingClientRect()
+      const distance = Math.abs(rect.left + rect.width / 2 - trackCenter)
+      return distance < closest.distance ? { index, distance } : closest
+    }, { index: 0, distance: Infinity }).index
+    setActiveProject(closestIndex)
+  }
+  const moveToProject = (direction) => {
+    const track = trackRef.current
+    if (!track) return
+    const nextIndex = Math.max(0, Math.min(projects.length - 1, activeProject + direction))
+    track.querySelectorAll('.project-card')[nextIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    setActiveProject(nextIndex)
+  }
+  const project = projects[activeProject]
+  return <section className="work" id="work" aria-labelledby="work-title">
+    <h2 id="work-title" className="sr-only">Selected Work</h2>
+    <div className="project-carousel">
+      <div className="project-track" ref={trackRef} onScroll={selectProject} aria-label="Selected projects" tabIndex="0">
+        <div className="project-gallery">{projects.map((item, index) => <ProjectCard key={item.number} project={item} selected={index === activeProject} />)}</div>
+      </div>
+      <div className="project-selection-frame" aria-hidden="true" />
+      <footer className="project-caption" aria-live="polite">
+        <div className="project-caption-copy">
+          <svg className="project-caption-outline" viewBox="0 0 260 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 C1 8 10 16 18 25 C24 32 28 39 30 45 H228 C231 37 237 28 244 20 C251 12 259 6 260 0" /></svg>
+          <a href={project.destination} className="project-caption-title">{project.name}</a><span className="project-caption-type">{project.category}</span>
+        </div>
+        <div className="project-carousel-controls"><button type="button" onClick={() => moveToProject(-1)} aria-label="Previous project">‹</button><button type="button" onClick={() => moveToProject(1)} aria-label="Next project">›</button></div>
+      </footer>
     </div>
   </section>
 }
