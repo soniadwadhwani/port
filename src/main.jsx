@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 
+const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8']
 const projects = Array.from({ length: 5 }, (_, i) => ({
   number: String(i + 1).padStart(2, '0'), name: `Project ${String(i + 1).padStart(2, '0')}`,
+  color: projectPlaceholderColors[i],
   category: 'Category placeholder', year: 'Year placeholder', description: 'Project description to be added.',
   imageAlt: `Project ${String(i + 1).padStart(2, '0')} image placeholder`, destination: `/project.html?project=${String(i + 1).padStart(2, '0')}`,
 }))
@@ -66,17 +68,51 @@ function Hero() {
 </div></section>
 }
 
-function AboutPreview() { return <section className="about section-grid" id="about">
-  <p className="eyebrow section-index">01 — ABOUT ME IN A GIST</p><h2 className="about-title">A little about Sonia.</h2>
-  <div className="about-layout" id="skills">{aboutDetails.map((item, i) => <article className={`about-item about-item--${i + 1}`} key={item.label}><div className="about-image" role="img" aria-label={item.image}><span>{item.image}</span></div><div className="about-text"><span>{item.label}</span><p>{item.text}</p></div></article>)}</div>
-  <a className="button about-cta" href="/about.html">Get to Know Me <Arrow /></a>
-</section> }
-
+const aboutStories = [
+  { topic: 'INTRODUCTION', left: 'PORTRAIT PLACEHOLDER', right: 'IMAGE PLACEHOLDER', color: '#CFE5DF' },
+  { topic: 'CURIOSITY', left: 'PROCESS IMAGE PLACEHOLDER', right: 'IMAGE PLACEHOLDER', color: '#A5B4C3' },
+  { topic: 'PSYCHOLOGY', left: 'IMAGE PLACEHOLDER', right: 'RESEARCH IMAGE PLACEHOLDER', color: '#D8C7CE' },
+  { topic: 'DESIGN PRACTICE', left: 'IMAGE PLACEHOLDER', right: 'MAKING IMAGE PLACEHOLDER', color: '#D9C8A8' },
+  { topic: 'WHAT I VALUE', left: 'IMAGE PLACEHOLDER', right: 'IMAGE PLACEHOLDER', color: '#CFE5DF' },
+]
 const aboutPageNotes = [
   'I look at the small details that shape how an experience feels, and bring them together into something clear and useful.',
   'I use observation, research, and thoughtful questions to understand people and the worlds they move through.',
   'My background in Psychology helps me consider the needs, motivations, and emotions behind each interaction.',
 ]
+function AboutPreview() {
+  const storyRef = useRef(null)
+  const [activeStory, setActiveStory] = useState(0)
+  useEffect(() => {
+    const updateStory = () => {
+      const section = storyRef.current
+      if (!section) return
+      const distance = Math.max(1, section.offsetHeight - window.innerHeight)
+      const progress = Math.max(0, Math.min(1, -section.getBoundingClientRect().top / distance))
+      setActiveStory(Math.min(aboutStories.length - 1, Math.floor(progress * aboutStories.length)))
+    }
+    updateStory()
+    window.addEventListener('scroll', updateStory, { passive: true })
+    window.addEventListener('resize', updateStory)
+    return () => { window.removeEventListener('scroll', updateStory); window.removeEventListener('resize', updateStory) }
+  }, [])
+  const story = aboutStories[activeStory]
+  return <section className="about about-home-scroll" id="about" aria-label="About Sonia, scroll to explore">
+    <div className="about-scroll-sequence" ref={storyRef}>
+      <div className="about-scroll-stage" style={{ '--story-accent': story.color }}>
+        <p className="about-scroll-prompt">SCROLL GENTLY INTO<br />THAT GOOD FIELD</p>
+        <div className="about-scroll-image about-scroll-image--left" key={`left-${activeStory}`} role="img" aria-label={story.left}><span>{story.left}</span></div>
+        <article className="about-scroll-copy" aria-live="polite" aria-atomic="true">
+          <p className="about-scroll-topic">{story.topic}</p>
+          <h1>Story title placeholder</h1>
+          <p className="about-scroll-body">[Add a short paragraph about {story.topic.toLowerCase()} here.]</p>
+        </article>
+        <div className="about-scroll-image about-scroll-image--right" key={`right-${activeStory}`} role="img" aria-label={story.right}><span>{story.right}</span></div>
+        <div className="about-scroll-steps" aria-hidden="true">{aboutStories.map((item, index) => <span className={index === activeStory ? 'is-active' : ''} key={item.topic} />)}</div>
+      </div>
+    </div>
+  </section>
+}
 function AboutPage() {
   return <main className="about-page" id="about-page-top">
     <Navigation />
@@ -97,7 +133,7 @@ function AboutPage() {
 }
 
 function ProjectCard({ project, selected }) { return <article className={`project-card project-card--${project.number}${selected ? ' is-selected' : ''}`}>
-  <div className="project-image" role="img" aria-label={project.imageAlt}>
+  <div className="project-image" style={{ '--project-placeholder-color': project.color }} role="img" aria-label={project.imageAlt}>
     <span className="project-image-placeholder">PROJECT IMAGE {project.number}</span>
   </div>
 </article> }
@@ -133,33 +169,43 @@ function ProjectDetailsPage() {
 }
 
 function SelectedProjects() {
+  const sectionRef = useRef(null)
   const trackRef = useRef(null)
   const [activeProject, setActiveProject] = useState(0)
-  const selectProject = () => {
-    const track = trackRef.current
-    if (!track) return
-    const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2
-    const cards = [...track.querySelectorAll('.project-card')]
-    const closestIndex = cards.reduce((closest, card, index) => {
-      const rect = card.getBoundingClientRect()
-      const distance = Math.abs(rect.left + rect.width / 2 - trackCenter)
-      return distance < closest.distance ? { index, distance } : closest
-    }, { index: 0, distance: Infinity }).index
-    setActiveProject(closestIndex)
-  }
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const scrollProgressRef = useRef(0)
+  useEffect(() => {
+    const onWheel = (event) => {
+      const section = sectionRef.current
+      if (!section || event.ctrlKey) return
+      const horizontalInput = event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)
+      const delta = horizontalInput ? (event.shiftKey ? event.deltaY : event.deltaX) : event.deltaY
+      const progress = scrollProgressRef.current
+      if (!delta || (delta > 0 && progress >= 1) || (delta < 0 && progress <= 0)) return
+      event.preventDefault()
+      const next = Math.max(0, Math.min(1, progress + delta / 1100))
+      scrollProgressRef.current = next
+      setScrollProgress(next)
+      setActiveProject(Math.min(projects.length - 1, Math.floor(next * projects.length)))
+    }
+    const section = sectionRef.current
+    section?.addEventListener('wheel', onWheel, { passive: false })
+    return () => section?.removeEventListener('wheel', onWheel)
+  }, [])
   const moveToProject = (direction) => {
-    const track = trackRef.current
-    if (!track) return
     const nextIndex = Math.max(0, Math.min(projects.length - 1, activeProject + direction))
-    track.querySelectorAll('.project-card')[nextIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    const next = nextIndex / (projects.length - 1)
+    scrollProgressRef.current = next
+    setScrollProgress(next)
     setActiveProject(nextIndex)
   }
   const project = projects[activeProject]
-  return <section className="work" id="work" aria-labelledby="work-title">
+  return <section className="work project-scroll-section" id="work" aria-labelledby="work-title" ref={sectionRef}>
     <h2 id="work-title" className="sr-only">Selected Work</h2>
     <div className="project-carousel">
-      <div className="project-track" ref={trackRef} onScroll={selectProject} aria-label="Selected projects" tabIndex="0">
-        <div className="project-gallery">{projects.map((item, index) => <ProjectCard key={item.number} project={item} selected={index === activeProject} />)}</div>
+      <header className="project-stage-header">Selected projects</header>
+      <div className="project-track" ref={trackRef} aria-label="Selected projects">
+        <div className="project-gallery" style={{ '--gallery-shift': `${-scrollProgress * 80}%` }}>{projects.map((item, index) => <ProjectCard key={item.number} project={item} selected={index === activeProject} />)}</div>
       </div>
       <div className="project-selection-frame" aria-hidden="true" />
       <footer className="project-caption" aria-live="polite">
@@ -167,7 +213,10 @@ function SelectedProjects() {
           <svg className="project-caption-outline" viewBox="0 0 260 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 C1 8 10 16 18 25 C24 32 28 39 30 45 H228 C231 37 237 28 244 20 C251 12 259 6 260 0" /></svg>
           <a href={project.destination} className="project-caption-title">{project.name}</a><span className="project-caption-type">{project.category}</span>
         </div>
-        <div className="project-carousel-controls"><button type="button" onClick={() => moveToProject(-1)} aria-label="Previous project">‹</button><button type="button" onClick={() => moveToProject(1)} aria-label="Next project">›</button></div>
+        <div className="project-carousel-controls">
+          {activeProject > 0 && <button type="button" onClick={() => moveToProject(-1)} aria-label="Previous project">‹</button>}
+          {activeProject < projects.length - 1 && <button type="button" onClick={() => moveToProject(1)} aria-label="Next project">›</button>}
+        </div>
       </footer>
     </div>
   </section>

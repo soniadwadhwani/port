@@ -228,6 +228,26 @@ html,body,#root{background:#F3F7F6}
   .project-overlay h3{font-size:1.25rem}
   .project-image-placeholder{font-size:.58rem}
 }
+
+/* Compact selected-work frame, with its labels tucked under the left corner. */
+.project-carousel{--selected-frame-width:min(54vw,760px);max-width:min(1280px,calc(100% - 64px))}
+.project-caption{justify-content:flex-start;margin:0 auto;min-height:34px;width:var(--selected-frame-width)}
+.project-caption-copy{gap:6px;margin:0 auto 0 0}
+.project-caption-title,.project-caption-type{background:#9096b5;border-color:#9096b5;color:#101717;border-radius:0 0 10px 10px;font-size:.48rem;line-height:1.15;padding:2px 8px 4px}
+.project-caption-type{font-size:.34rem}
+.project-carousel-controls button{bottom:0;top:auto;transform:none}
+.project-carousel-controls button:first-of-type{left:0;transform:translate(-155%,0)}
+.project-carousel-controls button:last-of-type{right:0;transform:translate(155%,0)}
+.project-carousel-controls button:focus-visible{outline-offset:2px}
+@media(max-width:700px){
+  .project-carousel{--selected-frame-width:min(74vw,330px);max-width:calc(100% - 36px)}
+  .project-caption{justify-content:flex-start;min-height:30px;width:var(--selected-frame-width)}
+  .project-caption-copy{gap:4px;margin-left:0}
+  .project-caption-title,.project-caption-type{font-size:.4rem;padding:2px 6px 3px}
+  .project-caption-type{font-size:.3rem}
+  .project-carousel-controls button:first-of-type{transform:translate(-125%,0)}
+  .project-carousel-controls button:last-of-type{transform:translate(125%,0)}
+}
 @media(prefers-reduced-motion:reduce){.project-overlay,.project-image-placeholder{transition:none}}
 
 /* Fixed project viewer: one selected image at a time, with its caption below. */
@@ -482,3 +502,93 @@ html,body,#root{background:#F3F7F6}
   .project-carousel-controls button:first-of-type{transform:translate(-125%,-50%)}
   .project-carousel-controls button:last-of-type{transform:translate(125%,-50%)}
 }
+
+/* Latest selected-work refinements: smaller frame, compact accent labels at bottom-left. */
+.project-carousel{--selected-frame-width:min(54vw,760px);max-width:min(1280px,calc(100% - 64px))}
+.project-caption{justify-content:flex-start;margin:0 auto;min-height:30px;width:var(--selected-frame-width)}
+.project-caption-copy{gap:6px;margin:0 auto 0 0}
+.project-caption-title,.project-caption-type{background:#9096b5;border-color:#9096b5;color:#101717;border-radius:0 0 8px 8px;font-size:.48rem;line-height:1.15;padding:2px 8px 4px}
+.project-caption-type{font-size:.34rem}
+.project-carousel-controls button{bottom:0;top:auto;transform:none}
+.project-carousel-controls button:first-of-type{left:0;transform:translate(-155%,0)}
+.project-carousel-controls button:last-of-type{right:0;transform:translate(155%,0)}
+@media(max-width:700px){
+  .project-carousel{--selected-frame-width:min(74vw,330px);max-width:calc(100% - 36px)}
+  .project-caption{justify-content:flex-start;min-height:28px;width:var(--selected-frame-width)}
+  .project-caption-copy{gap:4px;margin-left:0}
+  .project-caption-title,.project-caption-type{font-size:.4rem;padding:2px 6px 3px}
+  .project-caption-type{font-size:.3rem}
+  .project-carousel-controls button:first-of-type{transform:translate(-125%,0)}
+  .project-carousel-controls button:last-of-type{transform:translate(125%,0)}
+}
+
+/* Keep the frame fixed; group available scroll cues just outside its bottom-right corner. */
+.project-carousel-controls{bottom:auto;top:0}
+.project-carousel-controls button{bottom:-34px;top:auto;transform:none}
+.project-carousel-controls button:first-of-type{left:auto;right:42px;transform:none}
+.project-carousel-controls button:last-of-type{right:0;transform:none}
+.project-carousel-controls button{align-items:center;display:inline-flex;height:30px;justify-content:center;width:28px}
+@media(max-width:700px){
+  .project-carousel-controls button{bottom:-30px;height:26px;width:24px}
+  .project-carousel-controls button:first-of-type{right:32px}
+}
+
+/* Scroll driven project gallery: fixed viewport frame, horizontally moving slides. */
+.project-scroll-section{height:100svh;margin:0;padding:0;position:relative}
+.project-scroll-section .project-carousel{--selected-frame-width:min(83vw,1170px,calc((100svh - 180px)*1.68));--selected-frame-ratio:1.68;align-items:center;display:flex;flex-direction:column;height:100svh;justify-content:center;max-width:none;overflow:hidden;padding:30px 24px;position:relative;top:0;width:100%}
+.project-stage-header{font-size:.7rem;font-weight:700;letter-spacing:.12em;margin:0 auto 14px;text-align:left;text-transform:uppercase;width:var(--selected-frame-width)}
+.project-scroll-section .project-track{aspect-ratio:var(--selected-frame-ratio);border:3px solid #9096b5;box-sizing:border-box;height:auto;margin:0 auto;overflow:hidden;position:relative;width:var(--selected-frame-width)}
+.project-scroll-section .project-gallery{column-gap:0;display:flex;height:100%;padding:0;transform:translate3d(var(--gallery-shift,0%),0,0);transition:transform .08s linear;width:500%;will-change:transform}
+.project-scroll-section .project-card,.project-scroll-section .project-card--01,.project-scroll-section .project-card--02,.project-scroll-section .project-card--03,.project-scroll-section .project-card--04,.project-scroll-section .project-card--05{flex:0 0 20%;height:100%;min-width:0;scroll-snap-align:none}
+.project-scroll-section .project-card .project-image{aspect-ratio:auto;background:var(--project-placeholder-color,#b99090);height:100%;width:100%}
+.project-scroll-section .project-image-placeholder{display:none}
+.project-scroll-section .project-selection-frame{display:none}
+.project-scroll-section .project-caption{align-items:flex-start;justify-content:space-between;margin:-3px auto 0;min-height:34px;padding:0;position:relative;width:var(--selected-frame-width)}
+.project-scroll-section .project-caption-copy{gap:6px;margin:0}
+.project-scroll-section .project-caption-title,.project-scroll-section .project-caption-type{background:#9096b5;border:0;border-radius:0 0 8px 8px;color:#101717;font-size:.7rem;line-height:1.15;padding:3px 9px 5px}
+.project-scroll-section .project-caption-type{font-size:.5rem}
+.project-scroll-section .project-carousel-controls{align-items:center;display:flex;gap:4px;margin-left:auto;position:static;transform:none;width:auto;z-index:6}
+.project-scroll-section .project-carousel-controls button{align-items:center;background:none;border:0;color:#9096b5;display:inline-flex;font-size:1.7rem;height:30px;justify-content:center;line-height:1;position:static;transform:none;width:28px}
+@media(max-width:700px){
+ .project-scroll-section .project-carousel{--selected-frame-width:min(96vw,620px,calc((100svh - 230px)*1.68));height:100svh;padding:70px 10px 50px}
+ .project-stage-header{font-size:.62rem;margin-bottom:10px}
+ .project-scroll-section .project-caption{min-height:30px;margin-top:-3px}
+ .project-scroll-section .project-caption-copy{gap:4px}
+ .project-scroll-section .project-caption-title{font-size:.58rem;padding:3px 7px 4px}
+ .project-scroll-section .project-caption-type{font-size:.41rem;padding:3px 6px 4px}
+ .project-scroll-section .project-carousel-controls button{font-size:1.45rem;height:26px;width:24px}
+}
+@media(prefers-reduced-motion:reduce){.project-scroll-section .project-gallery{transition:none}}
+
+/* About page: pinned story panel with side placeholders that advance on scroll. */
+.about-home-scroll{background:var(--background);color:var(--text);display:block;padding:0}
+.about-scroll-sequence{height:500svh;position:relative}
+.about-scroll-stage{background:var(--background);border-radius:12px 12px 0 0;height:100svh;overflow:hidden;position:sticky;top:0;width:100%}
+.about-scroll-prompt{font-size:clamp(.68rem,1vw,.9rem);left:clamp(24px,4vw,64px);letter-spacing:.08em;line-height:1.4;position:absolute;top:10%;z-index:2}
+.about-scroll-copy{align-items:center;display:flex;flex-direction:column;justify-content:center;left:50%;min-height:300px;padding:32px;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%);width:min(42vw,620px);z-index:2}
+.about-scroll-topic{font-size:.72rem;letter-spacing:.12em;margin-bottom:18px}
+.about-scroll-copy h1{font-size:clamp(2.5rem,5vw,5.2rem);font-weight:400;letter-spacing:-.07em;line-height:.98;max-width:600px}
+.about-scroll-body{font-size:clamp(.9rem,1.25vw,1.1rem);line-height:1.55;margin-top:22px;max-width:440px}
+.about-scroll-image{align-items:center;animation:about-image-in .55s ease both;background:var(--story-accent);display:flex;justify-content:center;overflow:hidden;position:absolute;text-align:center;transition:background .5s}
+.about-scroll-image span{background:rgba(243,247,246,.84);color:var(--text);font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:10px 12px}
+.about-scroll-image--left{aspect-ratio:.86;border-radius:8px;left:7%;top:28%;width:clamp(220px,24vw,400px)}
+.about-scroll-image--right{aspect-ratio:.94;border-radius:8px;right:7%;top:54%;width:clamp(200px,21vw,350px)}
+.about-scroll-steps{bottom:clamp(24px,4vw,56px);display:flex;gap:8px;left:50%;position:absolute;transform:translateX(-50%);z-index:3}
+.about-scroll-steps span{background:var(--accent);border-radius:99px;height:4px;opacity:.28;transition:opacity .25s,width .25s;width:18px}
+.about-scroll-steps span.is-active{opacity:1;width:36px}
+@keyframes about-image-in{from{opacity:.35;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:700px){
+ .about-scroll-sequence{height:500svh}
+ .about-scroll-stage{border-radius:0}
+ .about-scroll-prompt{font-size:.62rem;left:20px;top:14%}
+ .about-scroll-copy{min-height:280px;padding:20px;top:47%;width:92vw}
+ .about-scroll-topic{font-size:.62rem;margin-bottom:14px}
+ .about-scroll-copy h1{font-size:clamp(2.4rem,10vw,4rem)}
+ .about-scroll-body{font-size:.88rem;margin-top:16px;max-width:330px}
+ .about-scroll-image span{font-size:.52rem;padding:7px}
+ .about-scroll-image--left{left:6%;top:24%;width:34vw}
+ .about-scroll-image--right{right:6%;top:68%;width:32vw}
+ .about-scroll-steps{bottom:24px}
+}
+@media(prefers-reduced-motion:reduce){.about-scroll-image{animation:none;transition:none}}
+
