@@ -573,9 +573,6 @@ html,body,#root{background:#F3F7F6}
 .about-scroll-image span{background:rgba(243,247,246,.84);color:var(--text);font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:10px 12px}
 .about-scroll-image--left{aspect-ratio:.86;border-radius:8px;left:7%;top:28%;width:clamp(220px,24vw,400px)}
 .about-scroll-image--right{aspect-ratio:.94;border-radius:8px;right:7%;top:54%;width:clamp(200px,21vw,350px)}
-.about-scroll-steps{bottom:clamp(24px,4vw,56px);display:flex;gap:8px;left:50%;position:absolute;transform:translateX(-50%);z-index:3}
-.about-scroll-steps span{background:var(--accent);border-radius:99px;height:4px;opacity:.28;transition:opacity .25s,width .25s;width:18px}
-.about-scroll-steps span.is-active{opacity:1;width:36px}
 @keyframes about-image-in{from{opacity:.35;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:700px){
  .about-scroll-sequence{height:500svh}
@@ -588,7 +585,29 @@ html,body,#root{background:#F3F7F6}
  .about-scroll-image span{font-size:.52rem;padding:7px}
  .about-scroll-image--left{left:6%;top:24%;width:34vw}
  .about-scroll-image--right{right:6%;top:68%;width:32vw}
- .about-scroll-steps{bottom:24px}
 }
 @media(prefers-reduced-motion:reduce){.about-scroll-image{animation:none;transition:none}}
+
+/* Project detail wireframe proportions on narrow screens. */
+@media(max-width:700px){
+ .project-details-page{padding-top:0}
+ .project-page-intro{padding:52px 9vw 16px}
+ .project-page-intro h1{font-size:2rem;letter-spacing:-.055em;line-height:1}
+ .project-page-type{font-size:1.45rem;letter-spacing:-.035em;margin-top:14px}
+ .project-page-summary{font-size:.46rem;line-height:1.25;margin-top:12px;max-width:none}
+ .project-detail-content{padding:0 8vw}
+ .project-detail-image{background:#d9d9d9}
+ .project-detail-hero{aspect-ratio:2.5}
+ .project-research{gap:12px;grid-template-columns:1.05fr .95fr;margin:18px 0 28px}
+ .project-research h2{font-size:.48rem;margin-bottom:12px}
+ .project-research p,.project-approach p{font-size:.45rem;line-height:1.25}
+ .project-research-image{aspect-ratio:1.1}
+ .project-detail-image--wide{aspect-ratio:2.05}
+ .project-approach{gap:12px;grid-template-columns:1fr 1fr;margin:28px 0 18px}
+ .project-approach-image{aspect-ratio:1.28}
+ .project-detail-image--second{margin-top:18px}
+ .project-detail-image--inset{aspect-ratio:2;margin-top:28px;width:100%}
+ .project-page-reflection{font-size:.45rem;line-height:1.25;margin:48px 0 90px}
+ .project-detail-footer{aspect-ratio:2.02;margin:0 2px}
+}
 

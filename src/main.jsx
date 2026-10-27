@@ -108,7 +108,6 @@ function AboutPreview() {
           <p className="about-scroll-body">[Add a short paragraph about {story.topic.toLowerCase()} here.]</p>
         </article>
         <div className="about-scroll-image about-scroll-image--right" key={`right-${activeStory}`} role="img" aria-label={story.right}><span>{story.right}</span></div>
-        <div className="about-scroll-steps" aria-hidden="true">{aboutStories.map((item, index) => <span className={index === activeStory ? 'is-active' : ''} key={item.topic} />)}</div>
       </div>
     </div>
   </section>
@@ -146,23 +145,22 @@ function ProjectDetailsPage() {
     <header className="project-page-intro">
       <h1>Name</h1>
       <p className="project-page-type">Type</p>
-      <p className="project-page-summary">A short introduction to the project, the people it serves, and the challenge it set out to solve.</p>
+      <p className="project-page-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </header>
     <div className="project-detail-content">
       <div className="project-detail-image project-detail-hero" role="img" aria-label="Project hero image placeholder"><span>PROJECT HERO IMAGE</span></div>
       <section className="project-research" aria-labelledby="research-title">
-        <div><h2 id="research-title">Research synthesis</h2><p>Summarize the research, key observations, and the opportunity they revealed.</p></div>
+        <div><h2 id="research-title">Research synthesis</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet.</p></div>
         <div className="project-detail-image project-research-image" role="img" aria-label="Research image placeholder"><span>RESEARCH IMAGE</span></div>
       </section>
       <div className="project-detail-image project-detail-image--wide" role="img" aria-label="Project image placeholder"><span>PROJECT IMAGE</span></div>
       <section className="project-approach" aria-label="Design approach">
         <div className="project-detail-image project-approach-image" role="img" aria-label="Design approach image placeholder"><span>PROCESS IMAGE</span></div>
-        <p>Describe the design approach, the decisions made along the way, and what changed through iteration.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet.</p>
       </section>
       <div className="project-detail-image project-detail-image--wide project-detail-image--second" role="img" aria-label="Project outcome image placeholder"><span>OUTCOME IMAGE</span></div>
       <div className="project-detail-image project-detail-image--inset" role="img" aria-label="Additional project image placeholder"><span>ADDITIONAL IMAGE</span></div>
-      <p className="project-page-reflection">Add a concise reflection on the outcome, what was learned, and what could come next.</p>
-      <a className="project-back-link" href="/#work">← Back to projects</a>
+      <p className="project-page-reflection">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ligula lorem ipsum dolor sit amet.</p>
     </div>
     <div className="project-detail-footer" role="img" aria-label="Closing project image placeholder"><span>CLOSING IMAGE PLACEHOLDER</span></div>
   </main>
