@@ -174,27 +174,15 @@ html,body,#root{background:#F3F7F6}
 .enrolme-intro .project-page-type{font-size:clamp(1.2rem,2vw,1.7rem);margin-top:14px}
 .enrolme-intro .project-page-type span{color:#9096b5;padding-inline:8px}
 .enrolme-intro-note{font-size:.82rem;margin-top:16px;opacity:.72}
-.enrolme-hero-art{aspect-ratio:700/494;background:radial-gradient(ellipse at 79% 56%,#d9faff 0 12%,transparent 30%),radial-gradient(ellipse at 72% 10%,#edc7f3 0,transparent 32%),radial-gradient(ellipse at 17% 75%,#c5f3f8 0,transparent 35%),linear-gradient(135deg,#f9fcff 0%,#f8effb 43%,#d8edff 72%,#fff0f5 100%);isolation:isolate;margin-inline:auto;max-width:1500px;overflow:hidden;position:relative}
-.enrolme-hero-art:before,.enrolme-hero-art:after{background:linear-gradient(110deg,#e7fbff,#f4d5f3 52%,#d7efff);border-radius:50%;content:"";height:42%;left:-8%;opacity:.8;position:absolute;top:-22%;transform:rotate(7deg);width:116%;z-index:-1}
-.enrolme-hero-art:after{height:34%;left:-5%;top:auto;bottom:-22%;transform:rotate(-5deg);width:110%}
-.enrolme-brand-lockup{align-items:center;color:#15527b;display:flex;gap:14px;left:7%;position:absolute;top:43%;z-index:1}
-.enrolme-brand-lockup>div{display:grid;line-height:1.15}
-.enrolme-brand-lockup strong{font-size:clamp(1.25rem,3vw,2.7rem);font-weight:500;letter-spacing:-.035em}
-.enrolme-brand-lockup small{font-size:clamp(.65rem,1.1vw,1rem);opacity:.75}
-.enrolme-mark{align-items:center;background:conic-gradient(from 30deg,#42c79a,#35bce2,#8985e7,#ea68ae,#42c79a);border-radius:34% 66% 54% 46%;color:transparent;display:flex;font-size:clamp(2rem,6vw,5rem);font-weight:700;height:1.25em;justify-content:center;-webkit-background-clip:text;background-clip:text;transform:rotate(-12deg);width:1.05em}
-.enrolme-bubble{align-items:center;background:radial-gradient(circle at 35% 27%,rgb(255 255 255 / .92),transparent 17%),radial-gradient(circle at 40% 35%,#e8f6ff 0,#a8e7f6 42%,#b9d8ff 74%,#efd8f7 100%);border:2px solid rgb(255 255 255 / .72);border-radius:44% 56% 50% 50%;box-shadow:inset -18px -22px 45px rgb(107 152 199 / .2),0 15px 45px rgb(123 158 203 / .16);display:flex;height:42%;justify-content:center;position:absolute;right:11%;top:27%;transform:rotate(-7deg);width:31%}
-.enrolme-bubble:before,.enrolme-bubble:after{background:radial-gradient(circle at 35% 30%,#fff,#d8f8ff 45%,#c5d6ff);border:1px solid rgb(255 255 255 / .75);border-radius:50%;content:"";height:17%;left:-11%;position:absolute;top:47%;width:17%}
-.enrolme-bubble:after{height:10%;left:auto;right:-5%;top:16%;width:10%}
-.enrolme-bubble i{background:#477dad;border-radius:50%;height:12%;margin:0 7%;width:6%}
-.enrolme-bubble b{background:#477dad;border-radius:0 0 50% 50%;height:12%;left:39%;position:absolute;top:58%;transform:rotate(4deg);width:24%}
-.enrolme-art-note{background:rgb(255 255 255 / .56);bottom:14px;color:#426b88;font-size:.58rem;font-weight:700;letter-spacing:.12em;padding:6px 9px;position:absolute;right:14px}
+.enrolme-hero-art{margin:0 auto;max-width:1500px;padding-inline:clamp(18px,4vw,56px)}
+.enrolme-hero-art img{display:block;height:auto;width:100%}
 .enrolme-placeholder-grid{display:grid;gap:clamp(24px,5vw,72px);grid-template-columns:.8fr 1.2fr;margin:clamp(48px,8vw,100px) auto;max-width:1240px;padding-inline:clamp(28px,7vw,112px)}
 .enrolme-placeholder-grid article h2{font-size:clamp(1.8rem,3.4vw,3rem);font-weight:500;letter-spacing:-.05em;line-height:1;margin-top:14px}
 .enrolme-placeholder-grid article>p:last-child{font-size:.8rem;margin-top:16px;opacity:.7}
 .enrolme-artifact-placeholder{align-items:center;aspect-ratio:1.3;background:linear-gradient(135deg,#e4f3f5,#f0e5f2 55%,#dfeaff);color:#4d6577;display:flex;font-size:.65rem;font-weight:700;justify-content:center;letter-spacing:.08em;text-align:center}
 .enrolme-artifact-placeholder--wide{aspect-ratio:2.1;grid-column:1/-1}
 .enrolme-back-link{border-top:1px solid rgb(10 15 14 / .2);display:block;font-size:.78rem;margin:0 auto;max-width:1240px;padding:18px clamp(28px,7vw,112px) 48px}
-@media(max-width:700px){.enrolme-intro{padding:72px 22px 20px}.enrolme-intro h1{font-size:clamp(3.1rem,15vw,5rem)}.enrolme-intro .project-page-type{font-size:1.1rem}.enrolme-intro-note{font-size:.68rem}.enrolme-hero-art{aspect-ratio:700/494}.enrolme-brand-lockup{gap:7px;left:6%;top:43%}.enrolme-brand-lockup strong{font-size:clamp(.85rem,4vw,1.35rem)}.enrolme-brand-lockup small{font-size:.48rem}.enrolme-bubble{height:39%;right:8%;top:28%;width:34%}.enrolme-placeholder-grid{gap:18px;grid-template-columns:1fr;margin:42px auto;padding-inline:22px}.enrolme-placeholder-grid article h2{font-size:2rem}.enrolme-placeholder-grid article>p:last-child{font-size:.68rem}.enrolme-artifact-placeholder{aspect-ratio:1.4}.enrolme-artifact-placeholder--wide{grid-column:auto}.enrolme-back-link{font-size:.68rem;padding:16px 22px 34px}}
+@media(max-width:700px){.enrolme-intro{padding:72px 22px 20px}.enrolme-intro h1{font-size:clamp(3.1rem,15vw,5rem)}.enrolme-intro .project-page-type{font-size:1.1rem}.enrolme-intro-note{font-size:.68rem}.enrolme-hero-art{padding-inline:14px}.enrolme-placeholder-grid{gap:18px;grid-template-columns:1fr;margin:42px auto;padding-inline:22px}.enrolme-placeholder-grid article h2{font-size:2rem}.enrolme-placeholder-grid article>p:last-child{font-size:.68rem}.enrolme-artifact-placeholder{aspect-ratio:1.4}.enrolme-artifact-placeholder--wide{grid-column:auto}.enrolme-back-link{font-size:.68rem;padding:16px 22px 34px}}
 
 /* Five-image asymmetrical work gallery with project details revealed on hover/focus. */
 .work{padding:clamp(110px,12vw,168px) clamp(24px,6vw,96px) clamp(100px,12vw,160px)}
@@ -605,7 +593,6 @@ html,body,#root{background:#F3F7F6}
 .about-home-scroll{background:var(--background);color:var(--text);display:block;padding:0}
 .about-scroll-sequence{height:500svh;position:relative}
 .about-scroll-stage{background:var(--background);border-radius:12px 12px 0 0;height:100svh;overflow:hidden;position:sticky;top:0;width:100%}
-.about-scroll-prompt{font-size:clamp(.68rem,1vw,.9rem);left:clamp(24px,4vw,64px);letter-spacing:.08em;line-height:1.4;position:absolute;top:10%;z-index:2}
 .about-scroll-copy{align-items:center;display:flex;flex-direction:column;justify-content:center;left:50%;min-height:300px;padding:32px;position:absolute;text-align:center;top:50%;transform:translate(-50%,-50%);width:min(42vw,620px);z-index:2}
 .about-scroll-topic{font-size:.72rem;letter-spacing:.12em;margin-bottom:18px}
 .about-scroll-copy h1{font-size:clamp(2.5rem,5vw,5.2rem);font-weight:400;letter-spacing:-.07em;line-height:.98;max-width:600px}
@@ -618,7 +605,6 @@ html,body,#root{background:#F3F7F6}
 @media(max-width:700px){
  .about-scroll-sequence{height:500svh}
  .about-scroll-stage{border-radius:0}
- .about-scroll-prompt{font-size:.62rem;left:20px;top:14%}
  .about-scroll-copy{min-height:280px;padding:20px;top:47%;width:92vw}
  .about-scroll-topic{font-size:.62rem;margin-bottom:14px}
  .about-scroll-copy h1{font-size:clamp(2.4rem,10vw,4rem)}
@@ -802,12 +788,12 @@ html,body,#root{background:#F3F7F6}
 }
 .about-scroll-stage--tools .about-scroll-image{display:none}
 .about-scroll-stage--tools .about-scroll-copy{width:min(74vw,1040px)}
-.about-tool-cloud{align-items:center;display:flex;flex-wrap:wrap;gap:clamp(14px,2vw,28px);justify-content:space-evenly;margin:clamp(28px,4vw,52px) auto 0;max-width:980px;width:100%}
-.about-tool{background:rgb(255 255 255 / .74);border-radius:14px;height:clamp(54px,6vw,76px);width:clamp(54px,6vw,76px)}
+.about-tool-cloud{align-items:center;display:grid;gap:clamp(8px,1vw,16px);grid-template-columns:repeat(12,minmax(0,1fr));justify-items:center;margin:clamp(28px,4vw,52px) auto 0;max-width:1080px;width:100%}
+.about-tool{background:rgb(255 255 255 / .74);border-radius:14px;height:clamp(48px,4vw,64px);width:clamp(48px,4vw,64px)}
 .about-tool>span{font-size:clamp(.88rem,1.2vw,1.1rem)}
 @media(max-width:700px){
  .about-scroll-stage--tools .about-scroll-copy{width:94vw}
- .about-tool-cloud{gap:12px;margin-top:22px;max-width:330px}
+ .about-tool-cloud{gap:12px;grid-template-columns:repeat(6,minmax(0,1fr));margin-top:22px;max-width:390px}
  .about-tool{border-radius:10px;height:48px;width:48px}
  .about-tool>span{font-size:.82rem}
 }

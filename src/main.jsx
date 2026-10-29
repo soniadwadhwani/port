@@ -24,7 +24,8 @@ const projects = Array.from({ length: 5 }, (_, i) => ({
   ...project,
   name: 'Enrol-Me',
   category: 'Business Design | Lifestyle Design | Industry Project',
-  imageAlt: 'Enrol-Me project hero artwork placeholder, inspired by its pastel bubble identity',
+  image: '/assets/enrolme-hero.png',
+  imageAlt: 'Enrol-Me hero artwork with its pastel bubble character and wordmark',
 } : project)
 const explorations = ['Sketch placeholder', 'Concept placeholder', 'Process placeholder', 'Experiment placeholder', 'Study placeholder', 'Idea placeholder']
 const aboutDetails = [
@@ -136,7 +137,6 @@ function AboutPreview() {
   return <section className="about about-home-scroll" id="about" aria-label="About Sonia, scroll to explore">
     <div className="about-scroll-sequence" ref={storyRef}>
       <div className={`about-scroll-stage${story.tools ? ' about-scroll-stage--tools' : ''}`} style={{ '--story-accent': story.color }}>
-        <p className="about-scroll-prompt">SCROLL GENTLY INTO<br />THAT GOOD FIELD</p>
         <div className="about-scroll-image about-scroll-image--left" key={`left-${activeStory}`} role="img" aria-label={story.left}><span>{story.left}</span></div>
         <article className="about-scroll-copy" aria-live="polite" aria-atomic="true">
           <p className="about-scroll-topic">{story.topic}</p>
@@ -160,7 +160,7 @@ function AboutPage() {
         <div className="about-collage-photo" role="img" aria-label="Portrait image placeholder"><span>PORTRAIT PLACEHOLDER</span></div>
         <div className="about-collage-accent" aria-hidden="true" />
       </div>
-      <p className="about-intro-copy">I’m Sonia Wadhwani, an experience designer with a minor in Psychology. I’m curious about how people think, feel, and move through the world—and I use that curiosity to shape thoughtful experiences.</p>
+      <p className="about-intro-copy">Hi, I’m Sonia. A right-brain thinker driven by curiosity, I see design as a way to bridge emotion and function. I love creating experiences that tell stories, spark connection, and make everyday moments meaningful.</p>
     </section>
     <section className="about-page-story" aria-label="About Sonia">
       <div className="about-wide-image" role="img" aria-label="Wide image placeholder"><span>WIDE IMAGE PLACEHOLDER</span></div>
@@ -351,11 +351,7 @@ function EnrolMeCasePlaceholder({ project }) {
       <p className="project-page-type">Business Design <span>·</span> Lifestyle Design</p>
       <p className="enrolme-intro-note">Project details and process documentation will be added here.</p>
     </header>
-    <section className="enrolme-hero-art" aria-label="Enrol-Me hero artwork placeholder inspired by the supplied visual">
-      <div className="enrolme-brand-lockup"><span className="enrolme-mark" aria-hidden="true">e</span><div><strong>ENROL-ME</strong><small>Explore all you can be</small></div></div>
-      <div className="enrolme-bubble" aria-hidden="true"><i /><i /><b /></div>
-      <span className="enrolme-art-note">HERO ARTWORK</span>
-    </section>
+    <figure className="enrolme-hero-art"><img src={project.image} alt={project.imageAlt} /></figure>
     <section className="enrolme-placeholder-grid" aria-label="Project content placeholders">
       <article><p className="eyebrow">OVERVIEW</p><h2>Project story coming soon.</h2><p>Overview and project context placeholder.</p></article>
       <div className="enrolme-artifact-placeholder">PROCESS IMAGE PLACEHOLDER</div>
