@@ -105,50 +105,101 @@ function Hero() {
 </div></section>
 }
 
-const aboutStories = [
-  { topic: 'INTRODUCTION', headline: "Hi, I'm Sonia.", text: 'I explore how people, technology and everyday systems shape our experiences.', left: 'PORTRAIT PLACEHOLDER', right: 'IMAGE PLACEHOLDER', color: '#CFE5DF', meta: 'Experience Design · Psychology' },
-  { topic: 'CURIOSITY', headline: 'Always asking, what if?', text: 'Curious about how things work, why people behave the way they do, and what new possibilities a different perspective can reveal.', left: 'PROCESS IMAGE PLACEHOLDER', right: 'IMAGE PLACEHOLDER', color: '#A5B4C3' },
-  { topic: 'PSYCHOLOGY', headline: 'People are more than patterns.', text: 'Psychology helps me look beyond actions to the emotions, motivations and behaviours shaping each experience.', left: 'IMAGE PLACEHOLDER', right: 'RESEARCH IMAGE PLACEHOLDER', color: '#D8C7CE' },
-  { topic: 'DESIGN PRACTICE', headline: 'Ideas explored. Experiences created.', text: '', left: 'IMAGE PLACEHOLDER', right: 'MAKING IMAGE PLACEHOLDER', color: '#D9C8A8', kpis: [['16', 'Academic Projects'], ['4', 'Industry Projects']] },
-  { topic: 'TOOLS & TECHNOLOGY', headline: 'Ideas, meet execution.', text: 'Tools I use to shape interfaces, build prototypes, code creatively and explore AI.', left: '', right: '', color: '#CFE5DF', tools: [['Figma','Fi'], ['Framer','Fr'], ['Adobe Illustrator','Ai'], ['Adobe Photoshop','Ps'], ['HTML','</>'], ['CSS','#'], ['JavaScript','JS'], ['p5.js','p5'], ['Python','Py'], ['Blender','Bl'], ['PowerPoint','P'], ['Agentic AI','AI']] },
-]
+const aboutNotes = Array.from({ length: 18 }, (_, index) => ({
+  preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+}))
 const aboutPageNotes = [
   'I look at the small details that shape how an experience feels, and bring them together into something clear and useful.',
   'I use observation, research, and thoughtful questions to understand people and the worlds they move through.',
   'My background in Psychology helps me consider the needs, motivations, and emotions behind each interaction.',
 ]
 function AboutPreview() {
-  const storyRef = useRef(null)
-  const [activeStory, setActiveStory] = useState(0)
-  useEffect(() => {
-    const updateStory = () => {
-      const section = storyRef.current
-      if (!section) return
-      const distance = Math.max(1, section.offsetHeight - window.innerHeight)
-      const progress = Math.max(0, Math.min(1, -section.getBoundingClientRect().top / distance))
-      setActiveStory(Math.min(aboutStories.length - 1, Math.floor(progress * aboutStories.length)))
+  const closeButtonRef = useRef(null)
+  const stickyWallRef = useRef(null)
+  const dragRef = useRef(null)
+  const suppressStickyClickRef = useRef(false)
+  const [stickyPositions, setStickyPositions] = useState({})
+  const [selectedNote, setSelectedNote] = useState(null)
+  const startStickyDrag = (event, index) => {
+    if (event.button !== 0) return
+    const wall = stickyWallRef.current
+    const noteElement = event.currentTarget
+    if (!wall) return
+    const wallRect = wall.getBoundingClientRect()
+    const noteRect = noteElement.getBoundingClientRect()
+    dragRef.current = {
+      index,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      offsetX: event.clientX - noteRect.left,
+      offsetY: event.clientY - noteRect.top,
+      wallRect,
+      noteWidth: noteRect.width,
+      noteHeight: noteRect.height,
+      moved: false,
     }
-    updateStory()
-    window.addEventListener('scroll', updateStory, { passive: true })
-    window.addEventListener('resize', updateStory)
-    return () => { window.removeEventListener('scroll', updateStory); window.removeEventListener('resize', updateStory) }
-  }, [])
-  const story = aboutStories[activeStory]
-  return <section className="about about-home-scroll" id="about" aria-label="About Sonia, scroll to explore">
-    <div className="about-scroll-sequence" ref={storyRef}>
-      <div className={`about-scroll-stage${story.tools ? ' about-scroll-stage--tools' : ''}`} style={{ '--story-accent': story.color }}>
-        <div className="about-scroll-image about-scroll-image--left" key={`left-${activeStory}`} role="img" aria-label={story.left}><span>{story.left}</span></div>
-        <article className="about-scroll-copy" aria-live="polite" aria-atomic="true">
-          <p className="about-scroll-topic">{story.topic}</p>
-          <h1>{story.headline}</h1>
-          {story.meta && <p className="about-scroll-meta">{story.meta}</p>}
-          {story.text && <p className="about-scroll-body">{story.text}</p>}
-          {story.kpis && <div className="about-kpis">{story.kpis.map(([value, label]) => <div className="about-kpi" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>}
-          {story.tools && <div className="about-tool-cloud" aria-label="Design and technology tools">{story.tools.map(([name, mark]) => <span className="about-tool" key={name} tabIndex="0" aria-label={name} data-tool={name}><span aria-hidden="true">{mark}</span><small>{name}</small></span>)}</div>}
-        </article>
-        <div className="about-scroll-image about-scroll-image--right" key={`right-${activeStory}`} role="img" aria-label={story.right}><span>{story.right}</span></div>
-      </div>
+    noteElement.setPointerCapture(event.pointerId)
+  }
+  const moveSticky = (event) => {
+    const drag = dragRef.current
+    if (!drag || drag.pointerId !== event.pointerId) return
+    if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 5) return
+    drag.moved = true
+    const maxLeft = Math.max(0, drag.wallRect.width - drag.noteWidth)
+    const maxTop = Math.max(0, drag.wallRect.height - drag.noteHeight)
+    const left = Math.max(0, Math.min(maxLeft, event.clientX - drag.wallRect.left - drag.offsetX))
+    const top = Math.max(0, Math.min(maxTop, event.clientY - drag.wallRect.top - drag.offsetY))
+    setStickyPositions((positions) => ({
+      ...positions,
+      [drag.index]: {
+        left: `${(left / drag.wallRect.width) * 100}%`,
+        top: `${(top / drag.wallRect.height) * 100}%`,
+      },
+    }))
+  }
+  const finishStickyDrag = (event) => {
+    if (dragRef.current?.pointerId === event.pointerId) {
+      suppressStickyClickRef.current = dragRef.current.moved
+      dragRef.current = null
+    }
+  }
+  const handleStickyClick = (event, note) => {
+    if (suppressStickyClickRef.current) {
+      event.preventDefault()
+      suppressStickyClickRef.current = false
+      return
+    }
+    setSelectedNote(note)
+  }
+  useEffect(() => {
+    if (!selectedNote) return
+    const previousOverflow = document.body.style.overflow
+    const previouslyFocused = document.activeElement
+    document.body.style.overflow = 'hidden'
+    closeButtonRef.current?.focus()
+    const closeOnEscape = (event) => { if (event.key === 'Escape') setSelectedNote(null) }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => { document.body.style.overflow = previousOverflow; window.removeEventListener('keydown', closeOnEscape); previouslyFocused?.focus?.() }
+  }, [selectedNote])
+  return <section className="about about-home-scroll" id="about" aria-labelledby="about-home-title">
+    <div className="about-home-intro">
+      <h2 id="about-home-title">Hi, I’m Sonia.</h2>
+      <p className="about-home-meta">Experience Design · Psychology</p>
+      <p className="about-home-description">I explore how people, technology, and everyday systems shape our experience.</p>
     </div>
+    <div className="about-sticky-wall" aria-label="Sonia’s ideas" ref={stickyWallRef}>
+      {aboutNotes.map((note, index) => <button className={`about-sticky about-sticky--${index % 4 + 1} about-sticky-note--${index + 1}`} style={stickyPositions[index]} type="button" key={index} onPointerDown={(event) => startStickyDrag(event, index)} onPointerMove={moveSticky} onPointerUp={finishStickyDrag} onPointerCancel={finishStickyDrag} onClick={(event) => handleStickyClick(event, note)} aria-label="Drag to move or click to expand sticky note">
+        <span>{note.preview}</span>
+      </button>)}
+    </div>
+    {selectedNote && <div className="about-note-overlay" onClick={() => setSelectedNote(null)}>
+      <article className={`about-note-expanded about-sticky--${(aboutNotes.indexOf(selectedNote) % 4) + 1}`} role="dialog" aria-modal="true" aria-label="Expanded sticky note" onClick={(event) => event.stopPropagation()}>
+        <button ref={closeButtonRef} className="about-note-close" type="button" onClick={() => setSelectedNote(null)} aria-label="Close expanded note">×</button>
+        <p>{selectedNote.content}</p>
+      </article>
+    </div>}
   </section>
 }
 function AboutPage() {
@@ -432,9 +483,11 @@ const graphicWorks = [
   ['graphic-15.png', 'Expressive face sketch'], ['graphic-16.png', 'Surreal face drawing'],
   ['graphic-17.png', 'Mushroom forest illustration'], ['graphic-18.png', 'Cat illustration'],
 ]
-function CircularOrbit() { return <div className="orbit" aria-label="Circular gallery of Sonia’s graphics"><div className="orbit-rotation">{graphicWorks.map(([src, alt], i) => <div className="orbit-item" key={src} style={{ '--i': i, '--orbit-angle': `${i * (360 / graphicWorks.length)}deg` }}><div className="orbit-image"><img src={`/assets/${src}`} alt={alt} loading="lazy" /></div></div>)}</div></div> }
+function CircularOrbit({ onSelect }) { return <div className="orbit" aria-label="Circular gallery of Sonia’s graphics"><div className="orbit-rotation">{graphicWorks.map(([src, alt], i) => <div className="orbit-item" key={src} style={{ '--i': i, '--orbit-angle': `${i * (360 / graphicWorks.length)}deg` }}><button className="orbit-image" type="button" onClick={() => onSelect({ src, alt })} aria-label={`Expand ${alt}`}><img src={`/assets/${src}`} alt={alt} loading="lazy" /></button></div>)}</div></div> }
 function CreativeExplorations() {
   const trackRef = useRef(null)
+  const lightboxCloseRef = useRef(null)
+  const [selectedGraphic, setSelectedGraphic] = useState(null)
   useEffect(() => {
     const track = trackRef.current
     const stage = track?.querySelector('.graphics-stage')
@@ -456,13 +509,29 @@ function CreativeExplorations() {
     window.addEventListener('resize', update)
     return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
   }, [])
+  useEffect(() => {
+    if (!selectedGraphic) return
+    const previousOverflow = document.body.style.overflow
+    const previouslyFocused = document.activeElement
+    document.body.style.overflow = 'hidden'
+    lightboxCloseRef.current?.focus()
+    const closeOnEscape = (event) => { if (event.key === 'Escape') setSelectedGraphic(null) }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => { document.body.style.overflow = previousOverflow; window.removeEventListener('keydown', closeOnEscape); previouslyFocused?.focus?.() }
+  }, [selectedGraphic])
   return <section className="creative" id="explorations" aria-labelledby="graphics-title">
     <div className="graphics-track" ref={trackRef}><div className="graphics-stage">
       <p className="eyebrow section-index">03 — GRAPHICS</p>
       <div className="creative-heading"><p className="graphics-kicker">A FEW OF MY DOODLES</p><h2 id="graphics-title">Visual<br />explorations</h2></div>
-      <CircularOrbit />
+      <CircularOrbit onSelect={setSelectedGraphic} />
     </div></div>
     <div className="graphics-more"><p className="eyebrow">MORE GRAPHICS · PLACEHOLDERS</p><div className="graphics-grid">{explorations.map((item, i) => <div className={`graphics-tile graphics-tile--${i + 1}`} role="img" aria-label={`Additional graphic placeholder ${String(i + 1).padStart(2, '0')}`} key={`more-${item}`}><span>GRAPHIC PLACEHOLDER {String(i + 1).padStart(2, '0')}</span></div>)}</div></div>
+    {selectedGraphic && <div className="graphics-lightbox" onClick={() => setSelectedGraphic(null)}>
+      <div className="graphics-lightbox-dialog" role="dialog" aria-modal="true" aria-label={selectedGraphic.alt} onClick={(event) => event.stopPropagation()}>
+        <button ref={lightboxCloseRef} className="graphics-lightbox-close" type="button" onClick={() => setSelectedGraphic(null)} aria-label="Close expanded graphic">×</button>
+        <img src={`/assets/${selectedGraphic.src}`} alt={selectedGraphic.alt} />
+      </div>
+    </div>}
   </section>
 }
 
