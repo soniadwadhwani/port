@@ -44,6 +44,7 @@ function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
   const [tabProgress, setTabProgress] = useState([0, 0, 0, 0, 0])
+  const projectProgressRef = useRef(0)
   const onAboutPage = window.location.pathname.endsWith('/about.html')
   const onProjectPage = window.location.pathname.endsWith('/project.html')
   useEffect(() => {
@@ -60,19 +61,34 @@ function Navigation() {
       if (!onAboutPage && !onProjectPage && sections.every(Boolean)) {
         const starts = sections.map((section) => section.getBoundingClientRect().top + window.scrollY)
         const ends = [...starts.slice(1), maxScroll]
-        setTabProgress(starts.map((start, index) => {
+        const nextProgress = starts.map((start, index) => {
           const end = ends[index]
           if (end <= start) return window.scrollY >= start ? 1 : 0
           return Math.max(0, Math.min(1, (window.scrollY - start) / (end - start)))
-        }))
+        })
+        const projectsBounds = sections[2].getBoundingClientRect()
+        if (projectsBounds.top < window.innerHeight && projectsBounds.bottom > 0) {
+          nextProgress[2] = projectProgressRef.current
+        }
+        setTabProgress(nextProgress)
       } else {
         // Retain the existing full-page progression on the standalone About page.
         setTabProgress(Array.from({ length: 5 }, (_, index) => Math.max(0, Math.min(1, pageProgress * 5 - index))))
       }
     }
+    const updateProjectProgress = (event) => {
+      projectProgressRef.current = event.detail
+      const projectSection = document.getElementById('work')
+      if (!projectSection) return
+      const bounds = projectSection.getBoundingClientRect()
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+        setTabProgress((current) => current.map((value, index) => index === 2 ? event.detail : value))
+      }
+    }
     update(); window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update)
-    return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update) }
+    window.addEventListener('project-gallery-progress', updateProjectProgress)
+    return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update); window.removeEventListener('project-gallery-progress', updateProjectProgress) }
   }, [onAboutPage, onProjectPage])
   const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/#work'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
   const tabStyle = (index) => ({ '--tab-fill': `${tabProgress[index] * 100}%` })
@@ -105,7 +121,7 @@ function Hero() {
 </div></section>
 }
 
-const aboutNotes = Array.from({ length: 18 }, (_, index) => ({
+const aboutNotes = Array.from({ length: 15 }, (_, index) => ({
   preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
 }))
@@ -208,8 +224,8 @@ function AboutPage() {
     <section className="about-page-intro" aria-label="Introduction">
       <h1 className="sr-only">About Sonia Wadhwani</h1>
       <div className="about-collage" aria-label="Portrait placeholder composition">
-        <div className="about-collage-photo" role="img" aria-label="Portrait image placeholder"><span>PORTRAIT PLACEHOLDER</span></div>
-        <div className="about-collage-accent" aria-hidden="true" />
+        <div className="about-collage-photo"><img src="/assets/about-portrait.jpeg" alt="Sonia working at a table" /></div>
+        <div className="about-collage-accent" aria-hidden="true"><img src="/assets/sonia-doodle.png" alt="" /></div>
       </div>
       <p className="about-intro-copy">Hi, I’m Sonia. A right-brain thinker driven by curiosity, I see design as a way to bridge emotion and function. I love creating experiences that tell stories, spark connection, and make everyday moments meaningful.</p>
     </section>
@@ -418,6 +434,11 @@ function SelectedProjects() {
   const [activeProject, setActiveProject] = useState(0)
   const [scrollProgress, setScrollProgress] = useState(0)
   const scrollProgressRef = useRef(0)
+  const publishProgress = (next) => {
+    scrollProgressRef.current = next
+    setScrollProgress(next)
+    window.dispatchEvent(new CustomEvent('project-gallery-progress', { detail: next }))
+  }
   useEffect(() => {
     const onWheel = (event) => {
       const section = sectionRef.current
@@ -434,8 +455,7 @@ function SelectedProjects() {
       // to move through the gallery without letting the page slip past it.
       if (bounds.top > 1) window.scrollTo(0, window.scrollY + bounds.top)
       const next = Math.max(0, Math.min(1, progress + delta / 1100))
-      scrollProgressRef.current = next
-      setScrollProgress(next)
+      publishProgress(next)
       setActiveProject(Math.round(next * (projects.length - 1)))
     }
     const section = sectionRef.current
@@ -445,8 +465,7 @@ function SelectedProjects() {
   const moveToProject = (direction) => {
     const nextIndex = Math.max(0, Math.min(projects.length - 1, activeProject + direction))
     const next = nextIndex / (projects.length - 1)
-    scrollProgressRef.current = next
-    setScrollProgress(next)
+    publishProgress(next)
     setActiveProject(nextIndex)
   }
   const project = projects[activeProject]
