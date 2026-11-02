@@ -1,0 +1,30 @@
+/* Standalone Projects page: uses the same palette, navigation and footer as About. */
+.projects-index{background:var(--background);color:var(--text);min-height:100vh;overflow:hidden;padding-top:110px}
+.projects-index-content{margin:0 auto;max-width:1240px;padding:56px clamp(32px,8vw,120px) clamp(120px,16vw,220px)}
+.projects-index-heading h1{font-size:clamp(2rem,4vw,3.158rem);font-weight:400;line-height:1.15;margin-bottom:24px}
+.projects-index-heading>p{font-size:.75rem;line-height:1.7;color:var(--text-600);max-width:620px}
+.projects-index-list{display:grid;gap:clamp(72px,10vw,144px);margin-top:80px}
+.projects-index-row{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,5vw,72px);align-items:end}
+.projects-index-image{aspect-ratio:1.38;background:var(--primary-100);overflow:hidden}
+.projects-index-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.projects-index-row:nth-child(even){grid-template-columns:1fr 1.35fr}
+.projects-index-row:nth-child(even) .projects-index-image{grid-column:2;grid-row:1}
+.projects-index-row:nth-child(even) .projects-index-copy{grid-column:1;grid-row:1}
+.projects-index-copy .eyebrow{font-size:.625rem;line-height:1.6;letter-spacing:.04em;color:var(--text-600);margin-bottom:14px}
+.projects-index-copy h2{font-size:clamp(1.777rem,3vw,2.369rem);font-weight:400;line-height:1.2;margin-bottom:20px}
+.projects-index-copy>p:not(.eyebrow){font-size:clamp(.95rem,1.3vw,1.125rem);line-height:1.55}
+.projects-index-cta{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--background-200);padding:24px 0 12px;margin-top:8px;font-size:.75rem}
+.projects-index-row:hover .projects-index-image img{transform:scale(1.025)}
+@media(max-width:700px){
+  .projects-index{padding-top:0}
+  .projects-index-content{padding:158px 9vw 100px}
+  .projects-index-heading h1{font-size:2rem}
+  .projects-index-heading>p{font-size:.7rem}
+  .projects-index-list{gap:64px;margin-top:48px}
+  .projects-index-row,.projects-index-row:nth-child(even){grid-template-columns:1fr;gap:24px}
+  .projects-index-row:nth-child(even) .projects-index-image,.projects-index-row:nth-child(even) .projects-index-copy{grid-column:auto;grid-row:auto}
+  .projects-index-copy>p:not(.eyebrow){font-size:.95rem}
+}
+
+.projects-index-placeholder{display:flex;align-items:center;justify-content:center;height:100%;min-height:inherit;padding:24px;font-size:.75rem;color:var(--text-600);text-align:center}
+.projects-index-image:has(.projects-index-placeholder){display:grid;place-items:center}

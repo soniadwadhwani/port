@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
+import './projects.css'
+import './about-content.css'
+import aboutContent from './about-content.json'
+import aboutNotes from './home-about-notes.json'
 
-const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8']
-const projects = Array.from({ length: 5 }, (_, i) => ({
+const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8', '#BFD5D9']
+const projects = Array.from({ length: 6 }, (_, i) => ({
   number: String(i + 1).padStart(2, '0'), name: `Project ${String(i + 1).padStart(2, '0')}`,
   color: projectPlaceholderColors[i],
   category: 'Category placeholder', year: 'Year placeholder', description: 'Project description to be added.',
@@ -26,7 +30,13 @@ const projects = Array.from({ length: 5 }, (_, i) => ({
   category: 'Business Design | Lifestyle Design | Industry Project',
   image: '/assets/enrolme-hero.png',
   imageAlt: 'Enrol-Me hero artwork with its pastel bubble character and wordmark',
-} : project)
+} : index === 3 ? {
+  ...project, name: 'Trail Tag', category: 'Tangible Interface Design', description: 'Tangible interface design project. Details coming soon.',
+} : index === 4 ? {
+  ...project, name: 'Data Visualization', category: 'Data Visualization', description: 'Data visualization project. Details coming soon.',
+} : {
+  ...project, name: 'SWYM', description: 'Project details coming soon.',
+})
 const explorations = ['Sketch placeholder', 'Concept placeholder', 'Process placeholder', 'Experiment placeholder', 'Study placeholder', 'Idea placeholder']
 const aboutDetails = [
   { label: 'INTRODUCTION', text: '[Personal introduction to be supplied.]', image: 'About image placeholder 01' },
@@ -46,6 +56,7 @@ function Navigation() {
   const [tabProgress, setTabProgress] = useState([0, 0, 0, 0, 0])
   const projectProgressRef = useRef(0)
   const onAboutPage = window.location.pathname.endsWith('/about.html')
+  const onProjectsPage = window.location.pathname.endsWith('/projects.html')
   const onProjectPage = window.location.pathname.endsWith('/project.html')
   useEffect(() => {
     const update = () => {
@@ -90,10 +101,10 @@ function Navigation() {
     window.addEventListener('project-gallery-progress', updateProjectProgress)
     return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update); window.removeEventListener('project-gallery-progress', updateProjectProgress) }
   }, [onAboutPage, onProjectPage])
-  const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/#work'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
+  const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/projects.html'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
   const tabStyle = (index) => ({ '--tab-fill': `${tabProgress[index] * 100}%` })
   return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}${onProjectPage ? ' nav--static' : ''}`} aria-label="Main navigation" style={onProjectPage ? undefined : { '--scroll-progress': `${progress * 100}%` }}>
-    <a className="brand" style={onProjectPage ? undefined : tabStyle(0)} href={onAboutPage ? '/' : onProjectPage ? '/' : '#top'}>SONIA WADHWANI</a>
+    <a className="brand" style={onProjectPage ? undefined : tabStyle(0)} href={onAboutPage || onProjectsPage || onProjectPage ? '/' : '#top'}>SONIA WADHWANI</a>
     <button className="menu-toggle" aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}><span className="sr-only">Toggle navigation</span><i /><i /></button>
     <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={onProjectPage ? undefined : tabStyle(index + 1)} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
   </nav>
@@ -121,10 +132,6 @@ function Hero() {
 </div></section>
 }
 
-const aboutNotes = Array.from({ length: 15 }, (_, index) => ({
-  preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-}))
 const aboutPageNotes = [
   'I look at the small details that shape how an experience feels, and bring them together into something clear and useful.',
   'I use observation, research, and thoughtful questions to understand people and the worlds they move through.',
@@ -195,7 +202,18 @@ function AboutPreview() {
     const previouslyFocused = document.activeElement
     document.body.style.overflow = 'hidden'
     closeButtonRef.current?.focus()
-    const closeOnEscape = (event) => { if (event.key === 'Escape') setSelectedNote(null) }
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setSelectedNote(null)
+      if (event.key === 'Tab') {
+        const dialog = closeButtonRef.current?.closest('[role="dialog"]')
+        const footer = dialog?.querySelector('.about-note-footer')
+        if (event.shiftKey && document.activeElement === closeButtonRef.current) {
+          event.preventDefault(); footer?.focus()
+        } else if (!event.shiftKey && document.activeElement === footer) {
+          event.preventDefault(); closeButtonRef.current?.focus()
+        }
+      }
+    }
     window.addEventListener('keydown', closeOnEscape)
     return () => { document.body.style.overflow = previousOverflow; window.removeEventListener('keydown', closeOnEscape); previouslyFocused?.focus?.() }
   }, [selectedNote])
@@ -204,21 +222,131 @@ function AboutPreview() {
       <h2 id="about-home-title">Hi, I’m Sonia.</h2>
       <p className="about-home-meta">Experience Design · Psychology</p>
       <p className="about-home-description">I explore how people, technology, and everyday systems shape our experience.</p>
+      <a className="about-home-more" href="/about.html">Explore my About Me page ↗</a>
     </div>
     <div className="about-sticky-wall" aria-label="Sonia’s ideas" ref={stickyWallRef}>
-      {aboutNotes.map((note, index) => <button className={`about-sticky about-sticky--${index % 4 + 1} about-sticky-note--${index + 1}`} style={stickyPositions[index]} type="button" key={index} onPointerDown={(event) => startStickyDrag(event, index)} onPointerMove={moveSticky} onPointerUp={finishStickyDrag} onPointerCancel={finishStickyDrag} onClick={(event) => handleStickyClick(event, note)} aria-label="Drag to move or click to expand sticky note">
-        <span>{note.preview}</span>
+      {aboutNotes.map((note, index) => <button className={`about-sticky about-sticky--${index % 4 + 1} about-sticky-note--${index + 1}`} style={stickyPositions[index]} type="button" key={index} onPointerDown={(event) => startStickyDrag(event, index)} onPointerMove={moveSticky} onPointerUp={finishStickyDrag} onPointerCancel={finishStickyDrag} onClick={(event) => handleStickyClick(event, note)} aria-label={`${note.number ? `${note.number} ` : ''}${note.title}. Click for details or drag to move.`} aria-haspopup="dialog">
+        <span className="about-sticky-copy">{note.number && <strong className="about-sticky-number">{note.number}</strong>}<span>{note.title}</span></span>
       </button>)}
     </div>
     {selectedNote && <div className="about-note-overlay" onClick={() => setSelectedNote(null)}>
-      <article className={`about-note-expanded about-sticky--${(aboutNotes.indexOf(selectedNote) % 4) + 1}`} role="dialog" aria-modal="true" aria-label="Expanded sticky note" onClick={(event) => event.stopPropagation()}>
+      <article className={`about-note-expanded about-sticky--${(aboutNotes.indexOf(selectedNote) % 4) + 1}`} role="dialog" aria-modal="true" aria-labelledby="about-note-title" onClick={(event) => event.stopPropagation()}>
         <button ref={closeButtonRef} className="about-note-close" type="button" onClick={() => setSelectedNote(null)} aria-label="Close expanded note">×</button>
-        <p>{selectedNote.content}</p>
+        <div className="about-note-body">
+          <h3 id="about-note-title">{selectedNote.number && <span>{selectedNote.number} </span>}{selectedNote.title}</h3>
+          <p>{selectedNote.description}</p>
+          <ul>{selectedNote.details.map(detail => <li key={detail}>{detail}</li>)}</ul>
+        </div>
+        <a className="about-note-footer" href="/about.html">Explore my About Me page ↗</a>
       </article>
     </div>}
   </section>
 }
+const toolDomains = {
+  Figma: 'figma.com', 'Adobe Illustrator': 'illustrator.adobe.com', 'Adobe Photoshop': 'photoshop.adobe.com', Blender: 'blender.org', Framer: 'framer.com',
+  HTML: 'html.spec.whatwg.org', CSS: 'css3.com', JavaScript: 'javascript.com', 'p5.js': 'p5js.org', Python: 'python.org',
+  ChatGPT: 'chatgpt.com', 'Google Gemini': 'gemini.google.com', Claude: 'claude.ai', Grok: 'grok.com', Midjourney: 'midjourney.com', Runway: 'runwayml.com', ElevenLabs: 'elevenlabs.io', 'GitHub Copilot': 'github.com', n8n: 'n8n.io',
+}
+
+const toolLogoPaths = {
+  HTML: 'html5/html5-original.svg', CSS: 'css3/css3-original.svg', JavaScript: 'javascript/javascript-original.svg',
+  'Adobe Illustrator': 'illustrator/illustrator-plain.svg', 'Adobe Photoshop': 'photoshop/photoshop-original.svg',
+  'p5.js': 'p5js/p5js-original.svg',
+}
+function aboutToolLogo(tool) {
+  return toolLogoPaths[tool]
+    ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${toolLogoPaths[tool]}`
+    : `https://www.google.com/s2/favicons?domain=${toolDomains[tool]}&sz=128`
+}
+
+function AboutToolkit() {
+  return <div className="about-tool-marquee" aria-label="Design and development tools">
+    <div className="about-tool-track">{[0, 1].map(copy => <ul className="about-tool-set" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+      {aboutContent.tools.map(tool => <li key={tool}><button type="button" className="about-tool-logo" aria-label={tool} tabIndex={copy === 1 ? -1 : 0}>
+        <img src={aboutToolLogo(tool)} width="40" height="40" alt="" loading="lazy" />
+        <span className="about-tool-tooltip">{tool}</span>
+      </button></li>)}
+    </ul>)}</div>
+  </div>
+}
+
+function AboutContent() {
+  return <div className="about-content">
+    <section className="about-content-section" aria-labelledby="about-more-title">
+      <p className="eyebrow about-content-kicker">01 — ABOUT ME</p>
+      <div className="about-content-introduction">
+        <h2 id="about-more-title">A little about me</h2>
+        <div>{aboutContent.introduction.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+      </div>
+      <div className="about-content-interests"><h3>Design interests</h3><ul className="about-content-tags">{aboutContent.interests.map(item => <li key={item}>{item}</li>)}</ul></div>
+    </section>
+    <section className="about-content-section" aria-labelledby="about-skills-title">
+      <p className="eyebrow about-content-kicker">02 — HARD SKILLS</p>
+      <h2 id="about-skills-title">What I can do</h2>
+      <div className="about-skill-groups">{aboutContent.skills.map((group, index) => <details className="about-skill-group" key={group.name} open={index === 0}>
+        <summary><span className="about-skill-number">0{index + 1}</span><h3>{group.name}</h3><span className="about-skill-toggle" aria-hidden="true" /></summary>
+        <ul className="about-skill-cloud">{group.items.map(item => <li key={item}>{item}</li>)}</ul>
+      </details>)}</div>
+    </section>
+    <section className="about-content-section" aria-labelledby="about-work-title">
+      <p className="eyebrow about-content-kicker">03 — SOFT SKILLS</p>
+      <h2 id="about-work-title">How I work</h2>
+      <ul className="about-strengths">{aboutContent.softSkills.map(item => <li key={item}>{item}</li>)}</ul>
+    </section>
+    <section className="about-content-section" aria-labelledby="about-tools-title">
+      <p className="eyebrow about-content-kicker">04 — TOOLS & SOFTWARE</p>
+      <h2 id="about-tools-title">My toolkit</h2>
+      <AboutToolkit />
+    </section>
+    <section className="about-content-section" aria-labelledby="about-experience-title">
+      <p className="eyebrow about-content-kicker">05</p>
+      <h2 id="about-experience-title">Industry experience</h2>
+      <div className="about-internships">{aboutContent.experience.map(entry => <article className="about-internship" key={entry.title}>
+        <span className="about-internship-year">{entry.year}</span>
+        <div><h3>{entry.title}</h3><p>{entry.discipline}</p></div>
+        <p className="about-internship-meta">{entry.type}<span>{entry.duration}</span></p>
+      </article>)}</div>
+    </section>
+    <section className="about-content-section" aria-labelledby="about-learning-title">
+      <p className="eyebrow about-content-kicker">06 — WORKSHOPS & EXPERIENTIAL LEARNING</p>
+      <h2 id="about-learning-title">Learning by doing</h2>
+      <div className="about-workshops">{aboutContent.workshops.map(entry => <article key={entry.title}>
+        <h3>{entry.title}</h3><p>{entry.course}</p>
+      </article>)}</div>
+    </section>
+  </div>
+}
+
 function AboutPage() {
+  const exitScrollRef = useRef({ distance: 0, timer: null })
+  useEffect(() => {
+    const returnHomeAtEnd = (event) => {
+      const state = exitScrollRef.current
+      const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4
+      const delta = event.deltaMode === 1 ? event.deltaY * 16 : event.deltaMode === 2 ? event.deltaY * window.innerHeight : event.deltaY
+
+      if (!atPageEnd || delta <= 0) {
+        state.distance = 0
+        window.clearTimeout(state.timer)
+        state.timer = null
+        return
+      }
+
+      state.distance += delta
+      window.clearTimeout(state.timer)
+      state.timer = window.setTimeout(() => {
+        state.distance = 0
+        state.timer = null
+      }, 850)
+
+      if (state.distance >= 900) window.location.assign('/')
+    }
+    window.addEventListener('wheel', returnHomeAtEnd, { passive: true })
+    return () => {
+      window.removeEventListener('wheel', returnHomeAtEnd)
+      window.clearTimeout(exitScrollRef.current.timer)
+    }
+  }, [])
   return <main className="about-page" id="about-page-top">
     <Navigation />
     <section className="about-page-intro" aria-label="Introduction">
@@ -229,11 +357,8 @@ function AboutPage() {
       </div>
       <p className="about-intro-copy">Hi, I’m Sonia. A right-brain thinker driven by curiosity, I see design as a way to bridge emotion and function. I love creating experiences that tell stories, spark connection, and make everyday moments meaningful.</p>
     </section>
-    <section className="about-page-story" aria-label="About Sonia">
-      <div className="about-wide-image" role="img" aria-label="Wide image placeholder"><span>WIDE IMAGE PLACEHOLDER</span></div>
-      <div className="about-note-grid">{aboutPageNotes.map((note, index) => <p key={note}><span>0{index + 1}</span>{note}</p>)}</div>
-    </section>
-    <div className="about-closing-image" role="img" aria-label="Closing image placeholder"><span>IMAGE PLACEHOLDER</span></div>
+    <AboutContent />
+    <ContactFooter />
   </main>
 }
 
@@ -474,7 +599,7 @@ function SelectedProjects() {
     <div className="project-carousel">
       <header className="project-stage-header">Selected projects</header>
       <div className="project-track" ref={trackRef} aria-label="Selected projects">
-        <div className="project-gallery" style={{ '--gallery-shift': `${-scrollProgress * ((projects.length - 1) / projects.length) * 100}%` }}>{projects.map((item, index) => <ProjectCard key={item.number} project={item} selected={index === activeProject} />)}</div>
+        <div className="project-gallery" style={{ width: `${projects.length * 100}%`, '--project-slide-width': `${100 / projects.length}%`, '--gallery-shift': `${-scrollProgress * ((projects.length - 1) / projects.length) * 100}%` }}>{projects.map((item, index) => <ProjectCard key={item.number} project={item} selected={index === activeProject} />)}</div>
       </div>
       <div className="project-selection-frame" aria-hidden="true" />
       <footer className="project-caption" aria-live="polite">
@@ -561,7 +686,36 @@ function ContactFooter() { return <footer className="contact footer-contact" id=
   <div className="footer-meta"><span>© 2026 SONIA WADHWANI</span><span>EXPERIENCE DESIGN · FLAME UNIVERSITY</span><a href="#top">BACK TO TOP ↑</a></div>
 </footer> }
 
+function ProjectsPage() {
+  return <div className="projects-index" id="top">
+    <Navigation />
+    <main className="projects-index-content">
+      <header className="projects-index-heading">
+        <h1>Selected Projects</h1>
+        <p>Service design | UI/UX | Business design | AI/ML | Product Design | Ecosystems design</p>
+      </header>
+      <div className="projects-index-list">
+        {projects.map((project) => <a className="projects-index-row" href={project.destination} key={project.number} aria-label={`View ${project.name} project`}>
+          <div className="projects-index-image">{project.image ? <img src={project.image} alt={project.imageAlt} loading="lazy" /> : <span className="projects-index-placeholder">{project.name} · Image coming soon</span>}</div>
+          <div className="projects-index-copy">
+            <p className="eyebrow">{project.category}</p>
+            <h2>{project.name}</h2>
+            <p>{[
+              'A guided temple experience that supports elderly devotees through connected services and thoughtful touchpoints.',
+              'A lifestyle ecosystem exploring the relationship between everyday routines, personal goals, and experience.',
+              'An industry project exploring business and lifestyle design through the Enrol-Me concept.',
+            ][Number(project.number) - 1] || project.description}</p>
+            <span className="projects-index-cta">View project <Arrow /></span>
+          </div>
+        </a>)}
+      </div>
+    </main>
+    <ContactFooter />
+  </div>
+}
+
 function App() {
+  if (window.location.pathname.endsWith('/projects.html')) return <ProjectsPage />
   if (window.location.pathname.endsWith('/about.html')) return <AboutPage />
   if (window.location.pathname.endsWith('/project.html')) return <ProjectDetailsPage />
   return <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main>

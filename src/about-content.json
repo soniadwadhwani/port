@@ -1,0 +1,134 @@
+{
+  "introduction": [
+    "I'm Sonia, an Experience Designer interested in understanding people, exploring complex problems and turning ideas into meaningful experiences.",
+    "My approach to design combines research, creativity and systems thinking. I enjoy exploring the intersection of technology, human behaviour and design, and creating solutions that are not just visually engaging but also purposeful and intuitive.",
+    "I'm constantly experimenting, learning and finding new ways to look at everyday problems."
+  ],
+  "interests": [
+    "Human-Centred Design",
+    "Experience Design",
+    "Interaction Design",
+    "Service Design",
+    "Technology and Innovation"
+  ],
+  "skills": [
+    {
+      "name": "Research & Strategy",
+      "items": [
+        "User Research",
+        "Qualitative Research",
+        "User Interviews",
+        "Affinity Mapping",
+        "Competitive Analysis",
+        "Stakeholder Mapping",
+        "Journey Mapping",
+        "Systems Thinking",
+        "Information Architecture"
+      ]
+    },
+    {
+      "name": "Experience & Interface Design",
+      "items": [
+        "UX Design",
+        "UI Design",
+        "Interaction Design",
+        "Wireframing",
+        "Prototyping",
+        "Usability Testing",
+        "Design Systems",
+        "Visual Design"
+      ]
+    },
+    {
+      "name": "Creative & Technical",
+      "items": [
+        "Data Visualisation",
+        "Service Design",
+        "Business Design",
+        "Branding",
+        "Storyboarding",
+        "Front-end Development",
+        "Creative Coding",
+        "AI & ML Exploration",
+        "Automation and AI Workflows"
+      ]
+    }
+  ],
+  "softSkills": [
+    "Creative Problem Solving",
+    "Critical Thinking",
+    "Collaboration & Teamwork",
+    "Adaptability",
+    "Communication",
+    "Empathy",
+    "Attention to Detail",
+    "Research-oriented Thinking",
+    "Presentation & Storytelling",
+    "Curiosity & Experimentation"
+  ],
+  "tools": [
+    "Figma",
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Blender",
+    "Framer",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "p5.js",
+    "Python",
+    "ChatGPT",
+    "Google Gemini",
+    "Claude",
+    "Grok",
+    "Midjourney",
+    "Runway",
+    "ElevenLabs",
+    "GitHub Copilot",
+    "n8n"
+  ],
+  "experience": [
+    {
+      "title": "V Construct",
+      "year": "2025",
+      "discipline": "UI/UX",
+      "type": "Internship",
+      "duration": "2 months"
+    },
+    {
+      "title": "Velocio",
+      "year": "2025",
+      "discipline": "UI/UX",
+      "type": "Internship",
+      "duration": "2 months"
+    },
+    {
+      "title": "Traxsoft",
+      "year": "2026",
+      "discipline": "Business Design",
+      "type": "Internship + ongoing industry project",
+      "duration": "3 months"
+    },
+    {
+      "title": "Eduval",
+      "year": "2026",
+      "discipline": "UI/UX & Product Design",
+      "type": "Internship",
+      "duration": "3 months"
+    }
+  ],
+  "workshops": [
+    {
+      "title": "CIID Pop-Up School, 2024",
+      "course": "Interaction Design"
+    },
+    {
+      "title": "CIID Pop-Up School, 2025",
+      "course": "Speculative Design"
+    },
+    {
+      "title": "CIID Pop-Up School, 2026",
+      "course": "Ecosystem Design"
+    }
+  ]
+}

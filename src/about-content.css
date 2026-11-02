@@ -1,0 +1,101 @@
+/* Content below the existing About portrait and introduction. */
+.about-content{margin:0 auto;max-width:1240px;padding:24px clamp(32px,8vw,120px) 120px}
+.about-content-section{padding:64px 0 72px;border-top:1px solid var(--background-200)}
+.about-content-kicker{color:var(--text-600);font-size:.625rem;margin-bottom:28px;letter-spacing:.1em}
+.about-content h2{font-size:clamp(1.777rem,3.4vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:32px;letter-spacing:-.025em}
+.about-content h3{font-size:.9rem;font-weight:700;line-height:1.5;margin-bottom:20px}
+.about-content p,.about-content li,.about-content dd{font-size:.95rem;line-height:1.65}
+.about-content ul{padding:0;margin:0;list-style:none}
+.about-content-introduction{display:grid;grid-template-columns:1fr 1.5fr;gap:48px}
+.about-content-introduction p+p{margin-top:18px}
+.about-content-interests{margin-top:48px}
+.about-content-tags{display:flex;flex-wrap:wrap;gap:10px}
+.about-content-tags li{border:1px solid var(--background-200);border-radius:var(--radius-sm);padding:8px 14px;font-size:.75rem}
+.about-content-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:40px}
+.about-content-skill-list li{padding:5px 0}
+.about-content-soft-skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
+.about-content-soft-skills li{display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--background-100)}
+.about-content-soft-skills li span{font-size:.625rem;color:var(--text-600)}
+.about-content-tool-groups{display:grid;gap:36px;margin-top:40px}
+.about-content-tools{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.about-content-tools li{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:116px;padding:18px 10px;background:var(--primary-50);border:1px solid var(--background-100);border-radius:var(--radius-sm);text-align:center;font-size:.75rem}
+.about-content-tools img{height:32px;width:32px;object-fit:contain}
+.about-content-lead{max-width:720px;margin-bottom:40px}
+.about-content-experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.about-content-experience{padding:28px;background:var(--primary-50);border:1px solid var(--background-100);border-radius:var(--radius-sm)}
+.about-content-experience h3{font-size:1.333rem;font-weight:400;margin-bottom:24px}
+.about-content-experience dl{margin:0;display:grid;gap:16px}
+.about-content-experience dt{font-size:.625rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-600);margin-bottom:4px}
+.about-content-experience dd{margin:0;font-size:.8rem;overflow-wrap:anywhere}
+.about-content-experience dd li{font-size:inherit;margin-bottom:8px}
+.about-content-workshop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.about-content-workshop-grid .about-content-experience{padding:24px}
+@media(max-width:900px){.about-content-tools{grid-template-columns:repeat(3,minmax(0,1fr))}.about-content-workshop-grid{grid-template-columns:1fr}.about-content-columns{gap:20px}}
+@media(max-width:700px){
+ .about-content{padding:64px 9vw 64px}
+ .about-content-section{padding:36px 0 48px}
+ .about-content-introduction,.about-content-columns,.about-content-experience-grid{grid-template-columns:1fr;gap:24px}
+ .about-content h2{margin-bottom:24px}
+ .about-content-introduction h2{margin-bottom:0}
+ .about-content p,.about-content li{font-size:.85rem}
+ .about-content-soft-skills{grid-template-columns:1fr}
+ .about-content-tools{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .about-content-tools li{font-size:.65rem;min-height:104px;gap:12px;padding:12px 6px}
+ .about-content-experience{padding:24px}
+ .about-content-interests{margin-top:32px}
+ .about-content-tags li{font-size:.7rem}
+}
+
+/* Compact skills, experience, and continuously moving toolkit. */
+.about-skill-groups{border-top:1px solid var(--background-200)}
+.about-skill-group{border-bottom:1px solid var(--background-200)}
+.about-skill-group summary{display:flex;align-items:center;gap:24px;padding:24px 0;cursor:pointer;list-style:none}
+.about-skill-group summary::-webkit-details-marker{display:none}
+.about-skill-group summary h3{margin:0;font-weight:400;font-size:clamp(1rem,2vw,1.333rem)}
+.about-skill-number{font-size:.65rem;color:var(--text-600)}
+.about-skill-toggle{margin-left:auto;width:18px;height:18px;position:relative;flex-shrink:0}
+.about-skill-toggle:before,.about-skill-toggle:after{content:'';position:absolute;background:var(--text-600);width:14px;height:1px;left:2px;top:8px}
+.about-skill-toggle:after{transform:rotate(90deg);transition:transform .2s}
+.about-skill-group[open] .about-skill-toggle:after{transform:rotate(0)}
+.about-content .about-skill-cloud{display:flex;flex-wrap:wrap;gap:10px;padding:0 0 28px 40px}
+.about-skill-cloud li{padding:8px 14px;background:var(--primary-100);border-radius:4px;font-size:.8rem}
+.about-content .about-strengths{display:flex;flex-wrap:wrap;gap:0 28px;max-width:860px}
+.about-strengths li{font-size:clamp(1rem,1.8vw,1.4rem);font-weight:400;line-height:1.5;padding:14px 0;display:flex;gap:28px;align-items:center}
+.about-strengths li:before{content:'✳';font-size:.9rem;color:var(--accent-500)}
+.about-strengths li:nth-child(3n+2):before{color:var(--primary-600)}
+.about-tool-marquee{overflow:hidden;padding:20px 0 46px;margin:0 -16px}
+.about-tool-track{display:flex;width:max-content;animation:aboutToolkitScroll 55s linear infinite}
+.about-content .about-tool-set{display:flex;align-items:center;gap:24px;padding:0 12px;flex-shrink:0}
+.about-tool-logo{width:72px;height:80px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;position:relative;cursor:default;padding:12px}
+.about-tool-logo img{width:40px;height:40px;object-fit:contain;transition:transform .2s}
+.about-tool-tooltip{position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%) translateY(-4px);opacity:0;pointer-events:none;background:var(--text);color:var(--background);padding:5px 9px;border-radius:4px;font-size:.65rem;white-space:nowrap;transition:opacity .15s,transform .15s;z-index:1}
+.about-tool-logo:hover .about-tool-tooltip,.about-tool-logo:focus .about-tool-tooltip{opacity:1;transform:translateX(-50%) translateY(0)}
+.about-tool-logo:hover img,.about-tool-logo:focus img{transform:scale(1.12)}
+.about-tool-marquee:hover .about-tool-track,.about-tool-marquee:focus-within .about-tool-track{animation-play-state:paused}
+@keyframes aboutToolkitScroll{to{transform:translateX(-50%)}}
+.about-internship{display:grid;grid-template-columns:60px 1fr 1fr;gap:24px;align-items:baseline;border-top:1px solid var(--background-200);padding:28px 0}
+.about-internship-year{font-size:.75rem;color:var(--text-600)}
+.about-internship h3{font-size:1.333rem;font-weight:400;margin-bottom:8px}
+.about-internship p{font-size:.85rem}
+.about-internship-meta{text-align:right;color:var(--text-600)}
+.about-internship-meta span{display:block;font-size:.75rem;margin-top:8px}
+.about-workshops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.about-workshops article{border-top:1px solid var(--background-200);padding-top:24px}
+.about-workshops h3{font-size:.85rem;font-weight:400;margin-bottom:10px}
+.about-workshops p{color:var(--text-600);font-size:.8rem}
+@media(max-width:700px){
+ .about-content .about-skill-cloud{padding-left:0;gap:8px}
+ .about-skill-cloud li{font-size:.7rem}
+ .about-skill-group summary{gap:14px}
+ .about-content .about-strengths{column-gap:20px}
+ .about-strengths li{font-size:.95rem;gap:12px;padding:10px 0}
+ .about-internship{grid-template-columns:44px 1fr;gap:12px 16px;padding:24px 0}
+ .about-internship-meta{grid-column:2;text-align:left}
+ .about-internship-meta span{display:inline;margin-left:12px}
+ .about-workshops{grid-template-columns:1fr;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){.about-tool-marquee{overflow-x:auto}.about-tool-track{animation:none}.about-tool-set[aria-hidden=true]{display:none}}
+
+/* Keep design interests in a single row, with horizontal scrolling on narrow screens. */
+.about-content .about-content-tags{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;gap:8px}
+.about-content-tags li{flex:0 0 auto;white-space:nowrap;padding:8px 10px;font-size:.7rem}

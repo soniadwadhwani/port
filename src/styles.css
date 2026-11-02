@@ -125,8 +125,9 @@ html,body,#root{background:#F3F7F6}
 .about-note-grid{display:grid;gap:clamp(16px,3vw,40px);grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px}
 .about-note-grid p{font-size:clamp(.8rem,1vw,.95rem);line-height:1.45}
 .about-note-grid p span{color:var(--accent);display:block;font-size:.67rem;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
-.about-closing-image{align-items:center;background:#D9D9D9;display:flex;justify-content:center;margin:0 10px;min-height:260px}
-@media(max-width:700px){.about-page{padding-top:0}.about-page-intro{display:block;margin:0;padding:158px 9vw 0;min-height:0}.about-collage{height:150px;width:100%}.about-collage-photo{height:98px;top:40px;width:38%}.about-collage-accent{height:79px;left:21%;top:0;width:55%}.about-intro-copy{font-size:.78rem;line-height:1.38;margin-top:18px;max-width:none;padding:0;transform:none}.about-page-story{margin-top:62px;padding:0 9vw 0}.about-wide-image{aspect-ratio:2.54}.about-note-grid{gap:20px 16px;margin-top:26px}.about-note-grid p{font-size:.72rem;line-height:1.35}.about-note-grid p span{font-size:.6rem;margin-bottom:8px}.about-closing-image{margin:320px 10px 0;min-height:0;aspect-ratio:2.02}.about-collage-photo span,.about-wide-image span,.about-closing-image span{font-size:.56rem;padding:7px 8px}}
+.about-closing-image{background:#D9D9D9;margin:0 10px;overflow:hidden;position:relative}
+.about-closing-image img{display:block;height:auto;object-fit:contain;position:static;width:100%}
+@media(max-width:700px){.about-page{padding-top:0}.about-page-intro{display:block;margin:0;padding:158px 9vw 0;min-height:0}.about-collage{height:150px;width:100%}.about-collage-photo{height:98px;top:40px;width:38%}.about-collage-accent{height:79px;left:21%;top:0;width:55%}.about-intro-copy{font-size:.78rem;line-height:1.38;margin-top:18px;max-width:none;padding:0;transform:none}.about-page-story{margin-top:62px;padding:0 9vw 0}.about-wide-image{aspect-ratio:2.54}.about-note-grid{gap:20px 16px;margin-top:26px}.about-note-grid p{font-size:.72rem;line-height:1.35}.about-note-grid p span{font-size:.6rem;margin-bottom:8px}.about-closing-image{margin:320px 10px 0;min-height:0;aspect-ratio:auto}.about-collage-photo span,.about-wide-image span,.about-closing-image span{font-size:.56rem;padding:7px 8px}}
 @media(max-width:380px){.about-page-intro{padding-inline:7vw}.about-collage-photo{width:42%}.about-collage-accent{left:29%;width:50%}.about-page-story{padding-inline:7vw}.about-note-grid{gap:12px}.about-note-grid p{font-size:.67rem}.about-closing-image{margin-top:260px}}
 @media(min-width:701px){.nav{grid-template-columns:repeat(5,minmax(0,1fr))}.nav-links a:nth-child(4){background:rgb(207 229 223 / .92);color:var(--text);grid-column:5}}
 
@@ -934,3 +935,42 @@ html,body,#root{background:#F3F7F6}
  .saarthi-stage-artifact img{max-height:none}
 }
 
+
+/* Homepage paper notes: editable content, with the original scattered positions. */
+.about-home-more{display:inline-block;font-size:.75rem;margin-top:16px;text-underline-offset:4px}
+.about-home-more:hover{text-decoration:underline}
+.about-sticky-copy{display:flex;flex-direction:column;gap:8px;overflow-wrap:break-word}
+.about-sticky-number{font-size:clamp(1.3rem,2.6vw,2.35rem);font-weight:400;line-height:1}
+.about-sticky:active{scale:.97}
+.about-note-expanded{display:flex;flex-direction:column;aspect-ratio:auto;min-height:360px;overflow-y:auto;animation:about-paper-open .2s ease both}
+.about-note-body h3{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;line-height:1.2;margin:0 0 24px;padding-right:16px}
+.about-note-body p{font-size:clamp(.95rem,1.4vw,1.15rem);line-height:1.5}
+.about-note-body ul{padding-left:18px;margin:20px 0 28px}
+.about-note-body li{font-size:clamp(.8rem,1.1vw,.95rem);line-height:1.5;margin-bottom:8px}
+.about-note-footer{align-self:flex-end;margin-top:auto;padding-top:16px;text-align:right;font-size:.75rem;text-underline-offset:4px}
+.about-note-footer:hover{text-decoration:underline}
+@keyframes about-paper-open{from{opacity:0;transform:translateY(10px) rotate(-1deg) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:700px){.about-sticky-number{font-size:1.6rem}.about-sticky-copy{gap:6px}.about-note-expanded{min-height:300px}.about-note-footer{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){.about-note-expanded{animation:none}.about-sticky:active{scale:1}}
+
+/* Consistent type for the homepage's text-only paper notes. */
+.about-sticky:not(:has(.about-sticky-number)){font-size:clamp(.8rem,1.05vw,1rem);line-height:1.3}
+.about-home-scroll + .work{padding-top:40px}
+.about-home-scroll .about-sticky-wall{margin-bottom:-48px}
+@media(max-width:700px){
+ .about-sticky:not(:has(.about-sticky-number)){font-size:clamp(.72rem,2.7vw,.95rem)}
+ .about-home-scroll + .work{padding-top:28px}
+ .about-home-scroll .about-sticky-wall{margin-bottom:-24px}
+}
+
+/* Bring the project heading directly beneath the scattered notes. */
+.about-home-scroll .about-sticky-wall{margin-bottom:-110px}
+.about-home-scroll + .project-scroll-section{padding-top:0}
+.about-home-scroll + .project-scroll-section .project-carousel{justify-content:flex-start;padding-top:24px}
+@media(max-width:700px){
+ .about-home-scroll .about-sticky-wall{margin-bottom:-48px}
+ .about-home-scroll + .project-scroll-section .project-carousel{padding-top:20px}
+}
+
+/* Each homepage slide occupies one viewport of the project track. */
+.project-scroll-section .project-gallery > .project-card{flex:0 0 var(--project-slide-width);height:100%;min-width:0;scroll-snap-align:none}

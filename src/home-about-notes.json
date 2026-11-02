@@ -1,0 +1,137 @@
+[
+  {
+    "number": "16+",
+    "title": "Academic Projects",
+    "description": "Exploring design through hands-on academic work.",
+    "details": [
+      "Projects across experience, interaction, service and business design.",
+      "From understanding a problem to developing and presenting a concept."
+    ]
+  },
+  {
+    "number": "04",
+    "title": "Industry Experiences",
+    "description": "Applying design in real-world contexts.",
+    "details": [
+      "V Construct \u00b7 UI/UX \u00b7 2025",
+      "Velocio \u00b7 UI/UX \u00b7 2025",
+      "Traxsoft \u00b7 Business Design \u00b7 2026",
+      "Eduval \u00b7 UI/UX & Product Design \u00b7 2026"
+    ]
+  },
+  {
+    "number": "03",
+    "title": "CIID Workshops",
+    "description": "Learning through experimentation at CIID Pop-Up Schools.",
+    "details": [
+      "2024 \u00b7 Interaction Design",
+      "2025 \u00b7 Speculative Design",
+      "2026 \u00b7 Ecosystem Design"
+    ]
+  },
+  {
+    "number": "19",
+    "title": "Tools & Technologies",
+    "description": "A toolkit for designing, building and experimenting.",
+    "details": [
+      "Design: Figma, Illustrator, Photoshop, Blender and Framer.",
+      "Development: HTML, CSS, JavaScript, p5.js and Python.",
+      "AI: ChatGPT, Gemini, Claude, Grok, Midjourney, Runway, ElevenLabs, GitHub Copilot and n8n."
+    ]
+  },
+  {
+    "number": "20+",
+    "title": "Design Skills",
+    "description": "Connecting research, design and technical exploration.",
+    "details": [
+      "Research & strategy, including user interviews and journey mapping.",
+      "Experience & interface design, including wireframing and usability testing.",
+      "Creative & technical skills, including branding, creative coding and AI workflows."
+    ]
+  },
+  {
+    "number": "10",
+    "title": "Months of Internship Experience",
+    "description": "Learning by contributing to teams and projects.",
+    "details": [
+      "V Construct \u00b7 2 months",
+      "Velocio \u00b7 2 months",
+      "Traxsoft \u00b7 3 months",
+      "Eduval \u00b7 3 months"
+    ]
+  },
+  {
+    "number": null,
+    "title": "Research & Strategy",
+    "description": "Understanding people and the context around a problem.",
+    "details": [
+      "User research, qualitative research and interviews.",
+      "Affinity mapping, competitive analysis and stakeholder mapping.",
+      "Journey mapping and information architecture."
+    ]
+  },
+  {
+    "number": null,
+    "title": "UX & UI Design",
+    "description": "Turning user needs into clear digital experiences.",
+    "details": [
+      "Wireframes, interface design and visual design.",
+      "Design systems, prototypes and usability testing."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Interaction Design",
+    "description": "Exploring how people move through and respond to an experience.",
+    "details": [
+      "Interaction flows, wireframing and prototyping.",
+      "CIID Pop-Up School 2024 \u00b7 Interaction Design."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Service & Business Design",
+    "description": "Considering how an experience connects to the services and organisations behind it.",
+    "details": [
+      "Service design, business design and stakeholder mapping.",
+      "Saarthi \u00b7 a guided temple experience.",
+      "Traxsoft \u00b7 Business Design internship and industry project."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Systems Thinking",
+    "description": "Looking at relationships across people, technology and everyday systems.",
+    "details": [
+      "Stakeholder mapping, journey mapping and connected experiences.",
+      "CIID Pop-Up School 2026 \u00b7 Ecosystem Design."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Prototyping & Development",
+    "description": "Making ideas tangible so they can be explored and refined.",
+    "details": [
+      "Wireframing, prototyping and front-end development.",
+      "HTML, CSS, JavaScript, p5.js and Python."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Creative Technology",
+    "description": "Experimenting where design and technology meet.",
+    "details": [
+      "Creative coding and data visualisation.",
+      "AI & ML exploration, automation and AI workflows."
+    ]
+  },
+  {
+    "number": null,
+    "title": "Human-Centred Design",
+    "description": "Keeping people\u2019s needs, motivations and experiences at the centre of design.",
+    "details": [
+      "An approach informed by empathy and psychology.",
+      "Understanding people through research and evaluating ideas through usability testing."
+    ]
+  }
+]
