@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 import './projects.css'
@@ -6,8 +6,8 @@ import './about-content.css'
 import aboutContent from './about-content.json'
 import aboutNotes from './home-about-notes.json'
 
-const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8', '#BFD5D9']
-const projects = Array.from({ length: 6 }, (_, i) => ({
+const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8']
+const projects = Array.from({ length: 5 }, (_, i) => ({
   number: String(i + 1).padStart(2, '0'), name: `Project ${String(i + 1).padStart(2, '0')}`,
   color: projectPlaceholderColors[i],
   category: 'Category placeholder', year: 'Year placeholder', description: 'Project description to be added.',
@@ -32,10 +32,10 @@ const projects = Array.from({ length: 6 }, (_, i) => ({
   imageAlt: 'Enrol-Me hero artwork with its pastel bubble character and wordmark',
 } : index === 3 ? {
   ...project, name: 'Trail Tag', category: 'Tangible Interface Design', description: 'Tangible interface design project. Details coming soon.',
-} : index === 4 ? {
-  ...project, name: 'Data Visualization', category: 'Data Visualization', description: 'Data visualization project. Details coming soon.',
+  image: '/assets/trail-tag-hero.png', imageAlt: 'Trail Tag screenless navigation wearable for trekkers, with pre-placed and portable beacons and a receiver band',
 } : {
-  ...project, name: 'SWYM', description: 'Project details coming soon.',
+  ...project, name: 'Data Visualization', category: 'Data Visualization', description: 'Data visualization project. Details coming soon.',
+  image: '/assets/data-visualization-hero-v2.png', imageAlt: 'Data Visualisation hero illustration with pie, bar and line charts',
 })
 const explorations = ['Sketch placeholder', 'Concept placeholder', 'Process placeholder', 'Experiment placeholder', 'Study placeholder', 'Idea placeholder']
 const aboutDetails = [
@@ -58,9 +58,11 @@ function Navigation() {
   const onAboutPage = window.location.pathname.endsWith('/about.html')
   const onProjectsPage = window.location.pathname.endsWith('/projects.html')
   const onProjectPage = window.location.pathname.endsWith('/project.html')
+  const showProgress = !onAboutPage && !onProjectsPage && !onProjectPage
   useEffect(() => {
     const update = () => {
       setScrolled(window.scrollY > 20)
+      if (!showProgress) return
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
       const pageProgress = maxScroll > 0 ? window.scrollY / maxScroll : 0
       setProgress(pageProgress)
@@ -69,7 +71,7 @@ function Navigation() {
       // In particular, Projects spans the entire pinned horizontal gallery.
       const sectionIds = ['top', 'about', 'work', 'explorations', 'contact']
       const sections = sectionIds.map((id) => document.getElementById(id))
-      if (!onAboutPage && !onProjectPage && sections.every(Boolean)) {
+      if (sections.every(Boolean)) {
         const starts = sections.map((section) => section.getBoundingClientRect().top + window.scrollY)
         const ends = [...starts.slice(1), maxScroll]
         const nextProgress = starts.map((start, index) => {
@@ -82,12 +84,10 @@ function Navigation() {
           nextProgress[2] = projectProgressRef.current
         }
         setTabProgress(nextProgress)
-      } else {
-        // Retain the existing full-page progression on the standalone About page.
-        setTabProgress(Array.from({ length: 5 }, (_, index) => Math.max(0, Math.min(1, pageProgress * 5 - index))))
       }
     }
     const updateProjectProgress = (event) => {
+      if (!showProgress) return
       projectProgressRef.current = event.detail
       const projectSection = document.getElementById('work')
       if (!projectSection) return
@@ -100,13 +100,13 @@ function Navigation() {
     window.addEventListener('resize', update)
     window.addEventListener('project-gallery-progress', updateProjectProgress)
     return () => { window.removeEventListener('scroll', update); window.removeEventListener('resize', update); window.removeEventListener('project-gallery-progress', updateProjectProgress) }
-  }, [onAboutPage, onProjectPage])
+  }, [showProgress])
   const links = [['About', onAboutPage ? '#about-page-top' : '/about.html'], ['Projects', '/projects.html'], ['Graphics', '/#explorations'], ['Contact', '/#contact']]
   const tabStyle = (index) => ({ '--tab-fill': `${tabProgress[index] * 100}%` })
-  return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}${onProjectPage ? ' nav--static' : ''}`} aria-label="Main navigation" style={onProjectPage ? undefined : { '--scroll-progress': `${progress * 100}%` }}>
-    <a className="brand" style={onProjectPage ? undefined : tabStyle(0)} href={onAboutPage || onProjectsPage || onProjectPage ? '/' : '#top'}>SONIA WADHWANI</a>
+  return <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}${onProjectPage ? ' nav--static' : ''}`} aria-label="Main navigation" style={!showProgress ? undefined : { '--scroll-progress': `${progress * 100}%` }}>
+    <a className="brand" style={!showProgress ? undefined : tabStyle(0)} href={onAboutPage || onProjectsPage || onProjectPage ? '/' : '#top'}>SONIA WADHWANI</a>
     <button className="menu-toggle" aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}><span className="sr-only">Toggle navigation</span><i /><i /></button>
-    <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={onProjectPage ? undefined : tabStyle(index + 1)} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
+    <div id="nav-links" className={`nav-links ${open ? 'nav-links--open' : ''}`}>{links.map(([name, href], index) => <a style={!showProgress ? undefined : tabStyle(index + 1)} key={name} href={href} onClick={() => setOpen(false)}>{name}</a>)}</div>
   </nav>
 }
 
@@ -399,14 +399,13 @@ function SaarthiArtifact({ src, alt, label }) {
 }
 
 function SaarthiCaseStudy({ project }) {
-  useEffect(() => {
-    const returnToProjectsAtEnd = (event) => {
-      const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2
-      if (event.deltaY > 0 && atPageEnd) window.location.assign('/#work')
-    }
-    window.addEventListener('wheel', returnToProjectsAtEnd, { passive: true })
-    return () => window.removeEventListener('wheel', returnToProjectsAtEnd)
-  }, [])
+  const filmAudioInitialized = useRef(false)
+  const initializeFilmAudio = (event) => {
+    if (filmAudioInitialized.current) return
+    event.currentTarget.muted = false
+    event.currentTarget.volume = 1
+    filmAudioInitialized.current = true
+  }
   const stages = [
     { number: '01', title: 'Understanding the Experience', headline: 'A temple visit is more than just reaching the destination.', text: 'For elderly devotees, visiting a temple involves navigating multiple stages of an experience, from planning the journey and arranging transportation to navigating crowds, accessing facilities, and completing the visit comfortably. The challenge was to look beyond the temple itself and understand the experience surrounding the visit.', image: '/assets/saarthi-affinity-map.png', artifact: 'Affinity map', alt: 'Saarthi research affinity map' },
     { number: '02', title: 'Identifying the Gaps', headline: 'The experience extends beyond the temple gates.', text: 'Looking at the experience as a whole meant considering not just what happens inside the temple, but also the support devotees need before, during, and after their visit. Transportation, waiting times, navigation, access to assistance, and opportunities to rest all form part of the broader experience. This shifted the focus towards understanding how the different parts of a temple visit could work together to make the journey more manageable.', image: '/assets/saarthi-journey-map.png', artifact: 'Journey map', alt: 'Saarthi desired journey map' },
@@ -421,9 +420,10 @@ function SaarthiCaseStudy({ project }) {
     { title: 'PLACE & INFRASTRUCTURE', color: '#9d5a43', points: [['temple','Temple facilities'], ['sign','Checkpoints'], ['rest','Rest stations'], ['cab','Cabs'], ['ride','Shared rides']] },
     { title: 'INFORMATION', color: '#d39c87', points: [['message','WhatsApp updates'], ['clock','Crowd and wait times'], ['ticket','Ride bookings'], ['id','Volunteer details'], ['audio','Audio stories']] },
   ]
-  return <main className="saarthi-page" id="project-page-top">
+  return <main className="saarthi-page saarthi-case-study" id="project-page-top">
     <Navigation />
     <header className="saarthi-hero case-wrap">
+      <a className="saarthi-top-back" href="/projects.html">← Back</a>
       <p className="saarthi-overline">CASE STUDY · SERVICE DESIGN</p>
       <h1>{project.name}</h1>
       <p className="saarthi-description">A guided temple experience for elderly devotees.</p>
@@ -432,12 +432,14 @@ function SaarthiCaseStudy({ project }) {
     </header>
 
     <section className="saarthi-overview case-wrap" aria-labelledby="saarthi-overview-title">
-      <div className="saarthi-section-heading"><p className="saarthi-overline">02 · OVERVIEW</p><h2 id="saarthi-overview-title">About Saarthi</h2></div>
+      <div className="saarthi-section-heading"><p className="saarthi-overline">OVERVIEW</p><h2 id="saarthi-overview-title">About Saarthi</h2></div>
       <div className="saarthi-overview-copy"><p>Saarthi is a service concept designed to make temple visits more accessible, comfortable, and convenient for elderly devotees. It brings together digital information, transportation, volunteer assistance, and on-ground facilities to create a more supported temple experience.</p><p>The goal is to make every stage of a temple visit easier, from planning the journey and reaching the temple to experiencing darshan and returning home.</p></div>
     </section>
 
-    <section className="saarthi-ecosystem case-wrap" aria-labelledby="saarthi-ecosystem-title">
-      <div className="saarthi-section-heading"><p className="saarthi-overline">THE SERVICE ECOSYSTEM</p><h2 id="saarthi-ecosystem-title">A connected experience</h2><p>Saarthi connects people, products, information, and physical infrastructure around the temple visit.</p></div>
+    <section className="saarthi-journey case-wrap" aria-labelledby="saarthi-journey-title">
+      <div className="saarthi-section-heading"><p className="saarthi-overline">THE JOURNEY OF MAKING SAARTHI</p><h2 id="saarthi-journey-title">From understanding the challenges of temple visits to designing a service that brings people, information, and infrastructure together.</h2></div>
+      <div className="saarthi-stages">{stages.map((stage) => <Fragment key={stage.number}><article className="saarthi-stage"><div className="saarthi-stage-copy"><h3>{stage.title}</h3><h4>{stage.headline}</h4><p>{stage.text}</p></div><SaarthiArtifact src={stage.image} alt={stage.alt} label={stage.artifact} /></article>{stage.number === '04' && (<section className="saarthi-ecosystem" aria-labelledby="saarthi-ecosystem-title">
+      <div className="saarthi-section-heading"><h2 id="saarthi-ecosystem-title">Service touch points</h2><p>Saarthi connects people, products, information, and physical infrastructure around the temple visit.</p></div>
       <div className="saarthi-touchpoints" aria-label="Saarthi service touchpoints">
         {touchpoints.map((group, groupIndex) => <article className={`saarthi-venn-lobe saarthi-venn-lobe--${groupIndex + 1}`} key={group.title} style={{ '--ring-color': group.color }}>
           <h3>{group.title}</h3>
@@ -445,20 +447,15 @@ function SaarthiCaseStudy({ project }) {
         </article>)}
         <div className="saarthi-touchpoints-core"><span>SAARTHI</span><strong>A supported<br />temple visit</strong></div>
       </div>
-    </section>
-
-    <section className="saarthi-journey case-wrap" aria-labelledby="saarthi-journey-title">
-      <div className="saarthi-section-heading"><p className="saarthi-overline">03 · THE JOURNEY OF MAKING SAARTHI</p><h2 id="saarthi-journey-title">From understanding the challenges of temple visits to designing a service that brings people, information, and infrastructure together.</h2></div>
-      <div className="saarthi-stages">{stages.map((stage) => <article className="saarthi-stage" key={stage.number}><div className="saarthi-stage-copy"><p className="saarthi-overline">{stage.number}</p><h3>{stage.title}</h3><h4>{stage.headline}</h4><p>{stage.text}</p></div><SaarthiArtifact src={stage.image} alt={stage.alt} label={stage.artifact} /></article>)}</div>
+    </section>)}</Fragment>)}</div>
     </section>
 
     <section className="saarthi-film case-wrap" aria-labelledby="saarthi-film-title">
-      <div className="saarthi-section-heading"><p className="saarthi-overline">04 · THE FINAL FILM</p><h2 id="saarthi-film-title">Experience Saarthi</h2><p>A guided temple experience, designed around care, comfort, and companionship.</p></div>
-      <video className="saarthi-final-video" controls playsInline preload="metadata" poster={project.image} aria-label="Saarthi final video advertisement"><source src="/assets/saarthi-final-film.mp4" type="video/mp4" />Your browser does not support the video element.</video>
+      <div className="saarthi-section-heading"><p className="saarthi-overline">THE FINAL FILM</p><h2 id="saarthi-film-title">Experience Saarthi</h2><p>A guided temple experience, designed around care, comfort, and companionship.</p></div>
+      <video className="saarthi-final-video" controls playsInline muted={false} onPlay={initializeFilmAudio} preload="metadata" poster={project.image} aria-label="Saarthi final video advertisement"><source src="/assets/saarthi-final-film-audio-fixed.mp4" type="video/mp4" />Your browser does not support the video element.</video>
     </section>
 
     <section className="saarthi-closing case-wrap" aria-label="Return to portfolio projects">
-      <a className="saarthi-closing-image" href="/#work" aria-label="Return to selected projects on the homepage"><img src={project.image} alt="Saarthi case study closing image; select to return to projects" /><span>BACK TO SELECTED PROJECTS ↗</span></a>
       <a className="saarthi-back-link" href="/#work">← Back to selected projects</a>
       <a className="saarthi-home-link" href="/">Home</a>
     </section>
@@ -686,17 +683,40 @@ function ContactFooter() { return <footer className="contact footer-contact" id=
   <div className="footer-meta"><span>© 2026 SONIA WADHWANI</span><span>EXPERIENCE DESIGN · FLAME UNIVERSITY</span><a href="#top">BACK TO TOP ↑</a></div>
 </footer> }
 
+const projectCategories = [
+  { name: 'Service Design', projects: ['01'] },
+  { name: 'UI/UX', projects: ['03', '05'] },
+  { name: 'Business Design', projects: ['03'] },
+  { name: 'AI/ML', projects: ['01', '03', '05'] },
+  { name: 'Product Design', projects: ['04'] },
+  { name: 'Ecosystem Design', projects: ['02'] },
+]
+
 function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState(null)
+  const resultsRef = useRef(null)
+  const visibleProjects = selectedCategory ? projects.filter(project => selectedCategory.projects.includes(project.number)) : projects
+  useEffect(() => {
+    if (selectedCategory) resultsRef.current?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' })
+  }, [selectedCategory])
   return <div className="projects-index" id="top">
     <Navigation />
     <main className="projects-index-content">
       <header className="projects-index-heading">
         <h1>Selected Projects</h1>
-        <p>Service design | UI/UX | Business design | AI/ML | Product Design | Ecosystems design</p>
+        <nav className="projects-category-links" aria-label="Project categories">
+          <button type="button" aria-pressed={!selectedCategory} onClick={() => setSelectedCategory(null)}>All projects</button>
+          {projectCategories.map(category => <button type="button" key={category.name} aria-pressed={selectedCategory === category} onClick={() => {
+            setSelectedCategory(category)
+            if (selectedCategory === category) resultsRef.current?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
+          }}>{category.name}</button>)}
+        </nav>
       </header>
+      <div ref={resultsRef} className="projects-category-results" tabIndex={-1}>
+      {selectedCategory && <div className="projects-category-summary"><p role="status">{selectedCategory.name} · {visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</p><button type="button" onClick={() => setSelectedCategory(null)}>Show all projects</button></div>}
       <div className="projects-index-list">
-        {projects.map((project) => <a className="projects-index-row" href={project.destination} key={project.number} aria-label={`View ${project.name} project`}>
-          <div className="projects-index-image">{project.image ? <img src={project.image} alt={project.imageAlt} loading="lazy" /> : <span className="projects-index-placeholder">{project.name} · Image coming soon</span>}</div>
+        {visibleProjects.map((project) => <a className="projects-index-row" href={project.destination} key={project.number} aria-label={`View ${project.name} project`}>
+          <div className="projects-index-image">{project.image || project.number === '04' || project.number === '05' ? <img src={project.number === '01' ? '/assets/saarthi-projects-preview.png' : project.number === '02' ? '/assets/margin-projects-preview.png' : project.number === '03' ? '/assets/enrolme-projects-preview.png' : project.number === '04' ? '/assets/trail-tag-projects-preview.png' : project.number === '05' ? '/assets/data-visualization-projects-preview.png' : project.image} alt={project.number === '04' ? 'Trail Tag tangible interface devices in a mountain landscape' : project.number === '05' ? 'Data visualization illustration with pie, bar and line charts' : project.imageAlt} loading="lazy" /> : <span className="projects-index-placeholder">{project.name} · Image coming soon</span>}</div>
           <div className="projects-index-copy">
             <p className="eyebrow">{project.category}</p>
             <h2>{project.name}</h2>
@@ -708,6 +728,7 @@ function ProjectsPage() {
             <span className="projects-index-cta">View project <Arrow /></span>
           </div>
         </a>)}
+      </div>
       </div>
     </main>
     <ContactFooter />

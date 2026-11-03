@@ -940,7 +940,7 @@ html,body,#root{background:#F3F7F6}
 .about-home-more{display:inline-block;font-size:.75rem;margin-top:16px;text-underline-offset:4px}
 .about-home-more:hover{text-decoration:underline}
 .about-sticky-copy{display:flex;flex-direction:column;gap:8px;overflow-wrap:break-word}
-.about-sticky-number{font-size:clamp(1.3rem,2.6vw,2.35rem);font-weight:400;line-height:1}
+.about-sticky-number{font-size:clamp(1.3rem,2.2vw,1.9rem);font-weight:400;line-height:1}
 .about-sticky:active{scale:.97}
 .about-note-expanded{display:flex;flex-direction:column;aspect-ratio:auto;min-height:360px;overflow-y:auto;animation:about-paper-open .2s ease both}
 .about-note-body h3{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;line-height:1.2;margin:0 0 24px;padding-right:16px}
@@ -953,12 +953,12 @@ html,body,#root{background:#F3F7F6}
 @media(max-width:700px){.about-sticky-number{font-size:1.6rem}.about-sticky-copy{gap:6px}.about-note-expanded{min-height:300px}.about-note-footer{font-size:.7rem}}
 @media(prefers-reduced-motion:reduce){.about-note-expanded{animation:none}.about-sticky:active{scale:1}}
 
-/* Consistent type for the homepage's text-only paper notes. */
-.about-sticky:not(:has(.about-sticky-number)){font-size:clamp(.8rem,1.05vw,1rem);line-height:1.3}
+/* One label scale for both KPI and text-only homepage notes. */
+.about-sticky-copy{font-size:clamp(.68rem,.85vw,.8rem);font-weight:400;line-height:1.35;width:100%;text-wrap:pretty}
 .about-home-scroll + .work{padding-top:40px}
 .about-home-scroll .about-sticky-wall{margin-bottom:-48px}
 @media(max-width:700px){
- .about-sticky:not(:has(.about-sticky-number)){font-size:clamp(.72rem,2.7vw,.95rem)}
+ .about-sticky-copy{font-size:clamp(.65rem,2.1vw,.78rem)}
  .about-home-scroll + .work{padding-top:28px}
  .about-home-scroll .about-sticky-wall{margin-bottom:-24px}
 }
@@ -974,3 +974,57 @@ html,body,#root{background:#F3F7F6}
 
 /* Each homepage slide occupies one viewport of the project track. */
 .project-scroll-section .project-gallery > .project-card{flex:0 0 var(--project-slide-width);height:100%;min-width:0;scroll-snap-align:none}
+
+/* Light, precise navigation typography shared across all pages. */
+.nav .brand,.nav .nav-links a{font-weight:400;letter-spacing:.08em}
+
+.saarthi-top-back{display:inline-block;color:inherit;font-size:.8rem;margin-bottom:24px;text-decoration:underline;text-underline-offset:4px}
+.saarthi-top-back:hover{color:var(--accent,#9096b5)}
+
+/* Saarthi only: generous illustration space inside gently overlapping circles. */
+.saarthi-case-study .saarthi-ecosystem{min-height:0;padding-block:64px}
+.saarthi-case-study .saarthi-touchpoints{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:960px;aspect-ratio:auto;margin:48px auto 0;position:relative;gap:0}
+.saarthi-case-study .saarthi-venn-lobe{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1;padding:14% 13%;display:flex;flex-direction:column;justify-content:center;text-align:center;transform:scale(1.035);box-shadow:none;backdrop-filter:none;min-width:0}
+.saarthi-case-study .saarthi-venn-lobe h3{font-size:clamp(.65rem,1.1vw,.9rem);line-height:1.4;margin:0 0 20px;letter-spacing:.06em}
+.saarthi-case-study .saarthi-venn-points{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 10px}
+.saarthi-case-study .saarthi-venn-lobe--2 .saarthi-venn-points{grid-template-columns:repeat(2,minmax(0,1fr))}
+.saarthi-case-study .saarthi-venn-point{min-width:0;gap:7px}
+.saarthi-case-study .saarthi-venn-point>.saarthi-touchpoint-illustration{width:clamp(40px,5vw,64px);height:clamp(40px,5vw,64px);padding:6px;flex-shrink:0}
+.saarthi-case-study .saarthi-venn-point small{font-size:clamp(.56rem,.85vw,.75rem);line-height:1.25;max-width:90px;overflow-wrap:break-word}
+.saarthi-case-study .saarthi-touchpoints-core{width:100px;height:100px;box-shadow:none}
+.saarthi-case-study .saarthi-touchpoints-core span{font-size:.65rem}
+.saarthi-case-study .saarthi-touchpoints-core strong{font-size:.65rem}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-touchpoints{grid-template-columns:1fr;max-width:420px;gap:16px;margin-top:28px}
+ .saarthi-case-study .saarthi-venn-lobe{transform:none;padding:14%;aspect-ratio:1}
+ .saarthi-case-study .saarthi-venn-lobe h3{font-size:.75rem;margin-bottom:18px}
+ .saarthi-case-study .saarthi-venn-point>.saarthi-touchpoint-illustration{width:48px;height:48px}
+ .saarthi-case-study .saarthi-venn-point small{font-size:.62rem;max-width:86px}
+ .saarthi-case-study .saarthi-touchpoints-core{position:relative;inset:auto;transform:none;order:-1;justify-self:center;width:100px;height:100px}
+}
+
+/* Saarthi: four overlapping sets with a shared centre. */
+.saarthi-case-study .saarthi-touchpoints{display:block;aspect-ratio:1;width:100%;max-width:960px;position:relative;margin:48px auto 0;container-type:inline-size}
+.saarthi-case-study .saarthi-venn-lobe{position:absolute;width:62%;height:62%;aspect-ratio:1;transform:none;display:block;padding:0;border-width:2px;background:color-mix(in srgb,var(--ring-color) 15%,transparent);z-index:1}
+.saarthi-case-study .saarthi-venn-lobe--1{inset:0 auto auto 0}
+.saarthi-case-study .saarthi-venn-lobe--2{inset:0 0 auto auto}
+.saarthi-case-study .saarthi-venn-lobe--3{inset:auto auto 0 0}
+.saarthi-case-study .saarthi-venn-lobe--4{inset:auto 0 0 auto}
+.saarthi-case-study .saarthi-venn-lobe h3{position:absolute;top:15%;left:14%;width:72%;font-size:clamp(.55rem,1.35cqw,.85rem);margin:0;line-height:1.3;letter-spacing:.035em}
+.saarthi-case-study .saarthi-venn-points{position:absolute;left:14%;top:25%;width:56%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5cqw .7cqw}
+.saarthi-case-study .saarthi-venn-lobe--2 .saarthi-venn-points{left:auto;right:14%;grid-template-columns:repeat(2,minmax(0,1fr))}
+.saarthi-case-study .saarthi-venn-lobe--3 h3,.saarthi-case-study .saarthi-venn-lobe--4 h3{top:43%}
+.saarthi-case-study .saarthi-venn-lobe--3 .saarthi-venn-points,.saarthi-case-study .saarthi-venn-lobe--4 .saarthi-venn-points{top:53%}
+.saarthi-case-study .saarthi-venn-lobe--4 .saarthi-venn-points{left:auto;right:14%}
+.saarthi-case-study .saarthi-venn-point{gap:.6cqw}
+.saarthi-case-study .saarthi-venn-point>.saarthi-touchpoint-illustration{width:5.5cqw;height:5.5cqw;padding:.6cqw;background:#fff8f4}
+.saarthi-case-study .saarthi-venn-point small{font-size:clamp(.38rem,1.05cqw,.68rem);line-height:1.2;max-width:100%;font-weight:500}
+.saarthi-case-study .saarthi-touchpoints-core{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:19%;height:19%;z-index:5;background:#fff8f4;border:2px solid #b96f50;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.saarthi-case-study .saarthi-touchpoints-core span{font-size:clamp(.5rem,1.5cqw,.9rem)}
+.saarthi-case-study .saarthi-touchpoints-core strong{font-size:clamp(.42rem,1.2cqw,.75rem);line-height:1.3;margin-top:6px}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-ecosystem{padding-inline:12px}
+ .saarthi-case-study .saarthi-touchpoints{max-width:620px;margin-top:32px}
+ .saarthi-case-study .saarthi-venn-points{gap:1.2cqw .6cqw}
+ .saarthi-case-study .saarthi-venn-point>.saarthi-touchpoint-illustration{width:6cqw;height:6cqw}
+}
