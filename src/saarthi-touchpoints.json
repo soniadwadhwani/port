@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Product",
+    "items": [
+      {
+        "name": "Take-home prasad kit",
+        "crop": [
+          316,
+          502,
+          160,
+          110
+        ],
+        "description": "A take-home prasad kit lets devotees carry the temple experience home and share prasad with family."
+      },
+      {
+        "name": "Saarthi ambulance",
+        "crop": [
+          510,
+          504,
+          169,
+          108
+        ],
+        "description": "An ambulance near the temple exit reassures elderly devotees that medical help is close if needed."
+      },
+      {
+        "name": "Pre-booked thali",
+        "crop": [
+          700,
+          511,
+          170,
+          99
+        ],
+        "description": "Offerings are prepared in advance. A volunteer matches the devotee\u2019s token to the pre-booked thali at the top-most checkpoint."
+      },
+      {
+        "name": "Offering tokens",
+        "crop": [
+          312,
+          649,
+          168,
+          112
+        ],
+        "description": "A token received at entry connects the devotee to their pre-booked offerings further along the route."
+      },
+      {
+        "name": "Saarthi T-shirt",
+        "crop": [
+          518,
+          647,
+          167,
+          115
+        ],
+        "description": "A recognisable Saarthi T-shirt helps devotees identify volunteers at the temple and along the route."
+      },
+      {
+        "name": "Saarthi App",
+        "crop": [
+          717,
+          640,
+          122,
+          123
+        ],
+        "description": "The app offers digital access to the service. Family members can also use Saarthi on a senior\u2019s behalf; WhatsApp provides an alternative."
+      }
+    ]
+  },
+  {
+    "name": "People",
+    "items": [
+      {
+        "name": "Saarthi volunteer",
+        "crop": [
+          939,
+          496,
+          255,
+          245
+        ],
+        "description": "Volunteers greet devotees, check their Saarthi pass, assist with footwear and tokens, and offer support at checkpoints."
+      },
+      {
+        "name": "Driver",
+        "crop": [
+          1230,
+          522,
+          235,
+          215
+        ],
+        "description": "Drivers support the journey to and from the temple, with cab details shared before the visit."
+      }
+    ]
+  },
+  {
+    "name": "Place / Environment / Infrastructure",
+    "items": [
+      {
+        "name": "Temple",
+        "crop": [
+          305,
+          866,
+          198,
+          128
+        ],
+        "description": "The temple is the heart of the experience, with Saarthi supporting the journey around darshan and worship."
+      },
+      {
+        "name": "Checkpoints",
+        "crop": [
+          526,
+          865,
+          151,
+          129
+        ],
+        "description": "Calm checkpoints along the route provide shade, seating, water and volunteer assistance."
+      },
+      {
+        "name": "Exit rest station",
+        "crop": [
+          690,
+          866,
+          178,
+          129
+        ],
+        "description": "A place to sit after darshan, receive returned slippers and prepare for the journey home."
+      },
+      {
+        "name": "Share a ride",
+        "crop": [
+          309,
+          1026,
+          281,
+          116
+        ],
+        "description": "Saarthi can suggest a shared ride with another devotee from the same area. Devotees can accept or decline."
+      },
+      {
+        "name": "Cab",
+        "crop": [
+          609,
+          1032,
+          254,
+          109
+        ],
+        "description": "Booked transport supports travel to the temple and a coordinated return journey."
+      }
+    ]
+  },
+  {
+    "name": "Information",
+    "items": [
+      {
+        "name": "WhatsApp",
+        "crop": [
+          945,
+          881,
+          90,
+          86
+        ],
+        "description": "Devotees can use Saarthi entirely through WhatsApp, without learning a new app."
+      },
+      {
+        "name": "Simple questions",
+        "crop": [
+          1057,
+          878,
+          115,
+          88
+        ],
+        "description": "The welcome conversation asks about the temple, preferred days and usual visit timings."
+      },
+      {
+        "name": "Daily updates",
+        "crop": [
+          1187,
+          877,
+          116,
+          88
+        ],
+        "description": "Updates share aarti timings, crowd levels and estimated waiting time to help devotees plan their visit."
+      },
+      {
+        "name": "Forecast board",
+        "crop": [
+          1322,
+          862,
+          158,
+          107
+        ],
+        "description": "The Darshan Forecast Board at the entrance provides crowd and waiting-time information on arrival."
+      },
+      {
+        "name": "Ride bookings",
+        "crop": [
+          929,
+          1027,
+          102,
+          87
+        ],
+        "description": "Ride booking lets devotees arrange transport as part of planning their temple visit."
+      },
+      {
+        "name": "Cab details",
+        "crop": [
+          1039,
+          1025,
+          102,
+          89
+        ],
+        "description": "Cab information is shared after booking so devotees know their transport arrangements."
+      },
+      {
+        "name": "Primary volunteer details",
+        "crop": [
+          1148,
+          1025,
+          112,
+          88
+        ],
+        "description": "Details of the primary volunteer help devotees know whom to look for when they arrive."
+      },
+      {
+        "name": "Audio story",
+        "crop": [
+          1271,
+          1026,
+          105,
+          88
+        ],
+        "description": "An audio story accompanies the journey, connecting the visit with the temple\u2019s cultural and devotional context."
+      },
+      {
+        "name": "Saarthi App",
+        "crop": [
+          1383,
+          1008,
+          108,
+          106
+        ],
+        "description": "The app is another channel for service information, alongside WhatsApp and on-site touchpoints."
+      }
+    ]
+  }
+]

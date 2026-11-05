@@ -1,0 +1,208 @@
+{
+  "foundations": [
+    {
+      "title": "Purpose",
+      "text": "To ensure every senior citizen experiences safe, dignified, and effortless mandir visits-while giving families quiet reassurance without taking away independence."
+    },
+    {
+      "title": "Vision",
+      "text": "A world where seniors can access spiritual spaces with comfort, confidence, and companionship."
+    },
+    {
+      "title": "Mission",
+      "text": "To deliver human-centered, culturally grounded support through simple digital touchpoints and on-ground assistance-making every mandir journey peaceful from planning to darshan to returning home."
+    }
+  ],
+  "promise": "A peaceful mandir experience, supported with dignity.",
+  "positioning": "For senior citizens who seek a safe and smooth mandir experience, Saarthi is a guided spiritual companion service that uses familiar technology and human support to ensure comfort, confidence, and independence throughout their darshan journey.",
+  "values": [
+    {
+      "name": "Dignity",
+      "text": "Seniors feel respected, not supervised."
+    },
+    {
+      "name": "Seva (Service)",
+      "text": "Compassionate, devotional care at every touchpoint."
+    },
+    {
+      "name": "Simplicity",
+      "text": "No new apps or friction—familiar, friendly interfaces like WhatsApp."
+    },
+    {
+      "name": "Safety",
+      "text": "Reliable guidance, volunteers, checkpoints, and medical readiness."
+    },
+    {
+      "name": "Companionship",
+      "text": "Subtle support from volunteers, fellow devotees, and family."
+    },
+    {
+      "name": "Trust",
+      "text": "Transparent, predictable, reliable assistance throughout the experience."
+    }
+  ],
+  "personality": [
+    {
+      "name": "Warm",
+      "text": "Emotionally comforting, like a reassuring family member."
+    },
+    {
+      "name": "Respectful",
+      "text": "Honors senior citizens’ autonomy and spiritual routine."
+    },
+    {
+      "name": "Devotional",
+      "text": "Rooted in temple culture and tradition, without being preachy."
+    },
+    {
+      "name": "Reassuring",
+      "text": "Clear, predictable, calming communication."
+    },
+    {
+      "name": "Dependable",
+      "text": "Consistent service across all touchpoints."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Seniors",
+      "role": "Primary",
+      "channel": "WhatsApp + Senior Mode",
+      "intro": "WhatsApp stays the primary senior interface: familiar, simple, no learning curve, low anxiety. Senior Mode is for digitally savvy seniors.",
+      "features": [
+        "Aarti timings",
+        "Crowd levels",
+        "Book visit",
+        "Book ride",
+        "Send SOS",
+        "See volunteer assigned",
+        "Listen to devotional stories",
+        "Mandir map (simple icons, large fonts)"
+      ],
+      "principle": "BIG fonts. HIGH contrast. ZERO complexity.",
+      "benefit": "Simplicity for Seniors",
+      "outcomes": [
+        "WhatsApp",
+        "Large-text app mode",
+        "Visual-only navigation",
+        "Devotional audio stories",
+        "Reminders"
+      ]
+    },
+    {
+      "name": "Families",
+      "role": "Secondary",
+      "channel": "The Saarthi App · Full Mode",
+      "intro": "A stronger, richer family app flow that stays respectful and non-intrusive.",
+      "features": [
+        "See planned mandir visits (only if senior opts in)",
+        "Get “visit started” + “visit ended” optional updates",
+        "Book or pre-pay rides",
+        "See volunteer assigned",
+        "Emergency contact",
+        "“Peace check”: A subtle “Everything okay” confirm from Saarthi",
+        "Prasad booking for parents",
+        "Senior preferences setup (only if given permission)"
+      ],
+      "principle": "Reassurance without surveillance.",
+      "benefit": "Reassurance for Families",
+      "outcomes": [
+        "Non-intrusive status",
+        "Optional alerts",
+        "Ride bookings",
+        "Volunteer check-ins",
+        "See senior’s “planned visits”"
+      ]
+    },
+    {
+      "name": "Volunteers",
+      "role": "Tertiary",
+      "channel": "App Dashboard",
+      "intro": "An on-ground coordination interface for volunteers supporting the mandir experience.",
+      "features": [
+        "Check senior arrivals",
+        "Token scanning",
+        "Know who needs assistance",
+        "Thali/prasad coordination",
+        "Track queue flow",
+        "First-aid status",
+        "On-ground communication",
+        "Emergency alerts"
+      ],
+      "principle": "Quick coordination, compassionate support.",
+      "benefit": "Efficiency for Volunteers",
+      "outcomes": [
+        "Real-time senior check-in",
+        "Quick coordination",
+        "Training modules",
+        "Live crowd updates"
+      ]
+    },
+    {
+      "name": "Temple Management",
+      "role": "Support group",
+      "channel": "Back Office Dashboard · Web admin",
+      "intro": "The admin layer for temple authorities, connecting service planning with daily operations.",
+      "features": [
+        "Crowd prediction",
+        "Live queue length",
+        "Volunteer assignment",
+        "Darshan Forecast Board updates",
+        "Ambulance readiness",
+        "Senior-priority scheduling",
+        "Daily footfall analytics"
+      ],
+      "principle": "A coordinated service behind every visit.",
+      "benefit": "Smooth Operations for Temples",
+      "outcomes": [
+        "System health",
+        "Forecasting",
+        "Crowd control",
+        "Resource planning"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "name": "Soft Pink",
+      "hex": "#ffd8d8",
+      "reason": "Warm, comforting, and emotionally gentle—ideal for elderly users who need reassurance and calm. Pink evokes care, empathy, and compassion, aligning with Saarthi’s purpose of guiding and supporting devotees. Soft shades reduce visual stress and feel inviting, not intimidating.",
+      "meaning": "Represents human connection, kindness, and emotional support. Positions Saarthi as a caring companion, not a formal authority."
+    },
+    {
+      "name": "Deep Temple Brown",
+      "hex": "#5f1a08",
+      "reason": "Inspired by temple woodwork, diyas, sacred soil, and traditional architecture. Conveys strength, stability, and trust, giving the brand a grounded, spiritual presence. An anchor for typography and key UI elements.",
+      "meaning": "Symbolizes devotion, rootedness, and cultural authenticity. Connects the service visually to Indian sacred spaces, making devotees feel familiar and comfortable."
+    },
+    {
+      "name": "Soft Off-White",
+      "hex": "#fff4f0",
+      "reason": "A clean, pure, minimal shade representing spiritual clarity, peace, and simplicity. A soothing, high-contrast background without the harshness of pure white. Elder-friendly: high readability, low glare.",
+      "meaning": "Reflects purity, serenity, and calmness, mirroring worship and darshan. A gentle canvas for information that improves accessibility for older devotees."
+    }
+  ],
+  "taglines": [
+    {
+      "audience": "For Seniors",
+      "lines": [
+        "सहज समाधान, सरल सफ़र",
+        "सहज सेवाएँ, सहज जीवन.",
+        "सहायता जो भरोसा दिलाए",
+        "जहाँ भरोसा, वहीं सेवा"
+      ]
+    },
+    {
+      "audience": "For Families",
+      "lines": [
+        "आपकी सुविधा, हमारी प्राथमिकता।"
+      ]
+    },
+    {
+      "audience": "For Temples",
+      "lines": [
+        "सम्मान और सुविधा का विश्वसनीय साथ।"
+      ]
+    }
+  ]
+}

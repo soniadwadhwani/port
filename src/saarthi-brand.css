@@ -1,0 +1,50 @@
+/* Saarthi brand architecture is scoped to this case study. */
+.saarthi-case-study .saarthi-brand{--brand-pink:#ffd8d8;--brand-brown:#5f1a08;--brand-cream:#fff4f0;color:var(--brand-brown);padding:20px 0 32px}
+.saarthi-case-study .saarthi-brand-intro{display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:40px;padding:32px;background:var(--brand-cream);border-radius:12px}
+.saarthi-case-study .saarthi-brand-logo{width:100%;aspect-ratio:1.3;position:relative;overflow:hidden;mix-blend-mode:multiply}
+.saarthi-case-study .saarthi-brand-logo img{position:absolute;width:150%;max-width:none;left:-24%;top:-26%;height:auto}
+.saarthi-case-study .saarthi-brand-kicker{font-size:.6rem;letter-spacing:.12em;line-height:1.7;color:#a27a68;margin:0 0 16px}
+.saarthi-case-study .saarthi-brand h4{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;line-height:1.35;letter-spacing:-.02em;margin:0 0 28px}
+.saarthi-case-study .saarthi-brand p{font-size:.85rem;line-height:1.8}
+.saarthi-case-study .saarthi-brand-intro>div>p:last-child{color:#896654}
+.saarthi-case-study .saarthi-brand-section{padding:48px 0;border-bottom:1px solid #dec8ba}
+.saarthi-case-study .saarthi-brand-section:last-child{border:0;padding-bottom:0}
+.saarthi-case-study .saarthi-brand h5{font-size:1rem;font-weight:500;line-height:1.4;margin:0 0 14px}
+.saarthi-case-study .saarthi-brand-foundations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.saarthi-case-study .saarthi-brand-foundations article{border-top:2px solid #c89c87;padding-top:20px}
+.saarthi-case-study .saarthi-brand-foundations p,.saarthi-case-study .saarthi-brand-values p,.saarthi-case-study .saarthi-brand-personality p{font-size:.8rem;color:#856b5a}
+.saarthi-case-study .saarthi-brand-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.saarthi-case-study .saarthi-brand-values article{padding:24px;background:var(--brand-cream);border-radius:8px}
+.saarthi-case-study .saarthi-brand-personality{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.saarthi-case-study .saarthi-brand-personality h5{font-size:.85rem}
+.saarthi-case-study .saarthi-brand-interfaces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:32px}
+.saarthi-case-study .saarthi-brand-interfaces button{background:transparent;border:1px solid #dcc4b5;border-radius:8px 8px 0 0;padding:18px 12px;color:var(--brand-brown);font-size:.85rem;cursor:pointer;text-align:left}
+.saarthi-case-study .saarthi-brand-interfaces button span{display:block;font-size:.6rem;color:#9e7c66;line-height:1.6;margin-bottom:8px}
+.saarthi-case-study .saarthi-brand-interfaces button[aria-selected=true]{background:var(--brand-pink);border-color:var(--brand-pink)}
+.saarthi-case-study .saarthi-brand-panel{padding:32px;background:var(--brand-cream);display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.saarthi-case-study .saarthi-brand-panel-intro{grid-column:1/-1;max-width:750px}
+.saarthi-case-study .saarthi-brand-panel blockquote{border-left:2px solid #d4a490;margin:24px 0 0;padding-left:16px;font-size:.95rem;line-height:1.7}
+.saarthi-case-study .saarthi-brand h6{font-size:.7rem;font-weight:500;letter-spacing:.04em;line-height:1.5;margin:0 0 16px}
+.saarthi-case-study .saarthi-brand-panel ul{margin:0;padding-left:16px;display:grid;gap:10px}
+.saarthi-case-study .saarthi-brand-panel li{font-size:.8rem;line-height:1.6;padding-left:4px}
+.saarthi-case-study .saarthi-brand-outcomes{background:#f2e3d8;padding:24px;border-radius:8px;align-self:start}
+.saarthi-case-study .saarthi-brand-colors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.saarthi-case-study .saarthi-brand-swatch{min-height:150px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #d9c5b8;border-radius:8px}
+.saarthi-case-study .saarthi-brand-swatch span{font-size:.95rem}
+.saarthi-case-study .saarthi-brand-swatch code{font-family:inherit;font-size:.75rem}
+.saarthi-case-study .saarthi-brand-colors details{padding-top:18px}
+.saarthi-case-study .saarthi-brand-colors summary{font-size:.7rem;cursor:pointer;margin-bottom:16px}
+.saarthi-case-study .saarthi-brand-colors p{font-size:.75rem;margin-bottom:16px}
+.saarthi-case-study .saarthi-brand-taglines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.saarthi-case-study .saarthi-brand-taglines h5{font-size:.7rem;color:#9e7c66;margin-bottom:20px}
+.saarthi-case-study .saarthi-brand-taglines p{font-size:1rem;line-height:1.8;margin-bottom:14px}
+@media(max-width:900px){.saarthi-case-study .saarthi-brand-personality{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-brand-intro,.saarthi-case-study .saarthi-brand-foundations,.saarthi-case-study .saarthi-brand-panel,.saarthi-case-study .saarthi-brand-colors,.saarthi-case-study .saarthi-brand-taglines{grid-template-columns:1fr}
+ .saarthi-case-study .saarthi-brand-intro{padding:24px;gap:20px}
+ .saarthi-case-study .saarthi-brand-logo{max-width:320px;justify-self:center}
+ .saarthi-case-study .saarthi-brand-values,.saarthi-case-study .saarthi-brand-personality{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .saarthi-case-study .saarthi-brand-interfaces{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .saarthi-case-study .saarthi-brand-panel{padding:24px}
+ .saarthi-case-study .saarthi-brand-values article{padding:18px}
+}

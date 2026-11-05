@@ -1,0 +1,374 @@
+{
+  "swot": {
+    "Strengths": [
+      "Existing platform in market",
+      "Access to user and enrollment data",
+      "Strong institute network",
+      "End-to-end enrollment capability",
+      "Low entry barrier for institutes"
+    ],
+    "Weaknesses": [
+      "Weak user experience",
+      "Low brand awareness",
+      "Low engagement and retention",
+      "Built for operations, not users",
+      "Limited emotional connection"
+    ],
+    "Opportunities": [
+      "Large unorganised market",
+      "Growing demand for classes",
+      "Increasing digital adoption",
+      "No dominant integrated platform identified in the project",
+      "Trust gap in the market"
+    ],
+    "Threats": [
+      "Competition from Google and UrbanPro",
+      "Resistance to technology adoption",
+      "Word-of-mouth dominance",
+      "Low urgency for change",
+      "Trust takes time to build"
+    ]
+  },
+  "stakeholders": {
+    "Primary": [
+      "Schools, educational and coaching institutes",
+      "Enrol-Me internal team",
+      "Parents / guardians",
+      "Students"
+    ],
+    "Secondary": [
+      "Payment gateway partners",
+      "Marketing and digital marketing partners",
+      "School admin staff",
+      "Teachers / academic coordinators",
+      "Technology vendors / developers"
+    ],
+    "Tertiary": [
+      "Government / educational boards",
+      "Competitor platforms",
+      "Community / society",
+      "Investors / business partners"
+    ]
+  },
+  "users": {
+    "Parents": [
+      "Research-driven decision makers",
+      "Rely heavily on word-of-mouth",
+      "Value convenience and accessibility"
+    ],
+    "Institutes / Coaches": [
+      "Focused on operational efficiency",
+      "Reputation-driven",
+      "Focused on student acquisition"
+    ],
+    "Students": [
+      "Rely heavily on word-of-mouth",
+      "Convenience-focused",
+      "Trust-oriented"
+    ]
+  },
+  "personas": [
+    {
+      "name": "Neha Sharma",
+      "meta": "34 \u00b7 Working mother",
+      "goals": [
+        "Find the right class for her child",
+        "Ensure safety and quality",
+        "Save time in decision-making"
+      ],
+      "behaviours": [
+        "Relies on word-of-mouth",
+        "Compares multiple options",
+        "Uses Google and WhatsApp"
+      ],
+      "pain": [
+        "Too many options",
+        "No trust signals",
+        "Confusing enrollment process"
+      ]
+    },
+    {
+      "name": "Rajesh Mehta",
+      "meta": "42 \u00b7 Coaching centre owner",
+      "goals": [
+        "Increase student enrollments",
+        "Manage operations efficiently",
+        "Improve visibility"
+      ],
+      "behaviours": [
+        "Tracks leads manually",
+        "Depends on calls and WhatsApp",
+        "Focused on conversions"
+      ],
+      "pain": [
+        "Lead drop-offs",
+        "No proper tracking system",
+        "Time-consuming follow-ups"
+      ]
+    },
+    {
+      "name": "Priya Singh",
+      "meta": "29 \u00b7 Admin staff",
+      "goals": [
+        "Manage applications smoothly",
+        "Track payments and students",
+        "Reduce manual work"
+      ],
+      "behaviours": [
+        "Uses Excel and registers",
+        "Handles calls and queries",
+        "Manages multiple tasks"
+      ],
+      "pain": [
+        "Disorganised data",
+        "Repetitive work",
+        "Errors in tracking"
+      ]
+    }
+  ],
+  "insights": [
+    "Discovery does not equal conversion: trust is the real decision driver in activity classes.",
+    "Enrollment decisions are driven more by convenience and child comfort than objective quality.",
+    "The problem extends beyond discovery to inefficient day-to-day operations across the ecosystem.",
+    "Behavioural adoption is a bigger challenge than technological capability.",
+    "A fragmented ecosystem creates an opportunity for a centralised platform.",
+    "Users do not yet perceive enough pain to demand a solution, making value communication critical."
+  ],
+  "parentJourney": [
+    {
+      "name": "Realising the need",
+      "actions": [
+        "Notices the child struggling or bored",
+        "Talks to the child, other parents, and family",
+        "Thinks about routine, interests, and development"
+      ],
+      "touchpoints": [
+        "School feedback",
+        "Other parents",
+        "Social circle",
+        "Family discussions"
+      ],
+      "feelings": "Concerned \u00b7 Slightly anxious \u00b7 Responsible \u00b7 Hopeful",
+      "goals": [
+        "Help the child improve or learn something useful",
+        "Support the child\u2019s growth"
+      ],
+      "pain": [
+        "Unsure which class is right",
+        "Confused about where to start"
+      ],
+      "opportunities": [
+        "Guide suggestions by age and interests",
+        "Explain which class types are relevant"
+      ]
+    },
+    {
+      "name": "Looking for options",
+      "actions": [
+        "Asks friends, family, and other parents",
+        "Searches Google and nearby classes",
+        "Checks Instagram, WhatsApp forwards, and offline boards",
+        "Saves options and shares details with family"
+      ],
+      "touchpoints": [
+        "Word of mouth",
+        "WhatsApp",
+        "Google Search and Maps",
+        "Instagram",
+        "Boards, banners, pamphlets"
+      ],
+      "feelings": "Curious \u00b7 Overwhelmed \u00b7 Confused \u00b7 Unsure \u00b7 Lost",
+      "goals": [
+        "Find good nearby classes",
+        "Get trusted recommendations",
+        "Explore available options"
+      ],
+      "pain": [
+        "Must ask multiple people",
+        "No single place to view classes",
+        "Conflicting suggestions"
+      ],
+      "opportunities": [
+        "Centralise class discovery",
+        "Show verified, complete listings",
+        "Enable location-based discovery"
+      ]
+    },
+    {
+      "name": "Comparing classes",
+      "actions": [
+        "Shortlists options and checks fees, location, and timings",
+        "Reads reviews and asks others",
+        "Calls or visits institutes",
+        "Compares information across tabs, chats, and Maps"
+      ],
+      "touchpoints": [
+        "Phone calls",
+        "Physical visits",
+        "Google reviews",
+        "Maps",
+        "Parents and institute staff"
+      ],
+      "feelings": "Analytical \u00b7 Doubtful \u00b7 Indecisive \u00b7 Uncertain \u00b7 Stressed \u00b7 Mentally overloaded",
+      "goals": [
+        "Shortlist reliable options",
+        "Compare timing, location, and fees"
+      ],
+      "pain": [
+        "Manual comparison and recall",
+        "No easy side-by-side view",
+        "Repeated calls or visits"
+      ],
+      "opportunities": [
+        "Standardise fees, timings, and batch information",
+        "Enable side-by-side comparison",
+        "Add reviews and trust indicators"
+      ]
+    }
+  ],
+  "instituteJourney": [
+    {
+      "name": "Realising the need",
+      "actions": [
+        "Reviews student counts, schedules, and batch capacity",
+        "Compares current and past enrollment",
+        "Calculates revenue gaps",
+        "Discusses admission strategies with staff"
+      ],
+      "touchpoints": [
+        "Registers and notebooks",
+        "Excel",
+        "Staff discussions",
+        "Parent feedback",
+        "Classroom observations",
+        "Past records"
+      ],
+      "feelings": "Ambitious \u00b7 Growth-focused \u00b7 Curious \u00b7 Slightly concerned \u00b7 Hopeful",
+      "goals": [
+        "Fill empty seats and balance batches",
+        "Ensure steady revenue",
+        "Plan admissions and increase visibility"
+      ],
+      "pain": [
+        "No clear capacity or live performance view",
+        "No demand forecasting",
+        "Reactive, intuition-led planning",
+        "Limited data and structured targets"
+      ],
+      "opportunities": [
+        "Batch performance dashboard",
+        "Seat tracking",
+        "Demand forecasting",
+        "Admission planning tools"
+      ]
+    },
+    {
+      "name": "Lead generation",
+      "actions": [
+        "Shares contact details in WhatsApp groups",
+        "Asks existing parents for referrals",
+        "Distributes flyers and banners",
+        "Accepts walk-ins and posts on social media",
+        "Observes which channels bring responses"
+      ],
+      "touchpoints": [
+        "WhatsApp and phone calls",
+        "Parent / student referrals",
+        "Flyers and banners",
+        "Social media"
+      ],
+      "feelings": "Optimistic \u00b7 Motivated \u00b7 Expectant",
+      "goals": [
+        "Reach more parents",
+        "Fill batches",
+        "Generate quality leads",
+        "Maintain steady inquiries"
+      ],
+      "pain": [
+        "Scattered lead sources",
+        "No central capture or channel tracking",
+        "Inconsistent inquiry flow",
+        "Heavy word-of-mouth dependency"
+      ],
+      "opportunities": [
+        "Centralised lead capture",
+        "Lead-source tracking",
+        "Digital discovery",
+        "Consistent pipeline"
+      ]
+    },
+    {
+      "name": "First interaction / Initial response",
+      "actions": [
+        "Answers calls and WhatsApp inquiries",
+        "Shares fees, timings, subjects, and location",
+        "Explains batches",
+        "Repeats information across conversations",
+        "Checks old messages to copy responses"
+      ],
+      "touchpoints": [
+        "WhatsApp chats",
+        "Phone calls",
+        "SMS",
+        "Saved message drafts",
+        "Walk-ins"
+      ],
+      "feelings": "Alert \u00b7 Responsive \u00b7 Engaged \u00b7 Slightly rushed",
+      "goals": [
+        "Respond quickly and clearly",
+        "Keep parents engaged",
+        "Build interest",
+        "Handle multiple inquiries professionally"
+      ],
+      "pain": [
+        "Repeated questions",
+        "No standard response format",
+        "Delayed replies",
+        "Scattered chats and missed messages"
+      ],
+      "opportunities": [
+        "Automated replies",
+        "FAQ templates",
+        "Standardised responses",
+        "Chat assistance",
+        "Faster responses"
+      ]
+    },
+    {
+      "name": "Understanding the lead",
+      "actions": [
+        "Asks about class, grade, goals, and needs",
+        "Suggests suitable batches",
+        "Explains teaching approach and outcomes",
+        "Clarifies expectations",
+        "Switches between chats to recall context"
+      ],
+      "touchpoints": [
+        "Teacher interaction",
+        "Trial class",
+        "Child feedback",
+        "Parent discussions"
+      ],
+      "feelings": "Evaluative \u00b7 Curious \u00b7 Focused \u00b7 Slightly uncertain",
+      "goals": [
+        "Match the student to a suitable batch",
+        "Build parent trust",
+        "Understand lead seriousness",
+        "Avoid misplacement and repeated back-and-forth"
+      ],
+      "pain": [
+        "No structured information capture",
+        "Details lost in chats",
+        "Repeated questions",
+        "Mental tracking across leads"
+      ],
+      "opportunities": [
+        "Structured inquiry forms",
+        "Lead profiles",
+        "Data capture",
+        "Batch recommendations",
+        "Organised conversations"
+      ]
+    }
+  ]
+}

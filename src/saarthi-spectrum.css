@@ -1,0 +1,19 @@
+/* Saarthi research: collapsible spectrum with independently selectable periods. */
+.saarthi-case-study .saarthi-spectrum-disclosure{border-top:1px solid var(--background-200);border-bottom:1px solid var(--background-200)}
+.saarthi-case-study .saarthi-spectrum-disclosure>summary{display:flex;justify-content:space-between;align-items:center;gap:20px;list-style:none;cursor:pointer;padding:24px 0;font-size:1.1rem}
+.saarthi-case-study .saarthi-spectrum-disclosure>summary::-webkit-details-marker{display:none}
+.saarthi-case-study .saarthi-spectrum-disclosure>summary:focus-visible{outline:2px solid var(--accent-600);outline-offset:4px}
+.saarthi-case-study .saarthi-spectrum-disclosure-icon{position:relative;width:18px;height:18px;flex-shrink:0}
+.saarthi-case-study .saarthi-spectrum-disclosure-icon:before,.saarthi-case-study .saarthi-spectrum-disclosure-icon:after{content:'';position:absolute;background:currentColor;width:16px;height:1px;top:8px;left:1px}
+.saarthi-case-study .saarthi-spectrum-disclosure-icon:after{transform:rotate(90deg);transition:transform .2s}
+.saarthi-case-study .saarthi-spectrum-disclosure[open] .saarthi-spectrum-disclosure-icon:after{transform:rotate(0)}
+.saarthi-case-study .saarthi-spectrum-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:8px 0 32px;align-items:start}
+.saarthi-case-study .saarthi-spectrum-card{border:1px solid var(--background-200);background:#fafbf9;border-radius:12px;padding:28px;min-width:0}
+.saarthi-case-study .saarthi-spectrum-card h5{font-size:1.2rem;font-weight:400;margin:0 0 22px;color:var(--text)}
+.saarthi-case-study .saarthi-spectrum-tabs{display:flex;gap:4px;border-bottom:1px solid var(--background-200);margin-bottom:24px}
+.saarthi-case-study .saarthi-spectrum-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px;color:var(--text-600);font-size:.75rem;cursor:pointer;margin-bottom:-1px;flex:1}
+.saarthi-case-study .saarthi-spectrum-tabs button[aria-selected=true]{border-bottom-color:#854a37;color:#612f24}
+.saarthi-case-study .saarthi-spectrum-tabs button:hover{background:var(--background-100)}
+.saarthi-case-study .saarthi-spectrum-panel p{font-size:.85rem;line-height:1.7;margin:0;overflow-wrap:break-word}
+.saarthi-case-study .saarthi-spectrum-panel p+p{margin-top:20px;padding-top:20px;border-top:1px solid var(--background-100)}
+@media(max-width:700px){.saarthi-case-study .saarthi-spectrum-cards{grid-template-columns:1fr;gap:16px}.saarthi-case-study .saarthi-spectrum-card{padding:22px}}

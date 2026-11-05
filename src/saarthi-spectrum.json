@@ -1,0 +1,290 @@
+[
+  {
+    "theme": "Social",
+    "color": "#ffe39a",
+    "periods": {
+      "Past": [
+        {
+          "text": "Heritage was community-owned, tied to rituals, daily life, and local identity \u2192 people protected it naturally.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Intangible Heritage: Preservation wasn't about a static building but about passing down intangible heritage like oral stories, songs, and traditional crafts. Collective Ownership: Heritage sites, like temples or public squares, were collectively owned and managed by the community. They were places of daily use, not just monuments to be viewed. Local Identity: Heritage was inextricably linked to local identity and social cohesion. A village's history was its own, and protecting it was a matter of pride and continuity.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Many heritage sites are \u201cmuseum- ified,\u201d separated from communities \u2192 younger generations feel detached.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Heritage is often detached from daily life. Museum-ification: Many heritage sites have become static \"museums \"for tourists, leading to a separation from the communities they originated from. Youth Disconnect: Younger generations, exposed to global culture, often feel detached and apathetic towards their local heritage, which can seem irrelevant.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Future": [
+        {
+          "text": "Heritage becomes living and participatory again, with co-creation (festivals, AR/VR engagement, inclusive access for all).",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Co-creation: Heritage will be participatory again, with communities actively co-creating festivals, art, and events. Inclusive Access: Technology like AR and VR will make heritage accessible to everyone, regardless of location or physical ability, fostering inclusive access for all.",
+          "author": "Sonia Wadhwani"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Political",
+    "color": "#b5eabb",
+    "periods": {
+      "Past": [
+        {
+          "text": "Weak or colonial-era heritage laws, often focused on \u201cmonuments\u201d not living culture.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Politics focused on state ownership and nationalism. State-Driven Protection: Heritage was primarily a tool for nationalism and state identity, with governments controlling preservation effor ts. Reactive Laws: Laws were often created in response to specific threats, like looting during war, rather than as a proactive, comprehensive strategy.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Politics is now more complex and collaborative. Soft Power: Heritage is used as a tool for \"soft power, \"promoting a country's culture and influence on the global stage. International Cooperation: There's a greater emphasis on international agreements and organi zations like UNESCO to protect heritage, though political disputes can still hamper these effor ts.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "UNESCO designations, national laws, and heritage bodies exist \u2192 but often siloed, underfunded, or mismanaged.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "Politics will integrate heritage into global issues. Global Security: Heritage will become a matter of global security and peacebuilding, with legal and political frameworks to prevent destruction in conflict zones. Climate Policy: Heritage protection will be a core component of climate policy, with governments creating legislation to protect sites from environmental threats.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Dynamic, digital-first governance of heritage \u2192 global databases, community-driven policy input, stronger enforcement with transparency.",
+          "author": "Kanika Khosla"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Economic",
+    "color": "#ffb0a2",
+    "periods": {
+      "Past": [
+        {
+          "text": "Heritage sustained by local economies (crafts, festivals, pilgrimages).",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Funding was primarily a cost, with limited revenue streams. Preservation was seen as a financial burden, funded mainly by public funds and philanthropy rather than as a source of income.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Heritage is now an economic asset. The focus is on sustainable tourism and public-private partnerships to generate revenue for conservation and create jobs in local communities.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Tourism drives revenue but also over- commerciali z es heritage; many sites underfunded.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "Heritage will be a catalyst for new economies. Innovative models like blockchain for ethical provenance and heritage-led urban regeneration will create new value and ensure long-term sustainability.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Circular heritage economies \u2192 blending tourism, craft markets, local food, and sustainable models that fund preservation without exploitation.",
+          "author": "Kanika Khosla"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Competition",
+    "color": "#acdcf7",
+    "periods": {
+      "Past": [
+        {
+          "text": "There was little to no competition for cultural heritage. It was seen as an intrinsic part of a community's identity, with its value being spiritual and historical, not commercial.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Culture seen as identity, continuity, and pride, not competition.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Competition is primarily for city branding and tourism. Cities use their heritage to stand out, often in a superficial way, attracting visitors with a focus on revenue over preservation. This can lead to the commodification of culture.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Cities use heritage for branding (e.g., \u201cHeritage Cities,\u201d cultural tourism) \u2192 but often superficial.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "The competition will be about authenticity and sustainability. Cities will differentiate themselves by showing how well they preserve their heritage and integrate it into a modern, thriving community, making it a key part of their sustainable tourism strategy and global reputation.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Heritage becomes a differentiator for sustainable tourism and global recognition \u2192 cities \u201ccompete\u201d by showing how well they preserve and integrate heritage into modern life.",
+          "author": "Kanika Khosla"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Technological",
+    "color": "#f6b2df",
+    "periods": {
+      "Past": [
+        {
+          "text": "Heritage preserved only through physical monuments and oral traditions.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Technology was a passive tool for simple documentation. M ethods included basic photography, hand-drawn sketches, and written records. The primary goal was creating a physical archive for research and reference, not for public engagement.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Technology is a critical tool for both preservation and engagement. 3D scanning and photogrammetry create precise digital twins of sites and artifacts. Drones and remote sensing are used for large-scale, remote monitoring to detect threats in real- time.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "Digital archiving, 3D scanning, AR/VR museums \u2192 still fragmented, mostly top-down.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "Immersive heritage ecosystems \u2192 digital twins of monuments, interactive storytelling, global open-source heritage databases accessible to all.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Technology will be preventative, immersive, and decentraliz ed. AI will be used for predictive analysis to anticipate and prevent damage to sites before it occurs. AR and VR will create fully immersive and interactive experiences, allowing people to explore and learn about heritage in new ways",
+          "author": "Sonia Wadhwani"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Regulatory",
+    "color": "#d5c2f7",
+    "periods": {
+      "Past": [
+        {
+          "text": "\u2022 Heritage laws often colonial in origin, focused only on monumental structures. \u2022 Weak enforcement, poor documentation, and little community input.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Regulations were reactive and limited. Laws were often created to address a specific crisis, like war-time looting, and were not comprehensive. They focused on individual, tangible obj ects rather than the broader cultural context or site protection.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "There's a push for global, complex frameworks. International conventions like the 1970 UNESCO Convention target illicit trafficking. National laws are becoming stricter, but enforcement often struggles to keep up with the speed and scale of illegal activities.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "\u2022 UNESCO conventions, national heritage laws, heritage city missions exist. \u2022 Gaps: underfunded bodies, corruption, fragmented policies, slow legal action.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "\u2022 Dynamic regulatory systems with real-time monitoring (AI, IoT, satellite). \u2022 Laws expand to cover intangible heritage (oral traditions, festivals, crafts). \u2022 Participatory governance \u2192 community, NGOs, and government co-regulating heritage.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "Regulations will be proactive, integrated, and technology-driven. New laws will explicitly address emerging threats like climate change and digital trafficking. Regulations will mandate the use of technologies like blockchain for provenance tracking and AI for monitoring.",
+          "author": "Sonia Wadhwani"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Universal",
+    "color": "#e5e5e5",
+    "periods": {
+      "Past": [
+        {
+          "text": "Environmental threats to heritage rarely considered.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "The concept was nationalist and selective. Only a few \"masterpieces \"or ancient wonders were considered important enough for protection. The idea of \"universal \"was limited and often defined by Western standards.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Present": [
+        {
+          "text": "Climate change, pollution, and urban expansion severely threaten monuments and natural heritage.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "The concept of Outstanding Universal Value is central. It holds that certain sites are so significant they transcend national boundaries and are part of the common heritage of all humanity, as defined by the UNESCO W orld Heritage Convention.",
+          "author": "Sonia Wadhwani"
+        }
+      ],
+      "Future": [
+        {
+          "text": "Heritage embedded into climate resilience and urban planning, with universal frameworks (UNESCO + SDG integration) protecting both tangible and intangible heritage.",
+          "author": "Kanika Khosla"
+        },
+        {
+          "text": "The focus will be on the universality of threats. Climate change, armed conflict, and pollution are global problems that req uire a unified, universal response to protect our shared heritage for future generations.",
+          "author": "Sonia Wadhwani"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "Market",
+    "color": "#a9efea",
+    "periods": {
+      "Past": [
+        {
+          "text": "The market was unregulated and opa que. Looting and illegal excavation fueled an underground market. There was a lack of provenance tracking, and stolen artifacts were easily sold to private collectors.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "\u2022 Heritage sustained by traditional markets (local crafts, pilgrimages, cultural festivals). \u2022 Economic value tied to daily life, not formaliz ed.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Present": [
+        {
+          "text": "The market is now a complex ecosystem. A growing, legitimate market for heritage tourism and related goods coexists with a sophisticated black market. Online platforms have made the illegal trade faster and more difficult to track.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "\u2022 Tourism is the main heritage market driver, often leading to over- commerciali zation. \u2022 Craftspeople/artisans struggle due to industrial substitutes and global competition.",
+          "author": "Kanika Khosla"
+        }
+      ],
+      "Future": [
+        {
+          "text": "The market will be defined by ethical transparency. Technologies like blockchain will create a verifiable, public chain of custody for artifacts. This will make it harder for illegal goods to enter the legitimate market and will build trust for buyers and sellers.",
+          "author": "Sonia Wadhwani"
+        },
+        {
+          "text": "\u2022 Circular heritage markets \u2192 sustainable tourism, heritage-based creative industries, local supply chains. \u2022 Technology-enabled marketplaces (digital craft platforms, virtual cultural tourism). \u2022 Heritage as a competitive economic advantage (cities branded by authentic cultural economies).",
+          "author": "Kanika Khosla"
+        }
+      ]
+    }
+  }
+]

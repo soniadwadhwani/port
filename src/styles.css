@@ -1028,3 +1028,464 @@ html,body,#root{background:#F3F7F6}
  .saarthi-case-study .saarthi-venn-points{gap:1.2cqw .6cqw}
  .saarthi-case-study .saarthi-venn-point>.saarthi-touchpoint-illustration{width:6cqw;height:6cqw}
 }
+
+/* Saarthi's research-to-solution narrative, below the approved introduction. */
+.saarthi-case-study .saarthi-process-section{border-top:1px solid rgb(10 15 14 / .16);padding:clamp(40px,6vw,80px) 0}
+.saarthi-case-study .saarthi-process-heading{max-width:760px;margin-bottom:40px}
+.saarthi-case-study .saarthi-process-heading h3{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;line-height:1.2;margin-top:14px}
+.saarthi-case-study .saarthi-process-heading h4{font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:400;line-height:1.4;margin-top:20px}
+.saarthi-case-study .saarthi-process-artifacts{display:grid;gap:40px}
+.saarthi-case-study .saarthi-process-artifact h4{font-size:.9rem;font-weight:400;margin-bottom:16px}
+.saarthi-case-study .saarthi-process-artifact .saarthi-artifact-placeholder{width:100%;aspect-ratio:2;min-height:180px}
+.saarthi-case-study .saarthi-process-section .saarthi-ecosystem{padding-top:0;padding-bottom:48px}
+@media(max-width:700px){.saarthi-case-study .saarthi-process-artifacts{gap:28px}.saarthi-case-study .saarthi-process-heading{margin-bottom:28px}}
+
+/* Saarthi stakeholder map: nested sets, reading from tertiary at left to primary at right. */
+.saarthi-case-study .saarthi-stakeholder-map{position:relative;isolation:isolate;aspect-ratio:1.2;width:100%;container-type:inline-size;margin:24px 0}
+.saarthi-case-study .saarthi-stakeholder-ring{position:absolute;border-radius:50%;border:1px solid;z-index:-1}
+.saarthi-case-study .saarthi-stakeholder-ring--tertiary{inset:0;background:#f2e2da;border-color:#c7a08e}
+.saarthi-case-study .saarthi-stakeholder-ring--secondary{left:28%;top:16%;width:70%;height:70%;background:#f8eee1;border-color:#d2b28c}
+.saarthi-case-study .saarthi-stakeholder-ring--primary{left:55%;top:28%;width:39%;height:46%;background:#dfeae3;border-color:#9bb7a5}
+.saarthi-case-study .saarthi-stakeholder-group{position:absolute;min-width:0;color:var(--text)}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary{left:5.5%;top:34%;width:23%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary{left:36%;top:29%;width:22%}
+.saarthi-case-study .saarthi-stakeholder-group--primary{left:65%;top:35%;width:23%}
+.saarthi-case-study .saarthi-stakeholder-group h5{font-size:clamp(.6rem,2cqw,1.15rem);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 2.5cqw;color:#704135}
+.saarthi-case-study .saarthi-stakeholder-group ul{padding-left:1.6cqw;margin:0}
+.saarthi-case-study .saarthi-stakeholder-group li{font-size:clamp(.55rem,1.7cqw,1rem);line-height:1.5;margin-bottom:.8cqw;overflow-wrap:break-word}
+@media(max-width:600px){
+ .saarthi-case-study .saarthi-stakeholder-map{aspect-ratio:1;}
+ .saarthi-case-study .saarthi-stakeholder-group h5{font-size:2.4cqw;letter-spacing:.02em;margin-bottom:2cqw}
+ .saarthi-case-study .saarthi-stakeholder-group li{font-size:2.3cqw;line-height:1.4;margin-bottom:1cqw}
+ .saarthi-case-study .saarthi-stakeholder-group ul{padding-left:2cqw}
+ .saarthi-case-study .saarthi-stakeholder-group--secondary{top:28%}
+ .saarthi-case-study .saarthi-stakeholder-group--primary{top:34%;left:63%;width:25%}
+}
+
+/* Saarthi stakeholder map: delicate concentric rings with labels in each band. */
+.saarthi-case-study .saarthi-stakeholder-map{aspect-ratio:1;max-width:900px;margin:36px auto;isolation:isolate}
+.saarthi-case-study .saarthi-stakeholder-ring{border-width:1px;box-shadow:none}
+.saarthi-case-study .saarthi-stakeholder-ring--tertiary{inset:0;width:100%;height:100%;background:#f8f2ed;border-color:#d7c3b8}
+.saarthi-case-study .saarthi-stakeholder-ring--secondary{inset:13%;width:74%;height:74%;background:#f5eee4;border-color:#d4bfa5}
+.saarthi-case-study .saarthi-stakeholder-ring--primary{inset:29%;width:42%;height:42%;background:#eaf0e9;border-color:#b1c3b3}
+.saarthi-case-study .saarthi-stakeholder-group{text-align:center}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary{left:28%;top:4%;width:44%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary{left:25%;top:17.5%;width:50%}
+.saarthi-case-study .saarthi-stakeholder-group--primary{left:33%;top:35%;width:34%}
+.saarthi-case-study .saarthi-stakeholder-group h5{font-size:clamp(.6rem,1.45cqw,.85rem);font-weight:400;letter-spacing:.16em;color:#795647;margin:0 0 1.2cqw;text-transform:uppercase}
+.saarthi-case-study .saarthi-stakeholder-group ul{list-style:none;padding:0;margin:0}
+.saarthi-case-study .saarthi-stakeholder-group li{font-size:clamp(.55rem,1.5cqw,.9rem);line-height:1.5;margin:0;overflow-wrap:normal}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary ul,.saarthi-case-study .saarthi-stakeholder-group--secondary ul{display:flex;flex-wrap:wrap;justify-content:center;column-gap:1.2cqw;row-gap:.2cqw}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary li+li:before,.saarthi-case-study .saarthi-stakeholder-group--secondary li+li:before{content:'·';margin-right:1.2cqw;color:#b39a87}
+.saarthi-case-study .saarthi-stakeholder-group--primary h5{color:#59715c;margin-bottom:1.8cqw}
+.saarthi-case-study .saarthi-stakeholder-group--primary li{margin-bottom:.5cqw}
+@media(max-width:600px){
+ .saarthi-case-study .saarthi-stakeholder-group h5{font-size:2cqw;letter-spacing:.1em}
+ .saarthi-case-study .saarthi-stakeholder-group li{font-size:2cqw;line-height:1.45}
+ .saarthi-case-study .saarthi-stakeholder-group--tertiary{left:22%;width:56%;top:3.5%}
+ .saarthi-case-study .saarthi-stakeholder-group--secondary{left:23%;width:54%;top:16.5%}
+ .saarthi-case-study .saarthi-stakeholder-group--primary{left:33%;width:34%;top:34%}
+}
+
+/* Distribute stakeholder names through their concentric bands. */
+.saarthi-case-study .saarthi-stakeholder-group--tertiary,.saarthi-case-study .saarthi-stakeholder-group--secondary,.saarthi-case-study .saarthi-stakeholder-group--primary{inset:0;width:100%;height:100%;pointer-events:none}
+.saarthi-case-study .saarthi-stakeholder-group h5{position:absolute;left:50%;transform:translateX(-50%);margin:0;white-space:nowrap}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary h5{top:5%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary h5{top:18%}
+.saarthi-case-study .saarthi-stakeholder-group--primary h5{top:34%}
+.saarthi-case-study .saarthi-stakeholder-group ul{display:contents}
+.saarthi-case-study .saarthi-stakeholder-group li{position:absolute;transform:translate(-50%,-50%);text-align:center;width:20%;margin:0;line-height:1.5}
+.saarthi-case-study .saarthi-stakeholder-group li+li:before{content:none}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary li:nth-child(1){left:8%;top:50%;width:14%}
+.saarthi-case-study .saarthi-stakeholder-group--tertiary li:nth-child(2){left:91%;top:50%;width:14%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary li:nth-child(1){left:30%;top:31%;width:18%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary li:nth-child(2){left:72%;top:31%;width:18%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary li:nth-child(3){left:22%;top:58%;width:16%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary li:nth-child(4){left:79%;top:58%;width:14%}
+.saarthi-case-study .saarthi-stakeholder-group--secondary li:nth-child(5){left:50%;top:79%;width:28%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(1){left:41%;top:43%;width:16%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(2){left:59%;top:43%;width:16%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(3){left:50%;top:51%;width:27%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(4){left:38%;top:57%;width:14%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(5){left:61%;top:57%;width:17%}
+.saarthi-case-study .saarthi-stakeholder-group--primary li:nth-child(6){left:50%;top:65%;width:25%}
+
+/* Compact stakeholder tiers for Saarthi research. */
+.saarthi-case-study .saarthi-stakeholders{border-top:1px solid #d8c9bd;margin-top:20px}
+.saarthi-case-study .saarthi-stakeholders-tier{display:grid;grid-template-columns:140px minmax(0,1fr);gap:32px;padding:28px 0;border-bottom:1px solid #e2d8ce;align-items:baseline}
+.saarthi-case-study .saarthi-stakeholders-tier h5{font-size:.8rem;font-weight:400;letter-spacing:.08em;color:#795647;margin:0}
+.saarthi-case-study .saarthi-stakeholders-tier ul{display:flex;flex-wrap:wrap;gap:12px 28px;list-style:none;margin:0;padding:0}
+.saarthi-case-study .saarthi-stakeholders-tier li{font-size:.9rem;line-height:1.6;display:flex;align-items:baseline;gap:10px}
+.saarthi-case-study .saarthi-stakeholders-tier li:before{content:'';width:4px;height:4px;border-radius:50%;background:#b48a72;flex-shrink:0;align-self:center}
+@media(max-width:600px){
+ .saarthi-case-study .saarthi-stakeholders-tier{grid-template-columns:1fr;gap:16px;padding:24px 0}
+ .saarthi-case-study .saarthi-stakeholders-tier ul{gap:10px 20px}
+ .saarthi-case-study .saarthi-stakeholders-tier li{font-size:.8rem}
+}
+
+/* Clear hierarchy: primary leads, with quieter supporting stakeholder groups. */
+.saarthi-case-study .saarthi-stakeholders{display:grid;grid-template-columns:1.3fr 1.1fr .85fr;gap:18px;border:0;margin-top:24px;align-items:stretch}
+.saarthi-case-study .saarthi-stakeholders-tier{display:block;padding:28px 24px;border:1px solid #e2d8ce;border-radius:8px;background:#faf8f4}
+.saarthi-case-study .saarthi-stakeholders-tier:first-child{background:#f1e6dc;border-color:#d3b9a3}
+.saarthi-case-study .saarthi-stakeholders-tier h5{font-size:1.25rem;font-weight:400;letter-spacing:-.02em;line-height:1.2;color:#704135;margin:0 0 24px;padding-bottom:16px;border-bottom:1px solid #dfd0c3}
+.saarthi-case-study .saarthi-stakeholders-tier:first-child h5{font-size:1.5rem}
+.saarthi-case-study .saarthi-stakeholders-tier ul{display:grid;grid-template-columns:1fr;gap:10px;padding:0;margin:0}
+.saarthi-case-study .saarthi-stakeholders-tier li{display:block;font-size:.85rem;line-height:1.5;color:#544d47}
+.saarthi-case-study .saarthi-stakeholders-tier li:before{content:none}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-stakeholders{grid-template-columns:1fr;gap:12px}
+ .saarthi-case-study .saarthi-stakeholders-tier{padding:22px}
+ .saarthi-case-study .saarthi-stakeholders-tier h5,.saarthi-case-study .saarthi-stakeholders-tier:first-child h5{font-size:1.2rem;margin-bottom:16px;padding-bottom:12px}
+ .saarthi-case-study .saarthi-stakeholders-tier ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px}
+ .saarthi-case-study .saarthi-stakeholders-tier li{font-size:.8rem}
+}
+
+.saarthi-case-study .saarthi-spectrum-disclosure>.saarthi-stakeholders{margin:8px 0 32px}
+
+/* Saarthi hypothesis development: original horizontal flow, rebuilt in live text. */
+.saarthi-case-study .saarthi-hypothesis-scroll{overflow-x:auto;padding:16px 0 28px;overscroll-behavior-x:contain}
+.saarthi-case-study .saarthi-hypothesis-flow{display:grid;grid-template-columns:190px 36px 250px 120px 270px 36px 250px 150px 250px;gap:16px;align-items:center;position:relative;width:max-content;padding:72px 12px 16px}
+.saarthi-case-study .saarthi-hypothesis-common{position:absolute;top:8px;left:270px;right:80px;border-top:1px solid #c5aa96;text-align:center}
+.saarthi-case-study .saarthi-hypothesis-common:after{content:'↓';position:absolute;right:-4px;top:-8px;color:#a98368}
+.saarthi-case-study .saarthi-hypothesis-common span{position:relative;top:-12px;background:var(--background);padding:6px 20px;color:#795647;font-size:.75rem;border:1px solid #d8c9bd;border-radius:40px}
+.saarthi-case-study .saarthi-hypothesis-context{background:#eee4d8;border:1px solid #dac8b6;border-radius:8px;padding:22px}
+.saarthi-case-study .saarthi-hypothesis-context p{font-size:.8rem;line-height:1.65;margin:0}
+.saarthi-case-study .saarthi-hypothesis-context p+p{margin-top:18px}
+.saarthi-case-study .saarthi-hypothesis-context h5{font-size:.85rem;font-weight:600;line-height:1.5;margin:0 0 18px}
+.saarthi-case-study .saarthi-hypothesis-statement{background:#faf8f4;border:1px solid #dfd3c6;border-radius:10px;padding:22px 18px;align-self:center}
+.saarthi-case-study .saarthi-hypothesis-statement h5{font-size:.7rem;font-weight:400;letter-spacing:.04em;color:#795647;margin:0 0 24px}
+.saarthi-case-study .saarthi-hypothesis-statement h5 span{color:#936b3d;font-size:1rem}
+.saarthi-case-study .saarthi-hypothesis-prompt{text-align:center;font-size:.85rem;margin-bottom:16px}
+.saarthi-case-study .saarthi-hypothesis-belief,.saarthi-case-study .saarthi-hypothesis-reason{background:#f0e4d7;border:1px solid #dbc4ad;border-radius:5px;padding:16px;font-size:.8rem;line-height:1.65}
+.saarthi-case-study .saarthi-hypothesis-reason{background:#e9eee6;border-color:#c9d4c4}
+.saarthi-case-study .saarthi-hypothesis-because{text-align:center;font-size:.75rem;margin:0}
+.saarthi-case-study .saarthi-hypothesis-down{display:block;text-align:center;padding:8px;color:#ab8e78}
+.saarthi-case-study .saarthi-hypothesis-arrow{font-size:1.5rem;color:#ab8e78;text-align:center}
+.saarthi-case-study .saarthi-hypothesis-bridge{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;color:#795647}
+.saarthi-case-study .saarthi-hypothesis-bridge p{border:1px solid #cbb5a3;border-radius:16px;padding:16px 12px;font-size:.75rem;line-height:1.6;margin:0}
+
+/* Faithful hypothesis board geometry: original frames, ovals, stars and curved links. */
+.saarthi-case-study .saarthi-hypothesis-replica{display:block;position:relative;width:2400px;height:680px;padding:0;background:#f8f8f8;border:1px solid #e4e4e4;font-family:Arial,sans-serif}
+.saarthi-case-study .saarthi-hypothesis-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context{position:absolute;left:12px;top:280px;width:213px;height:223px;border:0;border-radius:0;background:#ffe39a;padding:18px;box-shadow:0 2px 3px #00000012;box-sizing:border-box}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context p{font-size:13px;line-height:1.45}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long{left:1118px;top:255px;width:222px;height:371px;padding:18px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long p{font-size:11px;line-height:1.45}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context h5{font-size:12px;line-height:1.4;margin-bottom:16px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{position:absolute;top:214px;left:279px;width:333px;height:357px;box-sizing:border-box;background:white;border:1px solid #ededed;border-radius:0;padding:24px 10px 12px;display:flex;flex-direction:column;align-items:center}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:nth-of-type(2){left:1395px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child{left:2070px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement h5{position:absolute;left:0;top:0;font-size:6px;letter-spacing:0;margin:0;color:#333}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-prompt{font-size:16px;margin:0;line-height:1.4}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-belief,.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-reason{background:#ffedbe;border:1px solid #ffc04b;border-radius:2px;padding:16px 8px;width:100%;min-height:76px;box-sizing:border-box;font-size:11px;line-height:1.5}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-because{background:white;border:1px solid #ddd1ff;padding:10px 18px;font-size:16px;line-height:1.2}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-down{color:#ae85ff;font-size:20px;line-height:1;padding:10px 0}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common{position:absolute;top:46px;left:1390px;right:auto;border:1px solid #999;border-radius:50%;width:120px;height:57px;display:grid;place-items:center;background:white}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common:after{content:none}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common span{position:static;border:0;background:none;font-size:11px;color:#333;padding:0}
+.saarthi-case-study .saarthi-hypothesis-question,.saarthi-case-study .saarthi-hypothesis-reframe,.saarthi-case-study .saarthi-hypothesis-local{position:absolute;border:1px solid #999;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;color:#333}
+.saarthi-case-study .saarthi-hypothesis-question{left:730px;top:180px;width:160px;height:104px;font-size:11px}
+.saarthi-case-study .saarthi-hypothesis-reframe{left:1805px;top:306px;width:150px;height:65px;font-size:16px}
+.saarthi-case-study .saarthi-hypothesis-local{left:1805px;top:430px;width:150px;height:145px;font-size:11px;line-height:1.5;padding:24px}
+.saarthi-case-study .saarthi-hypothesis-star{position:absolute;left:-9px;top:112px;color:#dba500;font-size:32px;line-height:1;background:transparent;text-shadow:0 0 2px white}
+.saarthi-case-study .saarthi-hypothesis-statement.is-preferred .saarthi-hypothesis-star{top:1px}
+.saarthi-case-study .saarthi-hypothesis-replica>.saarthi-hypothesis-arrow{display:none}
+
+/* Fit the complete hypothesis composition within the case-study width. */
+.saarthi-case-study .saarthi-hypothesis-fit{position:relative;width:100%;overflow:hidden;margin:16px 0 24px}
+.saarthi-case-study .saarthi-hypothesis-replica{width:1200px;height:760px;transform:scale(var(--hypothesis-scale,1));transform-origin:top left;background:transparent;border:0}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context{left:10px;top:80px;width:200px;height:94px;padding:14px;background:#f2e5d3}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context p{font-size:12px;line-height:1.5}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long{left:400px;top:70px;width:340px;height:145px;padding:12px;overflow:auto}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long h5{font-size:11px;margin-bottom:8px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long p{font-size:10px;line-height:1.35}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long p+p{margin-top:8px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{left:10px;top:246px;width:290px;height:390px;padding:30px 14px 16px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:nth-of-type(2){left:450px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child{left:900px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement h5{font-size:10px;left:12px;top:10px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-belief,.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-reason{font-size:12px;padding:14px;line-height:1.5}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common{left:550px;top:14px;width:100px;height:42px}
+.saarthi-case-study .saarthi-hypothesis-question{left:240px;top:80px;width:130px;height:70px;font-size:12px}
+.saarthi-case-study .saarthi-hypothesis-reframe{left:805px;top:85px;width:140px;height:52px;font-size:14px}
+.saarthi-case-study .saarthi-hypothesis-local{left:850px;top:155px;width:150px;height:75px;padding:12px;font-size:11px}
+
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long{top:65px;height:220px;overflow:visible}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{top:310px}
+
+/* Fit the board with container-relative dimensions, including when expanded. */
+.saarthi-case-study .saarthi-hypothesis-fit{container-type:inline-size;width:100%;max-width:100%;height:auto;aspect-ratio:1200/760;overflow:hidden}
+.saarthi-case-study .saarthi-hypothesis-replica{zoom:calc(100cqw / 1200px);transform:none;background:transparent;color:#533c30}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{background:#f1e9e0;border-color:#d5bfae;border-radius:8px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context{background:#e9d9ca;border:1px solid #cfb59f;border-radius:6px;box-shadow:none}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-belief{background:#e8d3c2;border-color:#cba88c;color:#533c30}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-reason{background:#dfe8dc;border-color:#afc0a9;color:#354b39}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-because{background:transparent;border-color:#cbb5a3;color:#795647;border-radius:4px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-down{color:#a57856}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common,.saarthi-case-study .saarthi-hypothesis-question,.saarthi-case-study .saarthi-hypothesis-reframe,.saarthi-case-study .saarthi-hypothesis-local{background:#ede4d9;border-color:#bca18b;color:#704e38}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common span{color:#704e38}
+.saarthi-case-study .saarthi-hypothesis-connections>g{stroke:#b3947b}
+
+/* Readable hypothesis hierarchy at the natural page width. */
+.saarthi-case-study .saarthi-hypothesis-fit{aspect-ratio:auto;overflow:visible;height:auto}
+.saarthi-case-study .saarthi-hypothesis-replica{zoom:1;transform:none;width:100%;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;padding:48px 0 24px;align-items:start;background:transparent}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common{top:0;left:0;width:auto;height:auto;border:0;border-radius:0;background:none;display:block}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-common span{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:#9a765c}
+.saarthi-case-study .saarthi-hypothesis-connections{display:none}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context{position:static;inset:auto;width:auto;height:auto;grid-column:1;grid-row:1;background:#eee2d6;border:0;border-left:2px solid #bd8c68;border-radius:0;padding:20px;box-shadow:none}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context p{font-size:.85rem;line-height:1.65;color:#5b4639}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long{grid-column:2;grid-row:1;background:transparent;padding:0 0 0 20px;border-color:#d5c6b9}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long h5{font-size:.85rem;font-weight:600;line-height:1.5;color:#704135;margin:0 0 16px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long p{font-size:.75rem;line-height:1.65;color:#75665b}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long p+p{margin-top:14px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{position:relative;inset:auto;width:auto;height:auto;grid-column:1;grid-row:2;padding:26px 22px;border:1px solid #dac8b9;border-radius:10px;background:#f4ede5;align-self:stretch;display:flex;flex-direction:column;align-items:stretch}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:nth-of-type(2){left:auto;grid-column:2}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child{left:auto;grid-column:3;background:#e8eee5;border-color:#b7c6b0}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement h5{position:static;font-family:inherit;font-size:1.15rem;font-weight:400;line-height:1.3;letter-spacing:-.02em;margin:0 0 26px;color:#704135;min-height:3em}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child h5{color:#405c43}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-prompt,.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-because{font-size:.6rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;text-align:left;background:none;border:0;padding:0;margin:0 0 12px;color:#937257}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-belief{background:none;border:0;border-radius:0;padding:0;min-height:0;font-family:inherit;font-size:1rem;line-height:1.6;color:#4b372c;margin-bottom:26px}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-reason{background:none;border:0;border-top:1px solid #d8c8b9;border-radius:0;padding:16px 0 0;min-height:0;font-size:.8rem;line-height:1.65;color:#6d6056}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child .saarthi-hypothesis-reason{border-color:#c1cebb;color:#566850}
+.saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-down{display:none}
+.saarthi-case-study .saarthi-hypothesis-question{position:relative;inset:auto;transform:none;grid-column:1;grid-row:1;align-self:end;justify-self:end;width:auto;height:auto;border:1px solid #c6ad96;border-radius:50%;background:var(--background);padding:16px 22px;font-family:inherit;font-size:.75rem;margin:0 -8px -20px 0}
+.saarthi-case-study .saarthi-hypothesis-reframe{position:static;grid-column:3;grid-row:1;align-self:start;justify-self:start;width:auto;height:auto;padding:12px 24px;border-radius:50%;background:none;font-size:.8rem;font-family:inherit}
+.saarthi-case-study .saarthi-hypothesis-local{position:relative;inset:auto;grid-column:3;grid-row:1;align-self:start;width:auto;height:auto;margin-top:72px;padding:24px;background:#e7ded2;border:0;border-radius:8px;font-family:inherit;font-size:.95rem;line-height:1.65;text-align:left}
+.saarthi-case-study .saarthi-hypothesis-statement:before{content:'';position:absolute;left:-26px;top:-28px;width:40px;height:28px;border-top:1px solid #b3947b;border-right:1px solid #b3947b;border-radius:0 28px 0 0}
+.saarthi-case-study .saarthi-hypothesis-statement:first-of-type:before{display:none}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-hypothesis-replica{grid-template-columns:1fr;gap:24px;padding-top:40px}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context{grid-column:1;grid-row:1}
+ .saarthi-case-study .saarthi-hypothesis-question{grid-column:1;grid-row:2;margin:0;justify-self:center}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement{grid-column:1;grid-row:3}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-context--long{grid-column:1;grid-row:4}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:nth-of-type(2){grid-column:1;grid-row:5}
+ .saarthi-case-study .saarthi-hypothesis-reframe{grid-column:1;grid-row:6;justify-self:center}
+ .saarthi-case-study .saarthi-hypothesis-local{grid-column:1;grid-row:7;margin:0}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement:last-child{grid-column:1;grid-row:8}
+ .saarthi-case-study .saarthi-hypothesis-replica .saarthi-hypothesis-statement h5{min-height:0}
+}
+
+/* Saarthi research persona. */
+.saarthi-case-study .saarthi-persona{padding:16px 0 32px}
+.saarthi-case-study .saarthi-persona-profile{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,5vw,64px);align-items:center;background:#eee5da;border-radius:12px;padding:clamp(20px,3vw,40px)}
+.saarthi-case-study .saarthi-persona-portrait{align-self:stretch;display:flex;align-items:center;justify-content:center}
+.saarthi-case-study .saarthi-persona-portrait img{display:block;width:100%;height:auto;max-width:380px;object-fit:contain}
+.saarthi-case-study .saarthi-persona-kicker{font-size:.6rem;letter-spacing:.14em;color:#8b654b;margin-bottom:14px}
+.saarthi-case-study .saarthi-persona-identity h5{font-size:clamp(1.5rem,3vw,2.5rem);font-weight:400;line-height:1.15;letter-spacing:-.03em;margin:0 0 12px;color:#704135}
+.saarthi-case-study .saarthi-persona-meta{font-size:.8rem;color:#6f5f51}
+.saarthi-case-study .saarthi-persona-identity dl{display:grid;gap:16px;margin:28px 0}
+.saarthi-case-study .saarthi-persona-identity dt{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#8b654b;margin-bottom:6px}
+.saarthi-case-study .saarthi-persona-identity dd{margin:0;font-size:.85rem;line-height:1.6}
+.saarthi-case-study .saarthi-persona-identity blockquote{font-size:clamp(1rem,1.8vw,1.4rem);line-height:1.5;color:#704135;border-left:2px solid #b58d70;padding-left:20px;margin:24px 0 0}
+.saarthi-case-study .saarthi-persona-emotions{padding:32px 0;border-bottom:1px solid #ded2c5}
+.saarthi-case-study .saarthi-persona h6{font-size:.9rem;font-weight:500;color:#704135;margin:0 0 20px;line-height:1.4}
+.saarthi-case-study .saarthi-persona-emotions>div{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.saarthi-case-study .saarthi-persona-emotions blockquote{margin:0;font-size:.85rem;line-height:1.7;color:#756356}
+.saarthi-case-study .saarthi-persona-details{display:grid;grid-template-columns:1fr 1fr;gap:36px 48px;margin-top:36px}
+.saarthi-case-study .saarthi-persona-detail{border-top:1px solid #d8c6b5;padding-top:24px}
+.saarthi-case-study .saarthi-persona-detail:last-child{background:#e8eee4;padding:24px;border:0;border-radius:8px}
+.saarthi-case-study .saarthi-persona-detail:last-child h6{color:#496044}
+.saarthi-case-study .saarthi-persona-detail ul{margin:0;padding-left:16px;display:grid;gap:10px}
+.saarthi-case-study .saarthi-persona-detail li{font-size:.8rem;line-height:1.7;padding-left:4px}
+.saarthi-case-study .saarthi-persona-detail li::marker{color:#b2947c}
+@media(max-width:700px){
+ .saarthi-case-study .saarthi-persona-profile{grid-template-columns:1fr;gap:24px}
+ .saarthi-case-study .saarthi-persona-portrait img{max-width:260px}
+ .saarthi-case-study .saarthi-persona-details,.saarthi-case-study .saarthi-persona-emotions>div{grid-template-columns:1fr;gap:24px}
+}
+
+/* The as-is map scrolls inside the page; original content and diagram positions are retained. */
+.saarthi-case-study .saarthi-process-artifact{min-width:0;max-width:100%}
+.saarthi-case-study .saarthi-as-is-scroll{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid #ded2c5;margin:16px 0 28px;background:#faf8f4}
+.saarthi-case-study .saarthi-as-is-diagram{width:9592px;max-width:none}
+.saarthi-case-study .saarthi-as-is-diagram>svg{display:block;width:9592px;height:3250px;max-width:none}
+.saarthi-case-study .saarthi-journey-scroll-hint{font-size:.7rem;color:#8b6b53;margin:8px 0 0}
+
+.saarthi-case-study object.saarthi-as-is-diagram{display:block;width:9592px;height:3250px;max-width:none;border:0}
+
+/* Compact, flowing journey cells with the original stage palette. */
+.saarthi-case-study .saarthi-journey-table-scroll{max-width:100%;overflow:auto;max-height:620px;margin:16px 0 28px;border:1px solid #ded2c5;overscroll-behavior:contain;background:var(--background)}
+.saarthi-case-study .saarthi-journey-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:2950px;font-size:.75rem;line-height:1.6}
+.saarthi-case-study .saarthi-journey-table th,.saarthi-case-study .saarthi-journey-table td{box-sizing:border-box;width:310px;padding:16px;vertical-align:top;border-right:1px solid #fff;border-bottom:1px solid #ded2c5;text-align:left}
+.saarthi-case-study .saarthi-journey-table th:first-child{width:160px;position:sticky;left:0;z-index:2;background:#eee9e1;font-size:.7rem;font-weight:500}
+.saarthi-case-study .saarthi-journey-table thead th{position:sticky;top:0;z-index:3;font-weight:600;font-size:.85rem}
+.saarthi-case-study .saarthi-journey-table thead th:first-child{z-index:4}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(2){background:#ffe4f3}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(3){background:#e9dfff}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(4){background:#dcefff}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(5){background:#dcf7f3}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(6){background:#dff5e3}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(7){background:#fff0cc}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(8){background:#ffe7d1}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(9){background:#ffded9}
+.saarthi-case-study .saarthi-journey-table tr>:nth-child(10){background:#ededed}
+.saarthi-case-study .saarthi-journey-table td p{font-size:inherit;line-height:inherit;margin:0;white-space:pre-line;overflow-wrap:break-word}
+.saarthi-case-study .saarthi-journey-table td p+p{margin-top:14px;padding-top:14px;border-top:1px solid #00000012}
+.saarthi-case-study .saarthi-journey-emotions{display:block;width:2950px;height:160px;max-width:none}
+
+/* Horizontal lanes with small cards, preserving each row's identity. */
+.saarthi-case-study .saarthi-journey-table-scroll{max-height:680px;background:#f7f5f1}
+.saarthi-case-study .saarthi-journey-table th,.saarthi-case-study .saarthi-journey-table td{width:auto;padding:12px;vertical-align:top;border-bottom:2px solid #c6bcae;border-right:2px solid #d3c9bc}
+.saarthi-case-study .saarthi-journey-table tbody tr>td{background:#f8f6f2}
+.saarthi-case-study .saarthi-journey-table tbody tr:nth-child(even)>td{background:#eeebe5}
+.saarthi-case-study .saarthi-journey-table tbody th:first-child{background:#e2dbd0;font-size:.8rem;font-weight:600;letter-spacing:.02em;padding:20px 16px;vertical-align:middle;border-right:3px solid #b4a795;color:#533f30}
+.saarthi-case-study .saarthi-journey-table tbody tr:nth-child(even)>th:first-child{background:#d8cebf}
+.saarthi-case-study .saarthi-journey-table thead th{padding:18px 16px;border-bottom:3px solid #b9ab98}
+.saarthi-case-study .saarthi-journey-row-cards{display:flex;align-items:flex-start;gap:10px}
+.saarthi-case-study .saarthi-journey-table td p{box-sizing:border-box;flex:0 0 138px;width:138px;white-space:normal;margin:0;padding:12px;border:1px solid #00000012;border-radius:4px;font-size:.7rem;line-height:1.55;box-shadow:0 1px 2px #00000006;color:#312c29}
+.saarthi-case-study .saarthi-journey-table td p+p{margin:0;padding:12px;border:1px solid #00000012}
+.saarthi-case-study .saarthi-journey-table td:nth-child(2) p{background:#ffe4f3}
+.saarthi-case-study .saarthi-journey-table td:nth-child(3) p{background:#e9dfff}
+.saarthi-case-study .saarthi-journey-table td:nth-child(4) p{background:#dcefff}
+.saarthi-case-study .saarthi-journey-table td:nth-child(5) p{background:#dcf7f3}
+.saarthi-case-study .saarthi-journey-table td:nth-child(6) p{background:#dff5e3}
+.saarthi-case-study .saarthi-journey-table td:nth-child(7) p{background:#fff0cc}
+.saarthi-case-study .saarthi-journey-table td:nth-child(8) p{background:#ffe7d1}
+.saarthi-case-study .saarthi-journey-table td:nth-child(9) p{background:#ffded9}
+.saarthi-case-study .saarthi-journey-table td:nth-child(10) p{background:#e1e1e1}
+
+/* Original journey board, reduced to half the earlier diagram size. */
+.saarthi-case-study .saarthi-original-journey-scroll{max-width:100%;width:100%;overflow:auto;max-height:620px;margin:16px 0 28px;overscroll-behavior:contain;background:#fafafa}
+.saarthi-case-study .saarthi-original-journey{display:block;width:4800px;height:1626.3553px;max-width:none;border:0}
+
+/* Standalone map elements on the case-study background, in a smaller footprint. */
+.saarthi-case-study .saarthi-original-journey-scroll{background:transparent;max-height:480px;border:0}
+.saarthi-case-study .saarthi-original-journey{width:3200px;height:1084.237px;background:transparent}
+
+/* Revised source: larger text, transparent background, reduced overall footprint. */
+.saarthi-case-study .saarthi-original-journey{width:2800px;height:988.4844px}
+
+/* Explore individual journey cards without changing the source arrangement. */
+.saarthi-case-study .saarthi-journey-interactive-board{position:relative;width:2800px;height:988.4844px}
+.saarthi-case-study .saarthi-journey-interactive-board>.saarthi-original-journey{pointer-events:none}
+.saarthi-case-study .saarthi-journey-stage-label{position:absolute;transform:translateX(-50%);font-size:13px;font-weight:600;white-space:nowrap;line-height:22px;padding:0 8px;color:#342d29;z-index:2}
+.saarthi-case-study .saarthi-journey-hotspot,.saarthi-case-study .saarthi-journey-graph-hotspot{position:absolute;background:transparent;border:0;padding:0;cursor:pointer;z-index:3;border-radius:2px}
+.saarthi-case-study .saarthi-journey-hotspot:hover{background:#ffffff25;outline:1px solid #795647;box-shadow:0 2px 6px #00000015}
+.saarthi-case-study .saarthi-journey-graph-hotspot{left:0;top:67.55%;width:100%;height:32.45%}
+.saarthi-case-study .saarthi-journey-graph-hotspot:hover{background:#79564708}
+.saarthi-case-study .saarthi-journey-modal{position:fixed;inset:0;z-index:100;background:#16120ed0;display:flex;justify-content:center;align-items:center;padding:24px;backdrop-filter:blur(3px)}
+.saarthi-case-study .saarthi-journey-modal-content{width:min(540px,100%);max-height:85svh;overflow:auto;padding:60px 36px 40px;position:relative;border-radius:8px;box-shadow:0 20px 60px #00000030;animation:note-overlay-in .15s ease}
+.saarthi-case-study .saarthi-journey-modal-content>p{font-size:1.15rem;line-height:1.75;color:#302923}
+.saarthi-case-study .saarthi-journey-modal-close{position:absolute;right:14px;top:12px;background:none;border:0;font-size:28px;cursor:pointer;color:#533f30}
+.saarthi-case-study .saarthi-journey-modal-content.is-graph{width:min(1400px,96vw);background:var(--background);padding:48px 24px 28px}
+.saarthi-case-study .saarthi-journey-modal-content h4{font-size:1.2rem;font-weight:400;margin:0 0 24px}
+.saarthi-case-study .saarthi-expanded-feelings{display:block;width:100%;height:auto;aspect-ratio:18870/2162;border:0;pointer-events:none}
+.saarthi-case-study .saarthi-feelings-stage-legend{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:12px;margin-top:20px}
+.saarthi-case-study .saarthi-feelings-stage-legend span{font-size:.65rem;line-height:1.5;text-align:center;color:#795647}
+@media(max-width:600px){.saarthi-case-study .saarthi-feelings-stage-legend{grid-template-columns:repeat(3,1fr)}.saarthi-case-study .saarthi-journey-modal-content{padding:52px 24px 28px}}
+
+/* Each stage label and arrow form one larger pastel header. */
+.saarthi-case-study .saarthi-journey-stage-label{box-sizing:border-box;height:34px;display:flex;align-items:center;justify-content:center;padding:0 18px 0 22px;font-size:12px;line-height:1.2;white-space:normal;text-align:center;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%,10px 50%);z-index:4}
+.saarthi-case-study .saarthi-journey-interactive-board:before{content:'';position:absolute;top:0;left:0;width:100%;height:43px;background:var(--background);z-index:1;pointer-events:none}
+
+/* Affinity wall: original note positions, without exported board backgrounds or credits. */
+.saarthi-case-study .saarthi-affinity-scroll{max-width:100%;overflow:auto;max-height:640px;margin:16px 0 28px;overscroll-behavior:contain;background:transparent}
+.saarthi-case-study .saarthi-affinity-wall{position:relative;width:3306px;height:2964px}
+.saarthi-case-study .saarthi-affinity-group{position:absolute}
+.saarthi-case-study .saarthi-affinity-heading{position:absolute;top:-14px;left:0;width:100%;border:0;border-bottom:1px solid #cdbba8;background:transparent;text-align:left;padding:0 0 10px;font-size:13px;font-weight:500;color:#704135;cursor:pointer;line-height:1.4}
+.saarthi-case-study .saarthi-affinity-heading span{float:right;margin-right:12px}
+.saarthi-case-study .saarthi-affinity-heading:hover{color:#a46b47}
+.saarthi-case-study .saarthi-affinity-sticky{position:absolute;border:0;border-radius:0;box-shadow:0 2px 4px #00000012;padding:14px;text-align:left;cursor:pointer;color:#302923;transition:box-shadow .15s,translate .15s}
+.saarthi-case-study .saarthi-affinity-sticky>span{display:block;font-size:11px;line-height:1.5;max-height:100%;overflow:hidden}
+.saarthi-case-study .saarthi-affinity-sticky:hover{box-shadow:0 6px 14px #00000022;translate:0 -2px;z-index:2}
+.saarthi-case-study .saarthi-affinity-expanded h4{font-size:.75rem;font-weight:500;letter-spacing:.04em;margin:0 0 24px;line-height:1.5}
+.saarthi-case-study .saarthi-affinity-expanded.is-group{width:min(1100px,96vw);background:var(--background)}
+.saarthi-case-study .saarthi-affinity-expanded-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.saarthi-case-study .saarthi-affinity-expanded-notes p{padding:24px;font-size:.9rem;line-height:1.7;margin:0;box-shadow:0 2px 4px #00000012}
+@media(max-width:700px){.saarthi-case-study .saarthi-affinity-expanded-notes{grid-template-columns:1fr}}
+
+/* Entire affinity overview is visible within the page; clusters open individually. */
+.saarthi-case-study .saarthi-affinity-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 20px;padding:24px 0 32px}
+.saarthi-case-study .saarthi-affinity-cluster{display:flex;flex-direction:column;align-items:stretch;gap:12px;min-width:0;border:0;background:transparent;text-align:left;cursor:pointer;padding:10px;border-radius:8px;transition:background .2s,transform .2s}
+.saarthi-case-study .saarthi-affinity-cluster:hover{background:#eee6dd;transform:translateY(-3px)}
+.saarthi-case-study .saarthi-affinity-cluster-preview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;align-content:start;height:95px;padding:6px}
+.saarthi-case-study .saarthi-affinity-cluster-preview>span{display:block;aspect-ratio:1;max-height:28px;box-shadow:0 1px 2px #00000015}
+.saarthi-case-study .saarthi-affinity-cluster-title{font-size:.8rem;line-height:1.45;font-weight:500;color:#704135}
+.saarthi-case-study .saarthi-affinity-cluster-meta{font-size:.65rem;color:#96806c;display:flex;justify-content:space-between;margin-top:auto}
+.saarthi-case-study .saarthi-affinity-expanded-notes button{border:0;border-radius:0;text-align:left;cursor:pointer;padding:24px;font-size:.9rem;line-height:1.7;box-shadow:0 2px 4px #00000012;color:#302923}
+.saarthi-case-study .saarthi-affinity-expanded-notes button:hover{box-shadow:0 6px 18px #00000020}
+.saarthi-case-study .saarthi-affinity-back{background:none;border:0;font-size:.7rem;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:0;margin:0 0 20px;color:#704135}
+@media(max-width:700px){.saarthi-case-study .saarthi-affinity-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}}
+@media(prefers-reduced-motion:reduce){.saarthi-case-study .saarthi-affinity-cluster{transition:none}}
+
+/* Six findings, with context and traceable affinity evidence on demand. */
+.saarthi-case-study .saarthi-insights-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:24px 0 32px}
+.saarthi-case-study .saarthi-insight-card{display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:20px;padding:26px;background:#eee2d6;border:1px solid #deccbb;border-radius:8px;cursor:pointer;transition:transform .18s,box-shadow .18s;color:#533c30}
+.saarthi-case-study .saarthi-insight-card:nth-child(2n){background:#e8eee3;border-color:#cdd8c5}
+.saarthi-case-study .saarthi-insight-card:hover{transform:translateY(-3px);box-shadow:0 6px 18px #4d352312}
+.saarthi-case-study .saarthi-insight-index{font-size:.6rem;letter-spacing:.12em;color:#92755e;margin:0}
+.saarthi-case-study .saarthi-insight-title{font-size:1rem;font-weight:400;line-height:1.55}
+.saarthi-case-study .saarthi-insight-explore{display:flex;justify-content:space-between;font-size:.65rem;color:#93745b;margin-top:auto;padding-top:16px}
+.saarthi-case-study .saarthi-insight-expanded{width:min(1000px,95vw);background:var(--background)}
+.saarthi-case-study .saarthi-insight-expanded h4{font-size:clamp(1.3rem,2.5vw,1.9rem);line-height:1.4;font-weight:400;margin:16px 0 28px;color:#704135;max-width:760px}
+.saarthi-case-study .saarthi-insight-expanded h5{font-size:.75rem;font-weight:500;letter-spacing:.04em;margin:0 0 16px;color:#795647}
+.saarthi-case-study .saarthi-insight-context{border-left:2px solid #c4a68a;padding-left:20px;margin-bottom:32px}
+.saarthi-case-study .saarthi-insight-context p{font-size:.9rem;line-height:1.7;max-width:740px;margin:0}
+.saarthi-case-study .saarthi-insight-context p+p{margin-top:14px}
+.saarthi-case-study .saarthi-insight-evidence>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.saarthi-case-study .saarthi-insight-evidence article{padding:22px;background:#dceaf2;box-shadow:0 2px 4px #0000000a}
+.saarthi-case-study .saarthi-insight-evidence article span{font-size:.55rem;letter-spacing:.08em;color:#68818e;display:block;margin-bottom:14px}
+.saarthi-case-study .saarthi-insight-evidence article p{font-size:.85rem;line-height:1.7;margin:0;color:#394d58}
+@media(max-width:900px){.saarthi-case-study .saarthi-insights-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.saarthi-case-study .saarthi-insights-grid,.saarthi-case-study .saarthi-insight-evidence>div{grid-template-columns:1fr}}
+
+/* Final narrative: comfortable reading width and a quiet editorial hierarchy. */
+.saarthi-case-study .saarthi-narrative{border-top:1px solid #d8c6b5;padding:36px 0 16px}
+.saarthi-case-study .saarthi-narrative>h4{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:400;line-height:1.25;letter-spacing:-.025em;color:#704135;max-width:650px;margin:18px 0 32px}
+.saarthi-case-study .saarthi-narrative-copy{max-width:720px}
+.saarthi-case-study .saarthi-narrative-copy p{font-size:clamp(.9rem,1.2vw,1rem);line-height:1.9;margin:0 0 24px}
+.saarthi-case-study .saarthi-narrative-copy p:first-child{font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.75;color:#795647;margin-bottom:32px}
+
+/* Saarthi storyboard: original artwork, uncropped, with an expanded reading view. */
+.saarthi-case-study .saarthi-storyboard-preview{display:block;width:100%;padding:0;margin:16px 0 28px;background:none;border:0;text-align:right;cursor:zoom-in;color:#795647}
+.saarthi-case-study .saarthi-storyboard-preview img{display:block;width:100%;height:auto}
+.saarthi-case-study .saarthi-storyboard-preview>span{display:inline-block;font-size:.7rem;margin-top:12px}
+.saarthi-case-study .saarthi-storyboard-expanded{width:96vw;max-width:1800px;background:var(--background);padding:48px 16px 16px;overflow:hidden}
+.saarthi-case-study .saarthi-storyboard-scroll{overflow:auto;max-height:75svh}
+.saarthi-case-study .saarthi-storyboard-scroll img{display:block;width:1800px;max-width:none;height:auto}
+
+/* Illustrated, individually explorable service touchpoints. */
+.saarthi-case-study .saarthi-tp-groups{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px 0 32px}
+.saarthi-case-study .saarthi-tp-group{padding:24px 18px;border:1px solid #d9bfb1;border-radius:12px;background:#faf1eb}
+.saarthi-case-study .saarthi-tp-group>h4{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;line-height:1.6;color:#704135;margin:0 0 22px;padding:0 6px}
+.saarthi-case-study .saarthi-tp-items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px;align-items:start}
+.saarthi-case-study .saarthi-tp-group.is-people .saarthi-tp-items{grid-template-columns:repeat(2,minmax(0,1fr))}
+.saarthi-case-study .saarthi-tp-item{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:10px;padding:4px;text-align:center;cursor:pointer;min-width:0;color:#704135;transition:transform .2s}
+.saarthi-case-study .saarthi-tp-item:hover{transform:translateY(-4px)}
+.saarthi-case-study .saarthi-tp-item>span:last-child{font-size:.7rem;line-height:1.45}
+.saarthi-case-study .saarthi-tp-art{display:block;position:relative;overflow:hidden;width:100%;max-width:220px;border-radius:12px}
+.saarthi-case-study .saarthi-tp-art img{position:absolute;height:auto;display:block}
+.saarthi-case-study .saarthi-tp-expanded{background:#faf1eb;width:min(540px,95vw);animation:saarthiTouchpointOpen .23s ease both}
+.saarthi-case-study .saarthi-tp-expanded>.saarthi-tp-art{width:75%;margin:20px auto 28px;max-width:280px}
+.saarthi-case-study .saarthi-tp-category{font-size:.6rem!important;text-transform:uppercase;letter-spacing:.1em;color:#95705a!important}
+.saarthi-case-study .saarthi-tp-expanded h4{font-size:1.5rem;font-weight:400;color:#704135;margin:0 0 18px}
+.saarthi-case-study .saarthi-tp-expanded>p:last-child{font-size:.95rem;line-height:1.8;color:#6d5141}
+@keyframes saarthiTouchpointOpen{from{opacity:0;transform:translateY(12px) scale(.95)}to{opacity:1;transform:none}}
+@media(max-width:700px){.saarthi-case-study .saarthi-tp-groups{grid-template-columns:1fr}.saarthi-case-study .saarthi-tp-group{padding:20px 14px}}
+@media(prefers-reduced-motion:reduce){.saarthi-case-study .saarthi-tp-expanded{animation:none}.saarthi-case-study .saarthi-tp-item{transition:none}}
+
+/* Original blueprint connections stay intact; overlays only add reading interactions. */
+.saarthi-case-study .saarthi-blueprint-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}
+.saarthi-case-study .saarthi-blueprint-toolbar p,.saarthi-case-study .saarthi-blueprint-toolbar button{font-size:.7rem;color:#8b6b53}
+.saarthi-case-study .saarthi-blueprint-toolbar button{border:0;background:none;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.saarthi-case-study .saarthi-blueprint-scroll{overflow-x:auto;max-width:100%;margin-bottom:28px;overscroll-behavior-x:contain}
+.saarthi-case-study .saarthi-blueprint-board{position:relative;width:2200px;cursor:zoom-in}
+.saarthi-case-study .saarthi-blueprint-art{position:relative;width:100%;aspect-ratio:1510/650;overflow:hidden;mix-blend-mode:multiply}
+.saarthi-case-study .saarthi-blueprint-art img{display:block;position:absolute;width:135.16556%;max-width:none;height:auto;left:-17.41722%;top:-69.6923%;pointer-events:none}
+.saarthi-case-study .saarthi-blueprint-box{position:absolute;background:transparent;border:0;cursor:pointer;border-radius:4px;padding:0}
+.saarthi-case-study .saarthi-blueprint-box:hover{outline:1px solid #9a5f4d;background:#ffffff30}
+.saarthi-case-study .saarthi-blueprint-expanded{background:#f3e0d8}
+.saarthi-case-study .saarthi-blueprint-expanded.is-whole{width:96vw;max-width:1800px;padding:50px 16px 20px;background:var(--background)}
+.saarthi-case-study .saarthi-blueprint-expanded.is-whole .saarthi-blueprint-art{max-height:75svh}
+.saarthi-case-study .saarthi-narrative{border-top:0}
+@media(max-width:600px){.saarthi-case-study .saarthi-blueprint-toolbar{align-items:flex-start;flex-direction:column}}
+
+/* Blueprint is rebuilt from native text boxes and explicit vector connections. */
+.saarthi-case-study .saarthi-blueprint-native{mix-blend-mode:normal;background:transparent;container-type:inline-size}
+.saarthi-case-study .saarthi-blueprint-wires{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible}
+.saarthi-case-study .saarthi-blueprint-node{position:absolute;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;padding:.5cqw .3cqw;background:#f6ddd5;border:1px solid #e4bfb4;border-radius:4px;font-family:Arial,sans-serif;font-size:.72cqw;line-height:1.4;color:#604437;overflow-wrap:break-word}
+.saarthi-case-study .saarthi-blueprint-node.is-lane{background:#bd7f73;border-color:#bd7f73;color:#fff8f1;font-size:.9cqw;font-weight:500}
+.saarthi-case-study .saarthi-blueprint-node.is-stage{background:#efd0c5;font-size:.8cqw}
+.saarthi-case-study .saarthi-blueprint-board>.saarthi-blueprint-art{pointer-events:none}
+.saarthi-case-study .saarthi-blueprint-box{z-index:2}
