@@ -1,0 +1,42 @@
+const nodes = [
+ ['org','Org User',540,0,140,57,'ellipse'],['login','Login Page',534,84,152,77,'input'],['auth','Authentication Valid?',459,191,302,128,'decision'],['dash','Dashboard\n(Central Navigation hub)',507,349,206,76,'dashboard'],
+ ['users','My Users',-13,524,98,61,'feature'],['user-list','View User List',-13,621,98,62,'process'],['user-edit','Add/Edit\nUser &\nSave',-13,717,98,69,'input'],
+ ['programs','My Programs',133,524,98,61,'feature'],['program-view','Program View',133,621,98,62,'process'],['done','Done?',133,718,98,91,'decision'],['next','Next Step',133,839,98,62,'process'],
+ ['gallery','Create Gallery',280,524,98,61,'feature'],['gallery-view','View Gallery',280,621,98,62,'process'],['upload','Upload\nMedia',280,717,98,57,'input'],
+ ['applicants','New Applicants',426,524,98,61,'feature'],['applicant-list','View Applicant List',426,621,98,79,'process'],['applicant-filter','Filter/\nSearch\nApplicants',426,736,98,80,'input'],['select-applicant','Select Applicant',426,862,98,61,'process'],['applicant-details','View Applicant\nDetails',426,955,98,79,'process'],['reject','Select/\nReject\nApplicant',426,1078,98,91,'decision'],
+ ['reports','Reports',572,524,98,61,'feature'],['report-type','Select Report Type',572,621,98,57,'process'],['which','Which\nReport?',572,696,98,91,'decision'],
+ ['attendance','Attendance Report',572,852,98,79,'process'],['report-dates','Select Date\nRange and\nProgram',572,934,98,77,'input'],['attendance-grid','View Attendance Grid',572,1056,98,79,'process'],
+ ['detail-report','Detailed Attendance\nReport',699,852,98,79,'process'],['date-error','Error!! Date\nRange Cannot\nExceed 31\ndays.',669,971,128,119,'decision'],['detail-grid','View Detailed\nAttendance Grid',699,1126,98,96,'process'],
+ ['date-payments','Date-wise Payment\nReport',826,852,98,79,'process'],['summary','View Summary',826,1010,98,57,'process'],['download','Download\nSummary',826,1126,98,57,'input'],
+ ['matrix','Matrix Payment\nReport',954,852,98,79,'process'],['transactions','View Transaction\nDetails',954,1126,98,79,'process'],
+ ['invoices','Pending Invoices',1105,524,98,61,'feature'],['invoice-list','View Invoices',1105,621,98,57,'process'],['invoice-filter','Filter\nInvoices',1105,712,98,57,'input'],['invoice-select','Select Invoice',1105,804,98,57,'process'],['pay','Pay Now',1105,896,98,57,'process'],['pay-confirm','Payment\nConfirmation',1095,987,118,57,'input'],
+ ['broadcast','Broadcast Messages',1247,524,98,61,'feature'],['message-list','View Message List',1247,621,98,77,'process'],['search-create','Search or\nCreate?',1247,734,98,91,'decision'],['search','Search/Sort',1202,859,98,58,'process'],['compose','Compose Msg',1308,859,98,58,'process'],['message-sent','Message\nSent/Sho...',1257,955,98,57,'input'],
+ ['payment','Record Payment',1405,524,98,61,'feature'],['year','Select\nAcademic Ye...',1396,621,118,57,'input'],['participants','View Participant List',1405,712,98,79,'process'],['participant-search','Search\nParticipant',1405,826,98,57,'input'],['participant','Select Participant',1405,917,98,57,'process'],['payment-details','Enter Payment\nDetails',1395,1009,118,57,'input'],['recorded','Payment\nRecorded',1405,1100,98,57,'input'],
+ ['offline','Apply Offline',1568,524,98,61,'feature'],['fill','Fill Details',1568,621,98,57,'input'],['verify-reset','Verify or\nReset?',1568,734,98,91,'decision'],['verify','Verify Users',1515,862,98,57,'process'],['reset','Reset',1621,862,98,57,'process'],['confirmation','Confirmation\nMessage',1558,951,118,57,'input'],
+ ['take-attendance','Take Attendance',1710,524,98,61,'feature'],['select-date','Select Program &\nDate',1683,621,152,57,'input'],['students','Fetch Student Details',1710,712,98,79,'process'],['mark','Mark\nAttendance',1710,826,98,57,'input'],['saved','Attendance\nSaved',1710,918,98,57,'input'],
+ ['return','Return to\nDashboard',572,1424,98,57,'ellipse']
+]
+const palette = {ellipse:['#dcebdd','#91ad96'],feature:['#dcebe5','#94ada3'],process:['#e0ebe0','#9db49d'],input:['#ecdfeb','#baa0b6'],decision:['#eee2d3','#bba383'],dashboard:['#e2d8ef','#a291b9']}
+export default function EnrolMeInstituteFlow({onRead}) {
+ const lookup=Object.fromEntries(nodes.map(n=>[n[0],n])), paths=[]
+ const path=(d,label)=>paths.push({d,label})
+ function link(a,b){const A=lookup[a],B=lookup[b];const x=A[2]+A[4]/2,y=A[3]+A[5],tx=B[2]+B[4]/2,ty=B[3];path(x===tx?`M ${x} ${y+3} V ${ty-5}`:`M ${x} ${y+3} C ${x} ${(y+ty)/2} ${tx} ${(y+ty)/2} ${tx} ${ty-5}`)}
+ function chain(...ids){ids.slice(1).forEach((id,i)=>link(ids[i],id))}
+ chain('org','login','auth','dash');path('M 459 255 H 454 Q 428 255 428 230 V 148 Q 428 123 454 123 H 545','No');path('M 610 429 V 496','Navigates to Any Feature')
+ const chains=[['users','user-list','user-edit'],['programs','program-view','done','next'],['gallery','gallery-view','upload'],['applicants','applicant-list','applicant-filter','select-applicant','applicant-details','reject'],['reports','report-type','which','attendance','report-dates','attendance-grid'],['detail-report','date-error','detail-grid'],['date-payments','summary','download'],['invoices','invoice-list','invoice-filter','invoice-select','pay','pay-confirm'],['broadcast','message-list','search-create'],['payment','year','participants','participant-search','participant','payment-details','recorded'],['offline','fill','verify-reset'],['take-attendance','select-date','students','mark','saved']]
+ chains.forEach(ids=>chain(...ids))
+ ;['detail-report','date-payments','matrix'].forEach(id=>{const n=lookup[id],x=n[2]+49;path(`M 621 789 V 793 Q 621 818 646 818 H ${x-25} Q ${x} 818 ${x} 843`)})
+ path('M 748 934 V 946 Q 748 972 722 972 H 670');path('M 875 934 V 946 Q 875 972 849 972 H 670');path('M 1003 934 V 946 Q 1003 972 977 972 H 670')
+ path('M 1003 934 V 1013 Q 1003 1039 977 1039 H 928');path('M 1003 934 V 1121')
+ ;['search','compose'].forEach(id=>link('search-create',id));['search','compose'].forEach(id=>link(id,'message-sent'))
+ ;['verify','reset'].forEach(id=>link('verify-reset',id));['verify','reset'].forEach(id=>link(id,'confirmation'))
+ ;['user-edit','next','reject','attendance-grid','detail-grid','download','transactions','pay-confirm','message-sent','recorded','confirmation'].forEach(id=>{const n=lookup[id],x=n[2]+n[4]/2,y=n[3]+n[5];const sign=x<621?1:-1;path(`M ${x} ${y+3} V 1328 Q ${x} 1354 ${x+sign*26} 1354 H ${621-sign*26} Q 621 1354 621 1380 V 1419`)})
+ return <div className="em-institute-flow"><p className="enrolme-insight-hint">Scroll across to explore the complete flow. Select any shape to read it.</p><div className="em-institute-flow-scroll" role="region" tabIndex="0" aria-label="Institute user flow, horizontally scrollable"><svg className="em-institute-flow-svg" viewBox="-22 -8 1870 1500" aria-label="Institute user flow with original shapes and connections">
+ <defs><marker id="em-inst-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 6 4 L 1 7" fill="none" stroke="#a599af" strokeWidth="1.1"/></marker></defs>
+ <g fill="none" stroke="#a599af" strokeWidth="1.5">{paths.map(({d},i)=><path key={i} d={d} markerEnd="url(#em-inst-arrow)"/>)}</g>
+ <g fill="#75677f" fontSize="8"><text x="431" y="180">No</text><text x="618" y="333">Yes</text><text x="610" y="508" textAnchor="middle">Navigates to Any Feature</text></g>
+ {nodes.map(([id,text,x,y,w,h,shape])=>{const props={fill:palette[shape][0],stroke:palette[shape][1],strokeWidth:id==='verify'?4:1};return <g key={id} className="em-institute-flow-node" role="button" tabIndex="0" aria-label={text.replaceAll('\n',' ')} onClick={()=>onRead({title:'Institute user flow',text})} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onRead({title:'Institute user flow',text})}}}>
+ {shape==='ellipse'?<ellipse cx={x+w/2} cy={y+h/2} rx={w/2} ry={h/2} {...props}/>:shape==='decision'?<polygon points={`${x+w/2},${y} ${x+w},${y+h/2} ${x+w/2},${y+h} ${x},${y+h/2}`} {...props}/>:shape==='input'?<path d={`M ${x+5} ${y} H ${x+w-33} L ${x+w} ${y+h-7} Q ${x+w+3} ${y+h} ${x+w-5} ${y+h} H ${x+33} L ${x} ${y+7} Q ${x-3} ${y} ${x+5} ${y} Z`} {...props}/>:<rect x={x} y={y} width={w} height={h} rx={shape==='dashboard'?6:28} {...props}/>}
+ <text x={x+w/2} y={y+h/2} textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill="#44394f">{text.split('\n').map((line,i,lines)=><tspan key={i} x={x+w/2} dy={i===0?-(lines.length-1)*6:12}>{line}</tspan>)}</text></g>})}
+ </svg></div></div>
+}

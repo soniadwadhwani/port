@@ -1,0 +1,43 @@
+{
+  "architecture": {
+    "parent": [
+      {"title":"Discovery","subtitle":"Search and browse","items":["Nearby feed","Filters"]},
+      {"title":"Enrollment","subtitle":"Apply and track","items":["Inquiry","Document upload"]},
+      {"title":"My profile","subtitle":"Child and preferences","items":["Payment","Child profile"]}
+    ],
+    "institute": [
+      {"title":"Listing","subtitle":"Profile and classes","items":["Class cards","Media and videos / trust layer"]},
+      {"title":"Dashboard","subtitle":"Leads and analytics","items":["Lead CRM","Analytics","Applicants"]},
+      {"title":"Operations","subtitle":"Fees and batches","items":["Fee tracker","Batch management"]}
+    ],
+    "shared":[["Notifications","Reminders and alerts"],["Messaging","Unified chat"],["Payments","Gateway and receipts"],["Search","Name, category, GPS"],["Settings","Profile and support"]],
+    "future":[["Interest profiling","Guided discovery"],["Lead heatmap","Hot lead scoring"],["Drop-off engine","Funnel analysis"]]
+  },
+  "parentFlows":[
+    {"title":"Find a class","steps":["Landing page (parents)","Search programs","Filter by category / area","Browse programs"]},
+    {"title":"Set a location","steps":["Landing page","Location","Select city","Search nearby programs"]},
+    {"title":"Explore an institute","steps":["Automated institute ad carousel","Click a specific institute ad","Open institute organisation page","Apply now"]},
+    {"title":"Access an account","steps":["Profile","Log in / register","Enter details and verify OTP","My dashboard"],"branches":[["Organisation user","Organisational login / signup"],["Existing profile","View all profile details","Add / edit profile details"],["Sign out","Logout"]]},
+    {"title":"Manage applications","steps":["My dashboard","My applications","List of applications","Select an application","Application details page"]},
+    {"title":"Manage enrolled programs","steps":["My dashboard","My programs","List of enrolled programs","Select a program","Program details page"]},
+    {"title":"Pay and track fees","steps":["My dashboard","Pay fees","Pending institutes to pay fees","Select Pay now for an institute","Confirm payment page"],"branches":[["Payment history","My payments","Payments list page","Select an institute"],["Updates","Notifications","Notifications page"]]}
+  ],
+  "instituteFlows":[
+    {"title":"Sign in","steps":["Organisation user","Login page","Authentication valid?"],"branches":[["No","Return to login page"],["Yes","Dashboard — central navigation hub"]]},
+    {"title":"Bank account","steps":["Dashboard","Bank account","Add details","Verify and save","Return to dashboard"]},
+    {"title":"Application form","steps":["Dashboard","Application form","Edit / deactivate?","Edit","Add name, description and field details","Return to dashboard"]},
+    {"title":"My users","steps":["Dashboard","My users","View user list","Add / edit user and save","Return to dashboard"]},
+    {"title":"My programs","steps":["Dashboard","My programs","Program view","Done?","Next step","Return to dashboard"]},
+    {"title":"Create gallery","steps":["Dashboard","Create gallery","View gallery","Upload media","Return to dashboard"]},
+    {"title":"New applicants","steps":["Dashboard","New applicants","View applicant list","Filter / search applicants","Select applicant","View applicant details","Select / reject applicant","Return to dashboard"]},
+    {"title":"Reports","steps":["Dashboard","Reports","Select report type","Which report?"],"branches":[["Attendance report","Select date range and program","View attendance grid","Return to dashboard"],["Detailed attendance report","Select date range and program","Date range cannot exceed 31 days","View detailed attendance grid","Return to dashboard"],["Date-wise payment report","Select date range and program","View summary","Download summary","Return to dashboard"],["Matrix payment report","Select date range and program","View transaction details","Return to dashboard"]]},
+    {"title":"Pending invoices","steps":["Dashboard","Pending invoices","View invoices","Filter invoices","Select invoice","Pay now","Payment confirmation message sent / shown","Return to dashboard"]},
+    {"title":"Broadcast messages","steps":["Dashboard","Broadcast messages","View message list","Search or create?"],"branches":[["Search","Search / sort","Return to dashboard"],["Create","Compose message","Return to dashboard"]]},
+    {"title":"Record payment","steps":["Dashboard","Record payment","Select academic year and program","View participant list","Search participant","Select participant","Enter payment details","Payment recorded","Return to dashboard"]}
+  ],
+  "blueprint":[
+    {"stage":"Awareness","evidence":["Ads (Instagram / Google)","Landing page","App store listing","WhatsApp referral link","Brand visuals (logo, messaging)"],"onstage":["Displays targeted ads","Shows landing page content","Shows onboarding screens","Communicates value proposition"],"backstage":["Runs ad targeting campaigns","Tracks clicks and installs","Manages referral tracking","Optimizes campaign performance"],"support":["Meta / Google Ads platform","CRM / marketing tools","Analytics tools (tracking installs, CTR)","Content creation (design, copy, videos)"]},
+    {"stage":"Discovery","evidence":["Class listing cards (image, name, rating, distance)","Landing page","Home screen (personalized feed)","Explore Nearby Now button","Filter panel (age, fees, distance, category)"],"onstage":["Displays nearby classes","Shows search results instantly","Updates results based on filters","Highlights top / popular classes","Shows clean, visual browsing UI"],"backstage":["Detects user location (GPS / IP)","Processes search queries","Fetches class listings from database","Personalizes results (basic / AI future)","Runs ranking algorithm (distance, relevance, popularity)"],"support":["Maps API (location services)","Class listing database","Search engine logic","Recommendation system (future AI layer)","Backend servers (search and load)"]},
+    {"stage":"Evaluation","evidence":["People you know enrolled (social proof)","Class detail page","Fees and timing section","Coach profile","Photos / videos of classes","Reviews and ratings"],"onstage":["Displays detailed class info clearly","Enables comparison between options","Shows reviews and testimonials","Highlights social proof (contacts)","Plays videos / images"],"backstage":["Fetches class details from database","Processes social connections (contacts data)","Loads reviews and ratings","Retrieves media (images / videos)","Ranks and structures information"],"support":["Review and rating database","Media storage (CDN)","Data processing layer","Backend content management system","Contact integration system"]}
+  ]
+}

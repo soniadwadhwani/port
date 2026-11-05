@@ -1,0 +1,174 @@
+{
+  "insights": [
+    {
+      "title": "Trust turns discovery into a decision.",
+      "finding": "Finding a class does not automatically lead to enrollment. Parents look for reassurance before committing.",
+      "direction": "Make reviews, testimonials, and coach credibility visible while comparing classes."
+    },
+    {
+      "title": "Convenience and child comfort shape the choice.",
+      "finding": "Timings, distance, routine, and the child\u2019s comfort influence decisions alongside perceived quality.",
+      "direction": "Bring location, fees, timings, and class details together for easy comparison."
+    },
+    {
+      "title": "The problem continues behind the scenes.",
+      "finding": "Institutes manage scattered inquiries, follow-ups, payments, and records through manual work.",
+      "direction": "Support the institute journey with clearer dashboards, tracking, and communication."
+    },
+    {
+      "title": "Adoption is a behavioural challenge.",
+      "finding": "Technology alone does not replace familiar word-of-mouth, calls, or WhatsApp habits.",
+      "direction": "Show value quickly through familiar, low-friction interactions."
+    },
+    {
+      "title": "Fragmentation creates an opportunity to connect.",
+      "finding": "Discovery, comparison, enrollment, and ongoing management happen across separate channels.",
+      "direction": "Create one coherent journey from browsing to confirmation and beyond."
+    },
+    {
+      "title": "The value must be felt before it is demanded.",
+      "finding": "Users do not always perceive enough pain to actively seek a new platform.",
+      "direction": "Communicate practical benefits through clear messaging and an immediately useful experience."
+    }
+  ],
+  "opportunities": [
+    {
+      "need": "Too many places to search",
+      "opportunity": "Make discovery effortless",
+      "response": "Discovery-first browsing, nearby classes, and optional filters."
+    },
+    {
+      "need": "Uncertainty about whom to trust",
+      "opportunity": "Make confidence visible",
+      "response": "Reviews, testimonials, social proof, and rich class pages."
+    },
+    {
+      "need": "Friction between interest and confirmation",
+      "opportunity": "Keep enrollment connected",
+      "response": "A clear inquiry, documents, payment, and confirmation flow."
+    },
+    {
+      "need": "Manual, scattered institute work",
+      "opportunity": "Make operations easier",
+      "response": "Lead tracking, applicant management, reports, and clearer dashboards."
+    }
+  ],
+  "ladder": [
+    {
+      "name": "Mobile-friendly UI design",
+      "summary": "Help people browse, understand, and act with less effort.",
+      "details": [
+        {
+          "title": "What the UI offers",
+          "items": [
+            "Easy navigation optimised for small screens",
+            "Fast-loading, responsive layouts",
+            "Clear access to browsing, purchasing, and exploring",
+            "Readable text and simple flows"
+          ]
+        },
+        {
+          "title": "How it is designed",
+          "items": [
+            "Clean, minimal, uncluttered layouts",
+            "Thumb-friendly buttons and spacing",
+            "Consistent colours, fonts, and tone",
+            "Responsive layouts across devices"
+          ]
+        },
+        {
+          "title": "How the story comes through",
+          "items": [
+            "Visual storytelling through images, short videos, and micro-animations",
+            "Structured content flow and clear hierarchy",
+            "Visible brand values and consistent microcopy"
+          ]
+        },
+        {
+          "title": "Who it attracts and retains",
+          "items": [
+            "Mobile-first users and people seeking convenience and speed",
+            "New users discovering the brand through mobile",
+            "Smooth interactions, appealing interfaces, and quick task completion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marketing strategy",
+      "summary": "Tell a consistent story where the audience already spends time.",
+      "details": [
+        {
+          "title": "Story and messaging",
+          "items": [
+            "Narrative-led campaigns",
+            "Consistent messaging across platforms",
+            "Emotional, relatable storytelling"
+          ]
+        },
+        {
+          "title": "Channels",
+          "items": [
+            "Audience-relevant social media",
+            "Influencer collaborations",
+            "Email marketing and push notifications",
+            "Paid ads for performance and awareness"
+          ]
+        },
+        {
+          "title": "Distinctive approach",
+          "items": [
+            "Data-driven personalisation",
+            "Interactive campaigns such as challenges, user content, and polls",
+            "Community building alongside promotion"
+          ]
+        },
+        {
+          "title": "Audience and timing",
+          "items": [
+            "Clearly defined audience segments",
+            "Early adopters and loyal brand advocates",
+            "Campaigns timed around user behaviour",
+            "Consistent omnichannel presence"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Branding strategy",
+      "summary": "Build a recognisable identity that earns confidence over time.",
+      "details": [
+        {
+          "title": "Core identity",
+          "items": [
+            "Clear mission, vision, and values",
+            "A defined brand personality"
+          ]
+        },
+        {
+          "title": "Visual expression",
+          "items": [
+            "Distinct logo, colour palette, and typography",
+            "Consistent visual language across app and marketing"
+          ]
+        },
+        {
+          "title": "Story and differentiation",
+          "items": [
+            "Origin story and purpose",
+            "Emotional connection and a consistent voice",
+            "Clear value proposition and memorable identity"
+          ]
+        },
+        {
+          "title": "Building trust",
+          "items": [
+            "Transparency and authenticity",
+            "Consistent user experience",
+            "Strong community engagement"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "insight": "Discovery \u2260 Conversion \u2014 Trust is the real decision driver in activity classes",
+    "evidence": [
+      "Word of mouth is the strongest and most trusted channel",
+      "Parents rely on recommendations, child feedback, and observation",
+      "Marketing brings leads but not conversions"
+    ]
+  },
+  {
+    "insight": "Enrollment decisions are driven more by convenience and child comfort than objective quality",
+    "evidence": [
+      "Parents prefer nearby classes over better but distant ones",
+      "Decision factors include location, timing, and comfort",
+      "Process is: trial \u2192 child interest \u2192 final decision"
+    ]
+  },
+  {
+    "insight": "The real problem is not just discovery \u2014 it is inefficient day-to-day operations across the ecosystem",
+    "evidence": [
+      "No structured systems for payments, attendance, or data tracking",
+      "Heavy reliance on manual processes (registers, WhatsApp, Excel)",
+      "High chances of human error and time-consuming admin tasks"
+    ]
+  },
+  {
+    "insight": "The biggest challenge for platforms like EnrolMe is behavioral adoption, not technological capability",
+    "evidence": [
+      "Institutes show resistance to adopting new systems",
+      "Existing workflows are hard to change",
+      "Learning new tools is seen as effortful"
+    ]
+  },
+  {
+    "insight": "The ecosystem is highly fragmented, creating a strong opportunity for a centralized platform",
+    "evidence": [
+      "Information is scattered across WhatsApp, teachers, and platforms",
+      "No unified way to manage multiple classes",
+      "Market is highly fragmented and not easily discoverable"
+    ]
+  },
+  {
+    "insight": "Users do not yet perceive enough pain to demand a solution, making value communication critical",
+    "evidence": [
+      "Parents are willing to pay only a small amount",
+      "Platform is seen as \u201cnice to have\u201d not urgent",
+      "Current system is messy but still manageable"
+    ]
+  }
+]

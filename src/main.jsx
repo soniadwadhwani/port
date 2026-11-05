@@ -1,3 +1,7 @@
+import EnrolMeSolutioning from './EnrolMeSolutioning.jsx'
+import EnrolMePrioritisation from './EnrolMePrioritisation.jsx'
+import EnrolMeIdeaWall from './EnrolMeIdeaWall.jsx'
+import EnrolMeAffinity from './EnrolMeAffinity.jsx'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
@@ -19,6 +23,10 @@ import saarthiBrand from './saarthi-brand.json'
 import './saarthi-brand.css'
 import './enrolme-case.css'
 import enrolmeResearch from './enrolme-research.json'
+import enrolmeSynthesis from './enrolme-synthesis.json'
+import EnrolMeInstituteJourney from './EnrolMeInstituteJourney'
+import EnrolMeParentJourney from './EnrolMeParentJourney'
+import EnrolMeInsightCards from './EnrolMeInsightCards'
 
 const projectPlaceholderColors = ['#CFE5DF', '#A5B4C3', '#9096B5', '#D8C7CE', '#D9C8A8']
 const projects = Array.from({ length: 5 }, (_, i) => ({
@@ -1153,18 +1161,50 @@ function EnrolMeResearch({ section }) {
     <header className="enrolme-persona-landscape"><EnrolMePersonaPortrait index={index} /><div><span className="enrolme-persona-role">{['PARENT','INSTITUTE OWNER','ADMIN STAFF'][index]}</span><h5>{persona.name}</h5><p>{persona.meta}</p></div></header>
     <div className="enrolme-persona-details enrolme-persona-details--visible">{[['Goals',persona.goals],['Behaviours',persona.behaviours],['Pain points',persona.pain]].map(([label,items]) => <section key={label}><h6>{label}</h6>{list(items)}</section>)}</div>
   </article>)}</div>
-  if (section === 'Parent / child as-is journey') return <EnrolMeResearchJourney stages={enrolmeResearch.parentJourney} />
-  if (section === 'Institute as-is journey') return <EnrolMeResearchJourney stages={enrolmeResearch.instituteJourney} />
+  if (section === 'Parent / child as-is journey') return <EnrolMeParentJourney />
+  if (section === 'Institute as-is journey') return <EnrolMeInstituteJourney />
   return null
+}
+
+function EnrolMeSynthesis({ section }) {
+  if (section === 'Affinity map') return <EnrolMeAffinity />
+  if (section === 'Key research insights') return <EnrolMeInsightCards />
+  if (section === 'Key insight') return <div className="enrolme-synthesis-content"><blockquote className="enrolme-key-insight">“The system is not broken because of lack of options.<br />It is broken because there is no structured, trusted journey.”</blockquote></div>
+  if (section === 'Ideation') return <div className="enrolme-synthesis-content">
+    <p className="enrolme-synthesis-intro">Exploring ways to build trust, simplify decisions, and ease everyday administration.</p>
+    <h5 className="enrolme-synthesis-subheading">Behaviours we want to change</h5>
+    <div className="enrolme-ideation-behaviours">{['Spend less time on admin tasks', 'Shorten the decision-making process', 'Build trust in technology', 'Reduce unnecessary parent–teacher follow-ups'].map(text => <p key={text}>{text}</p>)}</div>
+    <h5 className="enrolme-synthesis-subheading">The idea wall</h5>
+    <EnrolMeIdeaWall />
+  </div>
+  return null
+}
+
+function EnrolMeConceptImpact() {
+  const rows = [
+    ['Discovery-first interface (browse classes without heavy login)', 'Easier exploration, less friction, more engagement', 'Higher user retention and session time'],
+    ['Optional filters instead of forced form filling', 'Faster onboarding and reduced drop-offs', 'More completed searches and signups'],
+    ['Auto-detect location + nearby classes', 'Hyper-relevant recommendations', 'Higher conversion rate'],
+    ['Trusted reviews from synced contacts', 'Social proof and confidence', 'Increased enrollments'],
+    ['Unified modern branding + smoother UX', 'Professional and premium perception', 'Stronger brand recall and trust'],
+    ['Rich class pages with videos, testimonials, coach credibility', 'Better decision-making', 'Higher paid enrollments'],
+    ['Organizer dashboard optimization', 'Easier lead management and operations', 'Better supply-side retention'],
+    ['Analytics dashboard for organizers', 'Data-backed growth decisions', 'Upsell premium SaaS features'],
+    ['Seamless mobile + web ecosystem', 'Omnichannel convenience', 'Larger reachable market'],
+  ]
+  return <div className="enrolme-concept-impact">
+    <div className="enrolme-impact-table-scroll"><table><thead><tr><th>Concept feature</th><th>Value proposition to users</th><th>Business impact</th></tr></thead><tbody>{rows.map(([feature,value,impact]) => <tr key={feature}><th scope="row">{feature}</th><td>{value}</td><td>{impact}</td></tr>)}</tbody></table></div>
+    <p>Proposed value and expected business impact from the project deck; these are intended outcomes rather than measured results.</p>
+  </div>
 }
 
 function EnrolMeCasePlaceholder({ project }) {
   const phases = [
     { id: 'context', label: 'Business context', title: 'Understanding the platform and the challenge', sections: ['Tracksoft Solutions Pvt. Ltd.', 'Platform background & evolution', 'System components', 'Business challenge, goals & success metrics', 'Scope & boundaries'] },
     { id: 'research', label: 'Research', title: 'Understanding the learning ecosystem', sections: ['Industry & competitive landscape', 'SWOT analysis', 'Stakeholders & target users', 'Primary research', 'User personas', 'Parent / child as-is journey', 'Institute as-is journey'] },
-    { id: 'synthesis', label: 'Synthesis', title: 'Connecting user needs with business opportunities', sections: ['Key research insights', 'Opportunity areas & problem framing', 'Concept ladder', 'Ideation & impact prioritisation'] },
-    { id: 'solutioning', label: 'Solutioning', title: 'Shaping the discovery-to-enrollment experience', sections: ['Concept & value proposition', 'Information architecture', 'Parent user flow', 'Institute user flow', 'Low-fidelity wireframes', 'High-fidelity mockups', 'Service blueprint'] },
-    { id: 'growth', label: 'Implementation & growth', title: 'Planning how the experience can grow', sections: ['Implementation roadmap', 'Marketing strategy', 'Branding strategy', 'Feature value & expected business impact', 'Prototype & project links'] },
+    { id: 'synthesis', label: 'Synthesis', title: 'Connecting user needs with business opportunities', sections: ['Affinity map', 'Key research insights', 'Key insight', 'Ideation'] },
+    { id: 'solutioning', label: 'Solutioning', title: 'Shaping the discovery-to-enrollment experience', sections: ['Idea refinement, prioritisation & implementation order', 'Concept evaluation', 'Information architecture', 'Parent user flow', 'Institute user flow', 'Low-fidelity wireframes', 'High-fidelity mockups', 'Service blueprint'] },
+    { id: 'growth', label: 'Implementation & growth', title: 'Planning how the experience can grow', sections: ['Implementation roadmap', 'Marketing strategy', 'Branding strategy', 'Prototype & project links', 'Concept Features — Value Proposition — Business Impact'] },
   ]
   return <main className="saarthi-page enrolme-skeleton" id="project-page-top">
     <Navigation />
@@ -1191,11 +1231,11 @@ function EnrolMeCasePlaceholder({ project }) {
         <header><p className="saarthi-overline">{phase.label}</p><h3 id={`enrolme-${phase.id}-title`}>{phase.title}</h3></header>
         <div className="enrolme-skeleton-sections">{phase.sections.map(title => <details className="enrolme-skeleton-disclosure" key={title}>
           <summary><span>{title}</span><span className="enrolme-skeleton-toggle" aria-hidden="true" /></summary>
-          {phase.id === 'context' ? <EnrolMeBusinessContext section={title} /> : phase.id === 'research' ? <EnrolMeResearch section={title} /> : <div className="enrolme-skeleton-slot"><span>{title}</span><small>Content / visual placeholder</small></div>}
+          {phase.id === 'context' ? <EnrolMeBusinessContext section={title} /> : phase.id === 'research' ? <EnrolMeResearch section={title} /> : phase.id === 'synthesis' ? <EnrolMeSynthesis section={title} /> : title === 'Idea refinement, prioritisation & implementation order' ? <EnrolMePrioritisation /> : phase.id === 'solutioning' ? <EnrolMeSolutioning section={title} /> : title === 'Concept Features — Value Proposition — Business Impact' ? <EnrolMeConceptImpact /> : <div className="enrolme-skeleton-slot"><span>{title}</span><small>Content / visual placeholder</small></div>}
         </details>)}</div>
       </section>)}</div>
     </section>
-    <section className="enrolme-skeleton-closing case-wrap" aria-label="Case study conclusion"><p className="saarthi-overline">REFLECTION</p><h2>Learnings & next steps</h2><div className="enrolme-skeleton-slot"><span>Reflection placeholder</span></div><a className="enrolme-skeleton-back" href="/projects.html">← Back to projects</a></section>
+    <div className="enrolme-case-end case-wrap"><a className="enrolme-skeleton-back" href="/projects.html">← Back to projects</a></div>
   </main>
 }
 

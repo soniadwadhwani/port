@@ -1,0 +1,92 @@
+{
+  "Institutes": {
+    "Present": [
+      "no common way to\nscore....?????????",
+      "Unified Communication\nDashboard\nAll conversations in\none place\nNo lost WhatsApp\nchats or calls",
+      "Learning Goal Tracker\nInstitutes set goals\n(e.g., improve math)\napp tracks progress\ntoward goal",
+      "Smart Follow-up System\nAuto nudges with\npersonalization\nExample: “Hey, only 2\nseats left in BBA at\nXYZ college”",
+      "Institute revenue\noptimization engine",
+      "Improved ui",
+      "Re-branding of enrol me",
+      "Attendance Pattern\nInsights\nshows how\nconsistently students\nattend\nindicates seriousness\nof class",
+      "Attendance + fee\nmanagement",
+      "Smart classification of\nclasses",
+      "Drop-off Diagnosis\nEngine\nDetects where and\nwhy students leave\nSuggests fixes (e.g.,\n“fees unclear”, “too\nmany steps”)",
+      "Enrollment Journey\nTracker\nLike order tracking\n(Amazon style)\nInquiry → Application\n→ Docs → Payment →\nConfirmed",
+      "Micro-Content\nExplainers\n30-sec reels\nexplaining:\ncourses\ncareers\ncolleges\nIntegrated inside\nplatform"
+    ],
+    "Future": [
+      "Pay-per-enrollment\npricing model",
+      "Inquiry-to-Enrollment\nFunnel\ntracks conversion\nstages\nidentifies drop-offs",
+      "Institute Growth\nAssistant\nsuggests demand\ntrends in area\nhelps institutes expand\nsmartly\nadds business value",
+      "Smart pricing suggestions",
+      "Dropout Analysis Tool\nConversion tracking\nsystem\nshows why students\nare leaving\nhelps improve\nretention",
+      "Counselor Performance\nInsights\nTracks:\nconversion rates\nresponse times\nstudent satisfaction",
+      "Document Autofill + Scan\nAI\nScan marksheet →\nauto-fill form\nReduces friction\nmassively",
+      "Payment Behavior\nInsights\nshows who delays,\nwho pays regularly\nimproves financial\ntracking",
+      "Achievement Highlights\nshows badges/\nachievements of child\nincreases motivation",
+      "Enrollment as a Game\nStudents unlock levels:\nfill form → unlock\nnext step\nRewards like badges,\nfee discounts"
+    ],
+    "Later": [
+      "Featured bidding\nmarketplace",
+      "AI Enrollment\nConcierge\nWhatsApp-based\nassistant that guides\nstudents step-by-step\nKnows course, fees,\ndeadlines, docs\nFeels like a personal\ncounselor",
+      "Empty Seat\nOptimizer",
+      "Video-Based\nEnrollment",
+      "Competitor\nPricing Monitor\nshows pricing\ntrends nearby\nhelps adjust\npricing",
+      "WhatsApp-native\nCRM (zero UI\nlearning)",
+      "Transfer-Friendly\nEnrollment",
+      "School\npartnerships\npipeline",
+      "Local parent\ninfluencer system",
+      "Parent referral\ngraph system"
+    ]
+  },
+  "Parents": {
+    "Present": [
+      "Insight:\n“Word of mouth is the\nstrongest trust factor”\nIdea:\nShow: “3 parents in\nyour society send their\nkids here”\nContact-based trust\ninstead of star ratings\n“People you know go\nhere” feature",
+      "Social Trust Layer\nshows which people\nfrom your contacts/\nlocal area are enrolled\nreplaces random\nreviews with real social\nproof\nbuilds trust faster and\nmore naturally",
+      "Peer Decision Network\nSee what similar\nstudents chose\n“Students like you\npicked BBA at XYZ”\nSocial proof engine",
+      "You can sync contacts for\ntrusted testimonials",
+      "Parent Quick Actions\nPanel\none place for pay,\nmessage, track, update\nreduces navigation\ncomplexity",
+      "Weekly Snapshot\nsummary of\nattendance, updates,\nprogress\nquick overview without\neffort",
+      "Parent Mode\nSeparate dashboard\nfor parents\nFees, progress,\nreminders",
+      "Compare Colleges Like\nZomato\nSide-by-side\ncomparison:\nfees\nplacements\nreviews\nfacilities",
+      "Class Fit Score\nshows how well a class\nmatches child profile\nbased on interest,\nlevel, distance",
+      "Class Discovery Stories\nshort story-style\npreviews of classes\nmore engaging than\nlistings",
+      "“Overchoice Simplifier”\nReduces 100 options\n→ 3 best picks\nBased on constraints,\nnot preferences",
+      "“Explore Nearby Now”\nButton\ninstant discovery\nbased on location\nquick access",
+      "competitor conflict with\norgs",
+      "Weekly Planner View\nvisual plan of entire week\nsimplifies scheduling",
+      "Parent dash for diff kids",
+      "Course Recommendation\nEngine\nSuggests courses\nbased on:\ninterests\nmarks\nbudget\ncareer goals"
+    ],
+    "Future": [
+      "Conversion\ntracking system",
+      "Child Interest Profiling\nparent answers few\nquestions about child\nplatform suggests\nclasses based on\npersonality + interests\nshifts from searching\n→ guided discovery",
+      "Inquiry-to-Enrollment\nFunnel\ntracks conversion\nstages\nidentifies drop-offs",
+      "Institute Growth\nAssistant\nsuggests demand\ntrends in area\nhelps institutes expand\nsmartly\nadds business value",
+      "Pay-per-\nenrollment pricing\nmodel",
+      "Smart pricing\nsuggestions",
+      "Parent decision\nsupport (quiz /\nsuggestions)",
+      "Teaching Style Analyzer\nBased on:\nstrictness\npace\nengagement\n→ helps parents\nchoose better",
+      "Lead Intent Heatmap\nVisual dashboard\nshowing how serious\neach lead is\nBased on clicks, time\nspent, repeated visits\nSales teams focus\nsmarter",
+      "Hyperlocal trust\nclusters",
+      "Counselor Performance\nInsights\nTracks:\nconversion rates\nresponse times\nstudent satisfaction",
+      "Trial class booking idea\n(one-click booking, post-\ntrial feedback capture) -\nonly with institutes\nsupporting trial",
+      "“Confusion to Clarity”\nQuiz\nQuick interactive quiz\nHelps undecided\nstudents find direction",
+      "Transparent Cost\nSimulator\nShows:\ntotal fees\nhidden costs\nEMI breakdown\nBuilds trust →\nincreases conversion",
+      "Nearby Activity Feed\nshows live updates\nfrom nearby classes\nnew batches, events,\nopenings\npassive discovery\nchannel",
+      "Teacher Profile Insights\nshows teacher\nexperience, style,\nspecialization\nbuilds credibility",
+      "Learning Goal Tracker\nparents set goals (e.g.,\nimprove math)\napp tracks progress\ntoward goal"
+    ],
+    "Later": [
+      "safety protocols\nstandardisation",
+      "AI Enrollment Concierge\nWhatsApp-based\nassistant that guides\nstudents step-by-step\nKnows course, fees,\ndeadlines, docs\nFeels like a personal\ncounselor",
+      "Burnout Indicator for\nTeachers\nTracks:\nclass load\nenergy patterns\n→ suggests breaks",
+      "Empty Seat\nOptimizer",
+      "Trial Buddy System”\nNew child paired with\nan existing student\nHelps comfort + faster\nadaptation",
+      "Parent Community\nCircles\nlocal parent groups\ninside app\nshare experiences, ask\nquestions\nformalizes word-of-\nmouth digitally",
+      "Featured bidding\nmarketplace",
+      "“Future You”\nSimulator\nShows:\nwhat your life could\nlook like after\nchoosing a course\nBased on data +\nstorytelling\nEmotional decision\nsupport"
+    ]
+  }
+}

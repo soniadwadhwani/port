@@ -1,0 +1,2218 @@
+[
+  {
+    "x": 50.50143998217923,
+    "y": 3.7145910589867306,
+    "w": 7.787256555498982,
+    "h": 3.8198601882919783,
+    "text": "Joining the Class",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.51404977087577,
+    "y": 58.52518509409196,
+    "w": 3.074894984725051,
+    "h": 4.965317208232076,
+    "text": "Provide clear confirmation and record of \nadmission",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 54.253357306517316,
+    "y": 58.511395333400905,
+    "w": 4.03213308299389,
+    "h": 2.1930157434816366,
+    "text": "Enable smooth digital enrollment",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 54.253357306517316,
+    "y": 61.41835921400423,
+    "w": 4.03213308299389,
+    "h": 2.0721366565284485,
+    "text": "Standardize onboarding information",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.54663632892057,
+    "y": 41.59815093716346,
+    "w": 7.743289364816701,
+    "h": 3.6092125892282416,
+    "text": "Complete enrollment smoothly\n\nSecure a spot without confusion",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.538489689409374,
+    "y": 49.34346846441238,
+    "w": 7.749721550407332,
+    "h": 5.0318219309678405,
+    "text": "Doesn\u2019t get all information clearly at once\n\nProcess differs for every class\n\nNo clear confirmation or record",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.51404977087577,
+    "y": 34.08993496687113,
+    "w": 2.2447293469959266,
+    "h": 2.344670952126376,
+    "text": "relieved",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.516706975560076,
+    "y": 27.16130058025049,
+    "w": 1.6657968431771895,
+    "h": 2.7925294485999532,
+    "text": "Institute office / front \ndesk",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 52.308967668024444,
+    "y": 27.16130058025049,
+    "w": 1.944337926425662,
+    "h": 2.7925294485999532,
+    "text": "Payment modes (cash / UPI \n/ bank transfer)",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 54.386360743380855,
+    "y": 27.16130058025049,
+    "w": 1.944337926425662,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp (added to \ngroup)",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 56.463753818737274,
+    "y": 27.16130058025049,
+    "w": 1.8187213594704685,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp (added to \ngroup)",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.51404977087577,
+    "y": 18.810056851890252,
+    "w": 3.6265195392057024,
+    "h": 4.2151387903395525,
+    "text": "Shares child\u2019s details with institute\n\nMakes payment (cash / UPI / transfer)",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 54.562929607942976,
+    "y": 18.810056851890252,
+    "w": 3.7193665669551934,
+    "h": 4.2151387903395525,
+    "text": "G ets added to WhatsApp group\n\nSaves institute contact\n\nReceives first set of instructions",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 50.51404977087577,
+    "y": 11.301840881597924,
+    "w": 1.234327265784114,
+    "h": 3.2403879450735307,
+    "text": "Fills form / \nshares details",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 52.216697428716905,
+    "y": 11.301840881597924,
+    "w": 1.747720691191446,
+    "h": 3.2403879450735307,
+    "text": "Pays fees (cash / \nonline)",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 54.43258337576374,
+    "y": 11.301840881597924,
+    "w": 1.649412073574338,
+    "h": 3.2403879450735307,
+    "text": "Gets added to \nWhatsApp group",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 56.54256300916497,
+    "y": 11.301840881597924,
+    "w": 1.747720691191446,
+    "h": 3.2403879450735307,
+    "text": "Receives schedule and \ninstructions",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 53.16293279022404,
+    "y": 34.08993496687113,
+    "w": 1.9224915669551934,
+    "h": 2.344670952126376,
+    "text": "satisfied",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 55.489593940936864,
+    "y": 34.08993496687113,
+    "w": 2.7963499236252543,
+    "h": 2.344670952126376,
+    "text": "confiden t\n\npositive",
+    "color": "#ffc7c2"
+  },
+  {
+    "x": 59.46708725814665,
+    "y": 3.7145910589867306,
+    "w": 7.290311545315682,
+    "h": 3.8198601882919783,
+    "text": "Getting Set Up",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.44656950101833,
+    "y": 3.6619018241074857,
+    "w": 7.328037487270876,
+    "h": 3.9252386580504672,
+    "text": "Getting Set Up",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.47969704684317,
+    "y": 58.511395333400905,
+    "w": 2.7617107942973522,
+    "h": 4.979106968923127,
+    "text": "Create a single dashboard with all class \ndetails",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.46340376782078,
+    "y": 58.45870609852166,
+    "w": 2.794297352342159,
+    "h": 5.084485438681616,
+    "text": "Create a single dashboard with all class \ndetails",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 62.63244653767821,
+    "y": 58.511395333400905,
+    "w": 4.05908302571283,
+    "h": 2.199106649906276,
+    "text": "Centralize schedules, contacts, and instructions",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 62.61615325865581,
+    "y": 58.45870609852166,
+    "w": 4.091669583757637,
+    "h": 2.304485119664765,
+    "text": "Centralize schedules, contacts, and instructions",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 62.668056262729124,
+    "y": 61.41259632893931,
+    "w": 4.05908302571283,
+    "h": 2.0778931098019986,
+    "text": "Centralize schedules, contacts, and instructions",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 62.65176298370672,
+    "y": 61.35990709406006,
+    "w": 4.091673561608961,
+    "h": 2.183271579560487,
+    "text": "Centralize schedules, contacts, and instructions",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.47969704684317,
+    "y": 41.59815093716346,
+    "w": 7.274949083503055,
+    "h": 3.6092125892282416,
+    "text": "Understand schedule and process\n\nGet clarity on communication and updates",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.46340376782078,
+    "y": 41.545461702284214,
+    "w": 7.307535641547862,
+    "h": 3.7145910589867306,
+    "text": "Understand schedule and process\n\nGet clarity on communication and updates",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.47969704684317,
+    "y": 49.34346846441238,
+    "w": 7.274949083503055,
+    "h": 5.0318219309678405,
+    "text": "H as to save details manually\n\nInformation comes in bits and pieces\n\nNo single place to check everything",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.46340376782078,
+    "y": 49.290779229533136,
+    "w": 7.307535641547862,
+    "h": 5.137200400726329,
+    "text": "H as to save details manually\n\nInformation comes in bits and pieces\n\nNo single place to check everything",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.47969704684317,
+    "y": 34.08993496687113,
+    "w": 1.6979458375763745,
+    "h": 2.344670952126376,
+    "text": "neutral",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.46340376782078,
+    "y": 34.03724573199188,
+    "w": 1.730532395621181,
+    "h": 2.4500494218848647,
+    "text": "neutral",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.47969704684317,
+    "y": 27.16130058025049,
+    "w": 1.4960539714867616,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp groups",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.46340376782078,
+    "y": 27.108611345371248,
+    "w": 1.5286405295315684,
+    "h": 2.897907918358442,
+    "text": "WhatsApp groups",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 61.161691700611,
+    "y": 27.16130058025049,
+    "w": 1.7419886074338087,
+    "h": 2.7925294485999532,
+    "text": "Direct messages with \nteacher/institute",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 61.145398421588595,
+    "y": 27.108611345371248,
+    "w": 1.774575165478615,
+    "h": 2.897907918358442,
+    "text": "Direct messages with \nteacher/institute",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 63.08961303462321,
+    "y": 27.16130058025049,
+    "w": 1.7419886074338087,
+    "h": 2.7925294485999532,
+    "text": "Personal notes / phone \nreminders",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 63.07331975560081,
+    "y": 27.108611345371248,
+    "w": 1.774575165478615,
+    "h": 2.897907918358442,
+    "text": "Personal notes / phone \nreminders",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 65.01755028004074,
+    "y": 27.16130058025049,
+    "w": 1.737095850305499,
+    "h": 2.7925294485999532,
+    "text": "Verbal instructions",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 65.00125700101833,
+    "y": 27.108611345371248,
+    "w": 1.7696824083503055,
+    "h": 2.897907918358442,
+    "text": "Verbal instructions",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.48332484725051,
+    "y": 18.810056851890252,
+    "w": 3.518226514765784,
+    "h": 4.2151387903395525,
+    "text": "Saves schedule in memory / phone\n\nNotes class timings informally\n\nReads WhatsApp messages for updates",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.4670315682281,
+    "y": 18.75736761701101,
+    "w": 3.5508130728105907,
+    "h": 4.3205172600980415,
+    "text": "Saves schedule in memory / phone\n\nNotes class timings informally\n\nReads WhatsApp messages for updates",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 63.231526858452135,
+    "y": 18.810056851890252,
+    "w": 3.523119271894094,
+    "h": 4.2151387903395525,
+    "text": "Ad justs daily routine accordingly\n\nCoordinates drop/pick logistics",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 63.21523357942973,
+    "y": 18.75736761701101,
+    "w": 3.5557058299389004,
+    "h": 4.3205172600980415,
+    "text": "Ad justs daily routine accordingly\n\nCoordinates drop/pick logistics",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 59.48332484725051,
+    "y": 11.301840881597924,
+    "w": 1.5658294615580448,
+    "h": 3.2403879450735307,
+    "text": "Saves timings, \nlocation, contacts",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 59.4670315682281,
+    "y": 11.24915164671868,
+    "w": 1.5984160196028514,
+    "h": 3.3457664148320196,
+    "text": "Saves timings, \nlocation, contacts",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 61.34763238289206,
+    "y": 11.301840881597924,
+    "w": 1.5658294615580448,
+    "h": 3.2403879450735307,
+    "text": "Understands rules / \nprocess",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 61.33133910386965,
+    "y": 11.24915164671868,
+    "w": 1.5984160196028514,
+    "h": 3.3457664148320196,
+    "text": "Understands rules / \nprocess",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 63.2119399185336,
+    "y": 11.301840881597924,
+    "w": 1.4777518775458247,
+    "h": 3.2403879450735307,
+    "text": "Coordinates drop/\npick timings",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 63.1956466395112,
+    "y": 11.24915164671868,
+    "w": 1.5103384355906313,
+    "h": 3.3457664148320196,
+    "text": "Coordinates drop/\npick timings",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 64.98819373727088,
+    "y": 11.301840881597924,
+    "w": 1.7664523930753562,
+    "h": 3.2403879450735307,
+    "text": "Starts receiving \nupdates/messages",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 64.97190045824848,
+    "y": 11.24915164671868,
+    "w": 1.7990389511201628,
+    "h": 3.3457664148320196,
+    "text": "Starts receiving \nupdates/messages",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 61.5815300407332,
+    "y": 34.08993496687113,
+    "w": 2.314492903513238,
+    "h": 2.344670952126376,
+    "text": "slightly confused",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 61.56523676171079,
+    "y": 34.03724573199188,
+    "w": 2.3470794615580446,
+    "h": 2.4500494218848647,
+    "text": "slightly confused",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 64.44100050916497,
+    "y": 34.08993496687113,
+    "w": 2.3144968813645623,
+    "h": 2.344670952126376,
+    "text": "ad justing\n\nmanaging",
+    "color": "#d9d9d9"
+  },
+  {
+    "x": 64.42470723014256,
+    "y": 34.03724573199188,
+    "w": 2.347083439409369,
+    "h": 2.4500494218848647,
+    "text": "ad justing\n\nmanaging",
+    "color": "#a5a5a5"
+  },
+  {
+    "x": 8.916109104506111,
+    "y": 3.7145910589867306,
+    "w": 9.70171286278004,
+    "h": 3.8198601882919783,
+    "text": "Realising the Need",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.89559035291497,
+    "y": 3.6619018241074857,
+    "w": 9.739441788123727,
+    "h": 3.9252386580504672,
+    "text": "Realising the Need",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.91932917515275,
+    "y": 11.442002479069664,
+    "w": 2.2428060558808554,
+    "h": 3.2320008891308385,
+    "text": "Notices child needs extra \nsupport / activity",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.903035896130346,
+    "y": 11.38931324419042,
+    "w": 2.275392613925662,
+    "h": 3.3373793588893275,
+    "text": "Notices child needs extra \nsupport / activity",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.91932917515275,
+    "y": 18.810056851890252,
+    "w": 4.615777351705703,
+    "h": 4.2151387903395525,
+    "text": "Notices child struggling / bore d\n\nTalks casually with other parents\n\nThinks about child\u2019s routine and gaps",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.903035896130346,
+    "y": 18.75736761701101,
+    "w": 4.648363909750509,
+    "h": 4.3205172600980415,
+    "text": "Notices child struggling / bore d\n\nTalks casually with other parents\n\nThinks about child\u2019s routine and gaps",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.920570264765784,
+    "y": 27.16130058025049,
+    "w": 2.354396719068228,
+    "h": 2.7925294485999532,
+    "text": "School (feedback, performance)",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.904276985743381,
+    "y": 27.108611345371248,
+    "w": 2.3869832771130346,
+    "h": 2.897907918358442,
+    "text": "School (feedback, performance)",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.924007128309572,
+    "y": 41.59815093716346,
+    "w": 9.687440332230143,
+    "h": 3.6092125892282416,
+    "text": "H elp my child improve or learn something useful\n\nDo something beneficial for my child\u2019s growth",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.90771384928717,
+    "y": 41.545461702284214,
+    "w": 9.72002689027495,
+    "h": 3.7145910589867306,
+    "text": "H elp my child improve or learn something useful\n\nDo something beneficial for my child\u2019s growth",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.924007128309572,
+    "y": 49.34346846441238,
+    "w": 9.687440332230143,
+    "h": 5.0318219309678405,
+    "text": "Not sure what class is actually right for the chil d\n\nFeels confused about where to start",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.90771384928717,
+    "y": 49.290779229533136,
+    "w": 9.72002689027495,
+    "h": 5.137200400726329,
+    "text": "Not sure what class is actually right for the chil d\n\nFeels confused about where to start",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.920570264765784,
+    "y": 58.511395333400905,
+    "w": 4.038486706020876,
+    "h": 4.979106968923127,
+    "text": "Provide guided suggestions based on child\u2019s age/interests",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.904276985743381,
+    "y": 58.45870609852166,
+    "w": 4.071073264065682,
+    "h": 5.084485438681616,
+    "text": "Provide guided suggestions based on child\u2019s age/interests",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 13.666162805498983,
+    "y": 58.511395333400905,
+    "w": 4.943723348396131,
+    "h": 4.979106968923127,
+    "text": "Help parents understand what types of classes are relevant",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 13.64986952647658,
+    "y": 58.45870609852166,
+    "w": 4.976309906440937,
+    "h": 5.084485438681616,
+    "text": "Help parents understand what types of classes are relevant",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 8.920570264765784,
+    "y": 34.08993496687113,
+    "w": 1.7977173100178208,
+    "h": 2.344670952126376,
+    "text": "Concerned",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 8.904276985743381,
+    "y": 34.03724573199188,
+    "w": 1.8303038680626271,
+    "h": 2.4500494218848647,
+    "text": "Concerned",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 11.608961303462321,
+    "y": 27.16130058025049,
+    "w": 2.0173255314409366,
+    "h": 2.3183263346867538,
+    "text": "Other parents (informal \nconversations)",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 11.592668024439918,
+    "y": 27.108611345371248,
+    "w": 2.049912089485743,
+    "h": 2.4237048044452427,
+    "text": "Other parents (informal \nconversations)",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 13.963340122199593,
+    "y": 27.16130058025049,
+    "w": 2.0173255314409366,
+    "h": 2.7925294485999532,
+    "text": "Social circle / peer \ncomparison",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 13.947046843177189,
+    "y": 27.108611345371248,
+    "w": 2.049912089485743,
+    "h": 2.897907918358442,
+    "text": "Social circle / peer \ncomparison",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 16.317718940936864,
+    "y": 27.16130058025049,
+    "w": 2.2880043915478616,
+    "h": 2.7925294485999532,
+    "text": "Home discussions (family input)",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 16.301425661914458,
+    "y": 27.108611345371248,
+    "w": 2.320590949592668,
+    "h": 2.897907918358442,
+    "text": "Home discussions (family input)",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 13.995672097759673,
+    "y": 18.810056851890252,
+    "w": 4.615777351705703,
+    "h": 4.2151387903395525,
+    "text": "Discusses options with family\n\nMentally decides to explore classes",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 13.97937881873727,
+    "y": 18.75736761701101,
+    "w": 4.648363909750509,
+    "h": 4.3205172600980415,
+    "text": "Discusses options with family\n\nMentally decides to explore classes",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 11.402431262729124,
+    "y": 11.301840881597924,
+    "w": 2.2428060558808554,
+    "h": 3.2320008891308385,
+    "text": "Talks to child about interests",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 11.386137983706721,
+    "y": 11.24915164671868,
+    "w": 2.275392613925662,
+    "h": 3.3373793588893275,
+    "text": "Talks to child about interests",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 13.885533350305499,
+    "y": 11.301840881597924,
+    "w": 2.2428060558808554,
+    "h": 3.2320008891308385,
+    "text": "Compares with other kids \n(school / peers)",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 13.869240071283095,
+    "y": 11.24915164671868,
+    "w": 2.275392613925662,
+    "h": 3.3373793588893275,
+    "text": "Compares with other kids \n(school / peers)",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 16.36865134928717,
+    "y": 11.301840881597924,
+    "w": 2.2428060558808554,
+    "h": 3.2320008891308385,
+    "text": "Feels pressure to \u201cdo \nsomething\u201d for development",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 16.352358070264767,
+    "y": 11.24915164671868,
+    "w": 2.275392613925662,
+    "h": 3.3373793588893275,
+    "text": "Feels pressure to \u201cdo \nsomething\u201d for development",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 11.39714867617108,
+    "y": 34.08993496687113,
+    "w": 2.2420403195010183,
+    "h": 2.344670952126376,
+    "text": "Slightly anxious",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 11.380855397148675,
+    "y": 34.03724573199188,
+    "w": 2.274626877545825,
+    "h": 2.4500494218848647,
+    "text": "Slightly anxious",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 14.313645621181262,
+    "y": 34.08993496687113,
+    "w": 1.818146559954175,
+    "h": 2.344670952126376,
+    "text": "Responsible",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 14.29735234215886,
+    "y": 34.03724573199188,
+    "w": 1.8507331179989817,
+    "h": 2.4500494218848647,
+    "text": "Responsible",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 16.806517311608964,
+    "y": 34.08993496687113,
+    "w": 1.7977183044806517,
+    "h": 2.344670952126376,
+    "text": "Hopeful",
+    "color": "#c6faf6"
+  },
+  {
+    "x": 16.790224032586558,
+    "y": 34.03724573199188,
+    "w": 1.8303048625254583,
+    "h": 2.4500494218848647,
+    "text": "Hopeful",
+    "color": "#5ad8cc"
+  },
+  {
+    "x": 30.744472775585542,
+    "y": 3.7145910589867306,
+    "w": 8.875085523803463,
+    "h": 3.8198601882919783,
+    "text": "Comparing Classes",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 58.511395333400905,
+    "w": 3.276054926171079,
+    "h": 4.979106968923127,
+    "text": "Provide standardized information (fees, timings, \nbatch size)",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 34.36222314154786,
+    "y": 58.511395333400905,
+    "w": 5.181262729124237,
+    "h": 2.199106649906276,
+    "text": "Enable easy side-by-side comparison",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 34.36222314154786,
+    "y": 61.29136992525229,
+    "w": 5.181262729124237,
+    "h": 2.199106649906276,
+    "text": "Add ratings / reviews / trust indicators",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 41.59815093716346,
+    "w": 8.871690427698574,
+    "h": 3.6092125892282416,
+    "text": "Shortlist the best options\n\nCompare based on timing, location, and fees\n\nChoose something reliable",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 49.34346846441238,
+    "w": 8.871690427698574,
+    "h": 5.0318219309678405,
+    "text": "H as to remember and compare details manually\n\nCannot easily compare classes side by side\n\nHas to visit or call each class separately",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 34.08993496687113,
+    "w": 1.4234621626782078,
+    "h": 2.344670952126376,
+    "text": "analytical",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 27.16130058025049,
+    "w": 1.5564476992107943,
+    "h": 2.7925294485999532,
+    "text": "Phone calls with \ninstitutes",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 32.38258974032587,
+    "y": 27.16130058025049,
+    "w": 1.5564457102851323,
+    "h": 2.7925294485999532,
+    "text": "Physical visits to \nclasses",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 34.093384037678206,
+    "y": 27.16130058025049,
+    "w": 2.0157284241344198,
+    "h": 2.7925294485999532,
+    "text": "G oogle reviews (if \navailable)\n\nlocation maps",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 36.26039014765784,
+    "y": 27.16130058025049,
+    "w": 1.5564457102851323,
+    "h": 2.7925294485999532,
+    "text": "Conversations with \nother parents",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 37.97118444501018,
+    "y": 27.16130058025049,
+    "w": 1.5564457102851323,
+    "h": 2.7925294485999532,
+    "text": "Institute staff / \nteachers",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 18.810056851890252,
+    "w": 4.179444851069246,
+    "h": 4.2151387903395525,
+    "text": "Opens multiple tabs / chats to compare\n\nChecks location on Maps\n\nCompares timings with child\u2019s schedule",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 35.25687372708758,
+    "y": 18.810056851890252,
+    "w": 4.286608165733197,
+    "h": 4.2151387903395525,
+    "text": "Asks different people for opinions\n\nCalls institutes for details\n\nNotes fees mentally or in chat\n\nFilters options based on convenience",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 30.671795442973522,
+    "y": 11.301840881597924,
+    "w": 1.6789217636201628,
+    "h": 3.2403879450735307,
+    "text": "Shortlists a few \noptions",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 32.611411659877795,
+    "y": 11.301840881597924,
+    "w": 1.4798999172606926,
+    "h": 3.2403879450735307,
+    "text": "Checks location, \ntiming, fees",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 34.35200801934827,
+    "y": 11.301840881597924,
+    "w": 1.6329954811608962,
+    "h": 3.2403879450735307,
+    "text": "Reads reviews (if \navailable)",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 36.245703920570264,
+    "y": 11.301840881597924,
+    "w": 1.6329954811608962,
+    "h": 3.2403879450735307,
+    "text": "Asks others for \nopinions",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 38.13938391038697,
+    "y": 11.301840881597924,
+    "w": 1.4798999172606926,
+    "h": 3.2403879450735307,
+    "text": "Calls or visits \ninstitutes",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 32.34185654276986,
+    "y": 34.08993496687113,
+    "w": 1.4234661405295315,
+    "h": 2.344670952126376,
+    "text": "doubtful",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 34.01191764256619,
+    "y": 34.08993496687113,
+    "w": 1.4549786787169041,
+    "h": 2.344670952126376,
+    "text": "indecisive\n\nuncertain",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 35.71456530040733,
+    "y": 34.08993496687113,
+    "w": 1.5205734470468433,
+    "h": 2.344670952126376,
+    "text": "slightly stressed",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 37.48238607433809,
+    "y": 34.08993496687113,
+    "w": 2.0559246117617107,
+    "h": 2.344670952126376,
+    "text": "mentally overloaded",
+    "color": "#ffecbd"
+  },
+  {
+    "x": 40.79608738543788,
+    "y": 3.7145910589867306,
+    "w": 8.512307471995927,
+    "h": 3.8198601882919783,
+    "text": "Trying & Deciding",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.833137092668025,
+    "y": 58.517569853113315,
+    "w": 3.5605946092158858,
+    "h": 4.966172636483899,
+    "text": "Provide clear insights into teaching style and class \nstructure",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 44.712990071283095,
+    "y": 58.511395333400905,
+    "w": 4.594398389765784,
+    "h": 1.8370675456438506,
+    "text": "Show real parent feedback and testimonials",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 44.7109375,
+    "y": 61.52198823651086,
+    "w": 4.594398389765784,
+    "h": 1.9684561796908726,
+    "text": "Reduce dependency on trial-only decision making",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.833137092668025,
+    "y": 41.59815093716346,
+    "w": 8.476455098014258,
+    "h": 2.863677924702761,
+    "text": "Check if my child is comfortable\n\nUnderstand teaching quality\n\nMake the right final decision",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.833137092668025,
+    "y": 49.34346846441238,
+    "w": 8.474259324083503,
+    "h": 5.0318219309678405,
+    "text": "T rial class doesn\u2019t give enough clarity\n\nDepends on child\u2019s mood for decision\n\nStill feels unsure after trying",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.833137092668025,
+    "y": 34.08993496687113,
+    "w": 1.745540828665988,
+    "h": 2.344670952126376,
+    "text": "hopeful",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.83474414460285,
+    "y": 27.16130058025049,
+    "w": 1.5214883528513239,
+    "h": 2.7925294485999532,
+    "text": "Trial class (physical \nspace)",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 42.46246499490835,
+    "y": 27.16130058025049,
+    "w": 1.5214883528513239,
+    "h": 2.7925294485999532,
+    "text": "teacher interaction",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 44.09179289714867,
+    "y": 27.16130058025049,
+    "w": 1.7759037678207739,
+    "h": 2.7925294485999532,
+    "text": "Child\u2019s feedback (direct \nconversation)",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 45.97366662423625,
+    "y": 27.16130058025049,
+    "w": 1.6611666242362526,
+    "h": 2.7925294485999532,
+    "text": "Parent discussions \n(friends/family)",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 47.741487398167,
+    "y": 27.16130058025049,
+    "w": 1.5668159686863543,
+    "h": 2.7925294485999532,
+    "text": "Trial class (physical \nspace)",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.82478360488798,
+    "y": 18.968124556527986,
+    "w": 3.9359168151731163,
+    "h": 4.051925652608143,
+    "text": "T akes child for trial class\n\nObserves how teacher interacts\n\nWatches child\u2019s reaction after class",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 45.11488034623218,
+    "y": 18.968124556527986,
+    "w": 4.190757860234216,
+    "h": 4.051925652608143,
+    "text": "T alks to child (\u201cdid you like it?\u201d)\n\nCompares 2\u20133 final options\n\nMakes decision based on comfort + trust",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 40.83518966395112,
+    "y": 11.73446889611422,
+    "w": 1.3364864434826884,
+    "h": 2.5710378492912938,
+    "text": "Takes trial classes",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 42.4011424389002,
+    "y": 11.73446889611422,
+    "w": 1.7459704366089612,
+    "h": 2.5710378492912938,
+    "text": "Observes child\u2019s interest \nand comfort",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 44.376591140529534,
+    "y": 11.73446889611422,
+    "w": 1.1273986443482689,
+    "h": 2.5710378492912938,
+    "text": "Talks to \nteacher/\ninstitute",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 45.73345213849287,
+    "y": 11.73446889611422,
+    "w": 1.5963157141038697,
+    "h": 2.5710378492912938,
+    "text": "Compares final few \noptions",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 47.55923816191446,
+    "y": 11.73446889611422,
+    "w": 1.7459704366089612,
+    "h": 2.5710378492912938,
+    "text": "Decides based on trust + \nconvenience",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 42.95126336558045,
+    "y": 34.08993496687113,
+    "w": 1.7559468877291242,
+    "h": 2.344670952126376,
+    "text": "observan t\n\ncareful",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 45.08568291751527,
+    "y": 34.08993496687113,
+    "w": 1.3818100814663952,
+    "h": 2.344670952126376,
+    "text": "nervous",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 46.845357051934826,
+    "y": 34.08993496687113,
+    "w": 2.479279372454175,
+    "h": 2.344670952126376,
+    "text": "cautiously optimistic",
+    "color": "#ffe0c2"
+  },
+  {
+    "x": 79.59367839867618,
+    "y": 3.7145910589867306,
+    "w": 9.913529467922606,
+    "h": 3.8198601882919783,
+    "text": "Facing Issues",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.57316064154786,
+    "y": 3.6619018241074857,
+    "w": 9.9512554098778,
+    "h": 3.9252386580504672,
+    "text": "Facing Issues",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 61.29136992525229,
+    "w": 9.71192400712831,
+    "h": 2.199106649906276,
+    "text": "Provide clear, structured communication system",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 61.23868069037305,
+    "w": 9.744510565173115,
+    "h": 2.304485119664765,
+    "text": "Provide clear, structured communication system",
+    "color": "#874fff"
+  },
+  {
+    "x": 84.74721550407331,
+    "y": 58.511395333400905,
+    "w": 4.781679607942974,
+    "h": 2.199106649906276,
+    "text": "Reduce need for repeated follow-ups",
+    "color": "#dcccff"
+  },
+  {
+    "x": 84.73092222505092,
+    "y": 58.45870609852166,
+    "w": 4.81426616598778,
+    "h": 2.304485119664765,
+    "text": "Reduce need for repeated follow-ups",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 58.511395333400905,
+    "w": 4.781687563645621,
+    "h": 2.199106649906276,
+    "text": "Enable easy access to past information",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 58.45870609852166,
+    "w": 4.814274121690428,
+    "h": 2.304485119664765,
+    "text": "Enable easy access to past information",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 41.59815093716346,
+    "w": 9.71192400712831,
+    "h": 3.6092125892282416,
+    "text": "Q uickly resolve confusion\n\nGet clear and timely information",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 41.545461702284214,
+    "w": 9.744510565173115,
+    "h": 3.7145910589867306,
+    "text": "Q uickly resolve confusion\n\nGet clear and timely information",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 49.34346846441238,
+    "w": 9.71192400712831,
+    "h": 5.0318219309678405,
+    "text": "H as to scroll chats to find information\n\nNeeds to ask again for basic details\n\nDoesn\u2019t get timely updates\n\nDepends on others for clarity",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 49.290779229533136,
+    "w": 9.744510565173115,
+    "h": 5.137200400726329,
+    "text": "H as to scroll chats to find information\n\nNeeds to ask again for basic details\n\nDoesn\u2019t get timely updates\n\nDepends on others for clarity",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 34.08993496687113,
+    "w": 2.0088944755600817,
+    "h": 2.344670952126376,
+    "text": "confused",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 34.03724573199188,
+    "w": 2.041481033604888,
+    "h": 2.4500494218848647,
+    "text": "confused",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 27.16130058025049,
+    "w": 2.6066223268839104,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp (missed / overloaded \nmessages)",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 27.108611345371248,
+    "w": 2.639208884928717,
+    "h": 2.897907918358442,
+    "text": "WhatsApp (missed / overloaded \nmessages)",
+    "color": "#874fff"
+  },
+  {
+    "x": 82.58988352851324,
+    "y": 27.16130058025049,
+    "w": 1.7976705702647657,
+    "h": 2.7925294485999532,
+    "text": "Phone calls for \nclarification",
+    "color": "#dcccff"
+  },
+  {
+    "x": 82.57359024949083,
+    "y": 27.108611345371248,
+    "w": 1.8302571283095723,
+    "h": 2.897907918358442,
+    "text": "Phone calls for \nclarification",
+    "color": "#874fff"
+  },
+  {
+    "x": 84.58530104378819,
+    "y": 27.16130058025049,
+    "w": 2.3010199210794298,
+    "h": 2.7925294485999532,
+    "text": "Institute directly (calls/visits)",
+    "color": "#dcccff"
+  },
+  {
+    "x": 84.56900776476579,
+    "y": 27.108611345371248,
+    "w": 2.3336064791242364,
+    "h": 2.897907918358442,
+    "text": "Institute directly (calls/visits)",
+    "color": "#874fff"
+  },
+  {
+    "x": 87.08405995417515,
+    "y": 27.16130058025049,
+    "w": 2.4178653258655802,
+    "h": 2.7925294485999532,
+    "text": "Other parents (double-checking \ninfo)",
+    "color": "#dcccff"
+  },
+  {
+    "x": 87.06776667515274,
+    "y": 27.108611345371248,
+    "w": 2.450451883910387,
+    "h": 2.897907918358442,
+    "text": "Other parents (double-checking \ninfo)",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 18.810056851890252,
+    "w": 4.530136201629328,
+    "h": 4.2151387903395525,
+    "text": "Misses messages in WhatsApp groups\n\nScrolls long chats to find one update\n\nForgets payment or due dates\n\nCalls institute for clarification",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 18.75736761701101,
+    "w": 4.562722759674134,
+    "h": 4.3205172600980415,
+    "text": "Misses messages in WhatsApp groups\n\nScrolls long chats to find one update\n\nForgets payment or due dates\n\nCalls institute for clarification",
+    "color": "#874fff"
+  },
+  {
+    "x": 84.661691700611,
+    "y": 18.810056851890252,
+    "w": 4.835738607433808,
+    "h": 4.2151387903395525,
+    "text": "Asks other parents for info agai n\n\nGets confused between different class schedules\n\nFeels overloaded with scattered information",
+    "color": "#dcccff"
+  },
+  {
+    "x": 84.6453984215886,
+    "y": 18.75736761701101,
+    "w": 4.868325165478615,
+    "h": 4.3205172600980415,
+    "text": "Asks other parents for info agai n\n\nGets confused between different class schedules\n\nFeels overloaded with scattered information",
+    "color": "#874fff"
+  },
+  {
+    "x": 79.78551425661915,
+    "y": 11.301840881597924,
+    "w": 1.3033111634419552,
+    "h": 3.2403879450735307,
+    "text": "Misses updates \nor messages",
+    "color": "#dcccff"
+  },
+  {
+    "x": 79.76922097759675,
+    "y": 11.24915164671868,
+    "w": 1.3358977214867618,
+    "h": 3.3457664148320196,
+    "text": "Misses updates \nor messages",
+    "color": "#874fff"
+  },
+  {
+    "x": 81.21916369653768,
+    "y": 11.301840881597924,
+    "w": 1.4381364562118126,
+    "h": 3.2403879450735307,
+    "text": "Gets confused \nabout schedules",
+    "color": "#dcccff"
+  },
+  {
+    "x": 81.20287041751527,
+    "y": 11.24915164671868,
+    "w": 1.4707230142566192,
+    "h": 3.3457664148320196,
+    "text": "Gets confused \nabout schedules",
+    "color": "#874fff"
+  },
+  {
+    "x": 82.78763047352342,
+    "y": 11.301840881597924,
+    "w": 1.3033111634419552,
+    "h": 3.2403879450735307,
+    "text": "Forgets \npayments or \ndeadlines",
+    "color": "#dcccff"
+  },
+  {
+    "x": 82.77133719450102,
+    "y": 11.24915164671868,
+    "w": 1.3358977214867618,
+    "h": 3.3457664148320196,
+    "text": "Forgets \npayments or \ndeadlines",
+    "color": "#874fff"
+  },
+  {
+    "x": 84.22126400203666,
+    "y": 11.301840881597924,
+    "w": 1.6853201374745417,
+    "h": 3.2403879450735307,
+    "text": "Struggles with too \nmany WhatsApp \ngroups",
+    "color": "#dcccff"
+  },
+  {
+    "x": 84.20497072301426,
+    "y": 11.24915164671868,
+    "w": 1.7179066955193483,
+    "h": 3.3457664148320196,
+    "text": "Struggles with too \nmany WhatsApp \ngroups",
+    "color": "#874fff"
+  },
+  {
+    "x": 86.03691446028513,
+    "y": 11.301840881597924,
+    "w": 1.460611316191446,
+    "h": 3.2403879450735307,
+    "text": "Has to ask \nrepeatedly for \nclarity",
+    "color": "#dcccff"
+  },
+  {
+    "x": 86.02062118126273,
+    "y": 11.24915164671868,
+    "w": 1.4931978742362526,
+    "h": 3.3457664148320196,
+    "text": "Has to ask \nrepeatedly for \nclarity",
+    "color": "#874fff"
+  },
+  {
+    "x": 87.62786405295316,
+    "y": 11.301840881597924,
+    "w": 1.8605922225050915,
+    "h": 3.2403879450735307,
+    "text": "Feels overwhelmed \nmanaging everything",
+    "color": "#dcccff"
+  },
+  {
+    "x": 87.61157077393077,
+    "y": 11.24915164671868,
+    "w": 1.8931787805498983,
+    "h": 3.3457664148320196,
+    "text": "Feels overwhelmed \nmanaging everything",
+    "color": "#874fff"
+  },
+  {
+    "x": 82.16741980651732,
+    "y": 34.08993496687113,
+    "w": 1.7976705702647657,
+    "h": 2.344670952126376,
+    "text": "annoye d\n\nfrustrated",
+    "color": "#dcccff"
+  },
+  {
+    "x": 82.15112652749491,
+    "y": 34.03724573199188,
+    "w": 1.8302571283095723,
+    "h": 2.4500494218848647,
+    "text": "annoye d\n\nfrustrated",
+    "color": "#874fff"
+  },
+  {
+    "x": 84.33811736252545,
+    "y": 34.08993496687113,
+    "w": 1.6448733452138493,
+    "h": 2.344670952126376,
+    "text": "stressed",
+    "color": "#dcccff"
+  },
+  {
+    "x": 84.32182408350305,
+    "y": 34.03724573199188,
+    "w": 1.677459903258656,
+    "h": 2.4500494218848647,
+    "text": "stressed",
+    "color": "#874fff"
+  },
+  {
+    "x": 86.3560017820774,
+    "y": 34.08993496687113,
+    "w": 3.0470500254582484,
+    "h": 2.344670952126376,
+    "text": "dependent on others",
+    "color": "#dcccff"
+  },
+  {
+    "x": 86.339708503055,
+    "y": 34.03724573199188,
+    "w": 3.079636583503055,
+    "h": 2.4500494218848647,
+    "text": "dependent on others",
+    "color": "#874fff"
+  },
+  {
+    "x": 90.7056946919552,
+    "y": 3.7145910589867306,
+    "w": 8.219028449592667,
+    "h": 3.8198601882919783,
+    "text": "Continuing or Changing",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 61.29136992525229,
+    "w": 8.219951311099797,
+    "h": 2.199106649906276,
+    "text": "Make switching or discovering new options easier",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 95.13702902240327,
+    "y": 58.511395333400905,
+    "w": 3.8012426807535644,
+    "h": 2.199106649906276,
+    "text": "Provide progress tracking and insights",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 58.511395333400905,
+    "w": 4.107791815173116,
+    "h": 2.199106649906276,
+    "text": "Help parents evaluate class effectiveness",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 41.59815093716346,
+    "w": 8.219959266802444,
+    "h": 3.6092125892282416,
+    "text": "Check if the class is actually helpin g\n\nDecide whether to continue or switch",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 49.34346846441238,
+    "w": 8.219959266802444,
+    "h": 5.0318219309678405,
+    "text": "H as to scroll chats to find information\n\nNeeds to ask again for basic details\n\nDoesn\u2019t get timely updates\n\nDepends on others for clarity",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 34.08993496687113,
+    "w": 1.751718431771894,
+    "h": 2.344670952126376,
+    "text": "reflective",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 27.16130058025049,
+    "w": 2.360449019857434,
+    "h": 2.7925294485999532,
+    "text": "Conversations with child",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 93.31708248472506,
+    "y": 27.16130058025049,
+    "w": 1.751718431771894,
+    "h": 2.7925294485999532,
+    "text": "Other parents / social \nnetwork",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 95.30486252545825,
+    "y": 27.16130058025049,
+    "w": 1.471446983197556,
+    "h": 2.7925294485999532,
+    "text": "Institute \ncommunication",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 97.0156568228106,
+    "y": 27.16130058025049,
+    "w": 1.9225114562118129,
+    "h": 2.7925294485999532,
+    "text": "Google / search again (if \nswitching)",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 18.810056851890252,
+    "w": 3.950133655804481,
+    "h": 4.2151387903395525,
+    "text": "Observes child\u2019s progress over time\n\nTalks to other parents for feedback\n\nEvaluates if effort is worth it",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 95.21147848778004,
+    "y": 18.810056851890252,
+    "w": 3.726785259674134,
+    "h": 4.2151387903395525,
+    "text": "Decides to continue / stop / switc h\n\nStarts searching again if needed",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 90.71830448065174,
+    "y": 11.301840881597924,
+    "w": 1.6072030931771892,
+    "h": 3.2403879450735307,
+    "text": "Evaluates if class is \nuseful",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 92.48612525458249,
+    "y": 11.301840881597924,
+    "w": 1.4013811099796334,
+    "h": 3.2403879450735307,
+    "text": "Observes child\u2019s \nprogress/interest",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 94.0502800407332,
+    "y": 11.301840881597924,
+    "w": 1.2700006364562118,
+    "h": 3.2403879450735307,
+    "text": "Talks to other \nparents",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 95.48408859470469,
+    "y": 11.301840881597924,
+    "w": 1.6422400076374748,
+    "h": 3.2403879450735307,
+    "text": "Decides to continue / \nswitch / stop",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 97.29264256619145,
+    "y": 11.301840881597924,
+    "w": 1.6422400076374748,
+    "h": 3.2403879450735307,
+    "text": "Decides to continue / \nswitch / stop",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 93.03195010183299,
+    "y": 34.08993496687113,
+    "w": 1.37071983197556,
+    "h": 2.344670952126376,
+    "text": "practical",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 94.96270366598777,
+    "y": 34.08993496687113,
+    "w": 1.9225114562118129,
+    "h": 2.344670952126376,
+    "text": "hopeful (if changing)",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 97.44742871690427,
+    "y": 34.08993496687113,
+    "w": 1.471446983197556,
+    "h": 2.344670952126376,
+    "text": "accepting",
+    "color": "#c2e5ff"
+  },
+  {
+    "x": 67.93228901476579,
+    "y": 3.7145910589867306,
+    "w": 10.483794233706721,
+    "h": 3.8198601882919783,
+    "text": "Managing Everything",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 72.78330257128309,
+    "y": 58.511395333400905,
+    "w": 5.633576247454175,
+    "h": 2.0938696795578635,
+    "text": "Centralize attendance, updates, and schedules",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99377864052954,
+    "y": 58.511395333400905,
+    "w": 4.318426998472505,
+    "h": 2.0938696795578635,
+    "text": "Create a unified view for parents",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 74.8858356670061,
+    "y": 61.39654257768703,
+    "w": 3.527494908350305,
+    "h": 2.0938696795578635,
+    "text": "Reduce reliance on WhatsApp and manual tracking",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 71.50498026985743,
+    "y": 61.39654257768703,
+    "w": 2.989816700610998,
+    "h": 2.0938696795578635,
+    "text": "Provide one platform to manage all classes",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99377864052954,
+    "y": 61.39654257768703,
+    "w": 2.989816700610998,
+    "h": 2.0938696795578635,
+    "text": "Enable payment tracking and reminders",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99377864052954,
+    "y": 41.59815093716346,
+    "w": 10.418199465376782,
+    "h": 3.6092125892282416,
+    "text": "K eep track of classes and schedules\n\nStay updated on progress and activities\n\nManage payments easily",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99377864052954,
+    "y": 49.34346846441238,
+    "w": 10.418199465376782,
+    "h": 5.0318219309678405,
+    "text": "H as to check multiple WhatsApp groups\n\nImportant messages get lost in chats\n\nHas to remember schedules manually\n\nForgets payment dates\n\nNo clear view of attendance or updates\n\nManaging multiple classes becomes confusing",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99377864052954,
+    "y": 34.08993496687113,
+    "w": 1.7273660259674135,
+    "h": 2.344670952126376,
+    "text": "frustrated",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99023039714868,
+    "y": 27.16130058025049,
+    "w": 1.9506030422606926,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp (primary \ntouchpoint)",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 70.11190491344196,
+    "y": 27.16130058025049,
+    "w": 1.0680610361507128,
+    "h": 2.7925294485999532,
+    "text": "Phone calls",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 71.33700356415478,
+    "y": 27.16130058025049,
+    "w": 2.566517629837067,
+    "h": 2.7925294485999532,
+    "text": "Registers (institute side) an d\n\nExcel/manual systems",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 74.00657141038697,
+    "y": 27.16130058025049,
+    "w": 1.4967302062118126,
+    "h": 2.7925294485999532,
+    "text": "Child (as \ninformation source)",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 75.6063518329939,
+    "y": 27.16130058025049,
+    "w": 2.8069787423625256,
+    "h": 2.7925294485999532,
+    "text": "Memory / informal tracking",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99023039714868,
+    "y": 18.810056851890252,
+    "w": 5.1919233706720975,
+    "h": 4.2151387903395525,
+    "text": "Checks WhatsApp multiple times for updates\n\nScrolls through chats to find info\n\nMentally tracks attendance (\u201cwent/not went\u201d)\n\nRemembers or checks payment dates",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 73.48147912423624,
+    "y": 18.810056851890252,
+    "w": 4.931835539714868,
+    "h": 4.2151387903395525,
+    "text": "H andles multiple groups for different classes\n\nAsks child about what happened in class\n\nTries to keep everything organized mentally",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 67.99023039714868,
+    "y": 11.301840881597924,
+    "w": 1.4231160896130346,
+    "h": 3.2403879450735307,
+    "text": "Tracks class \ntimings manually",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 69.58509419551935,
+    "y": 11.301840881597924,
+    "w": 1.4231160896130346,
+    "h": 3.2403879450735307,
+    "text": "Checks WhatsApp \nfor updates",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 71.12598650712832,
+    "y": 11.301840881597924,
+    "w": 2.1837449083503055,
+    "h": 3.2403879450735307,
+    "text": "Keeps track of attendance \n(mentally / informally)",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 73.48147912423624,
+    "y": 11.301840881597924,
+    "w": 1.5703363671079429,
+    "h": 3.2403879450735307,
+    "text": "Remembers payment \ndates",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 75.22358706720978,
+    "y": 11.301840881597924,
+    "w": 1.59487175407332,
+    "h": 3.2403879450735307,
+    "text": "Manages multiple \nclasses together",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 76.99021448574338,
+    "y": 11.301840881597924,
+    "w": 1.4231160896130346,
+    "h": 3.2403879450735307,
+    "text": "Coordinates with \nchild regularly",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 70.11508719450102,
+    "y": 34.08993496687113,
+    "w": 1.7273660259674135,
+    "h": 2.344670952126376,
+    "text": "overwhelmed",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 72.39205702647658,
+    "y": 34.08993496687113,
+    "w": 1.1679369271894093,
+    "h": 2.344670952126376,
+    "text": "tired",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 74.10962958248473,
+    "y": 34.08993496687113,
+    "w": 1.030533986761711,
+    "h": 2.344670952126376,
+    "text": "irritated",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 75.68977533095723,
+    "y": 34.08993496687113,
+    "w": 2.566517629837067,
+    "h": 2.344670952126376,
+    "text": "mentally burdened",
+    "color": "#ffc2ec"
+  },
+  {
+    "x": 19.791872851960285,
+    "y": 3.7145910589867306,
+    "w": 9.693247995162933,
+    "h": 3.8198601882919783,
+    "text": "Looking for Options",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 19.771353105906314,
+    "y": 3.6619018241074857,
+    "w": 9.73097791496945,
+    "h": 3.9252386580504672,
+    "text": "Looking for Options",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 58.511395333400905,
+    "w": 3.7044993476323826,
+    "h": 4.979106968923127,
+    "text": "Create a centralized platform with all classes in one \nplace",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 58.45870609852166,
+    "w": 3.7370859056771892,
+    "h": 5.084485438681616,
+    "text": "Create a centralized platform with all classes in one \nplace",
+    "color": "#66d575"
+  },
+  {
+    "x": 24.151508401221996,
+    "y": 58.511395333400905,
+    "w": 5.159193609979633,
+    "h": 2.199106649906276,
+    "text": "Show verified and complete listings",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 24.135215122199593,
+    "y": 58.45870609852166,
+    "w": 5.19178016802444,
+    "h": 2.304485119664765,
+    "text": "Show verified and complete listings",
+    "color": "#66d575"
+  },
+  {
+    "x": 24.151508401221996,
+    "y": 61.41259632893931,
+    "w": 5.159193609979633,
+    "h": 2.0778931098019986,
+    "text": "Enable location-based discovery",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 24.135215122199593,
+    "y": 61.35990709406006,
+    "w": 5.19178016802444,
+    "h": 2.183271579560487,
+    "text": "Enable location-based discovery",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 41.59815093716346,
+    "w": 9.44195519348269,
+    "h": 3.6092125892282416,
+    "text": "F ind good classes nearby\n\nGet trusted recommendations\n\nExplore available options",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 41.545461702284214,
+    "w": 9.474541751527495,
+    "h": 3.7145910589867306,
+    "text": "F ind good classes nearby\n\nGet trusted recommendations\n\nExplore available options",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 49.34346846441238,
+    "w": 9.44195519348269,
+    "h": 5.0318219309678405,
+    "text": "H as to ask multiple people to find options\n\nCannot see all available classes in one place\n\nGets different suggestions from different people",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 49.290779229533136,
+    "w": 9.474541751527495,
+    "h": 5.137200400726329,
+    "text": "H as to ask multiple people to find options\n\nCannot see all available classes in one place\n\nGets different suggestions from different people",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 34.08993496687113,
+    "w": 1.5902236348014256,
+    "h": 2.344670952126376,
+    "text": "curious",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 34.03724573199188,
+    "w": 1.6228101928462322,
+    "h": 2.4500494218848647,
+    "text": "curious",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 27.16130058025049,
+    "w": 1.6082950133655805,
+    "h": 2.7925294485999532,
+    "text": "Word of mouth \n(friends, parents, \nrelatives)",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 27.108611345371248,
+    "w": 1.640881571410387,
+    "h": 2.897907918358442,
+    "text": "Word of mouth \n(friends, parents, \nrelatives)",
+    "color": "#66d575"
+  },
+  {
+    "x": 21.905995417515275,
+    "y": 27.16130058025049,
+    "w": 1.7844839931262728,
+    "h": 2.7925294485999532,
+    "text": "WhatsApp (groups, \nforwards, personal \nchats)",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 21.889702138492872,
+    "y": 27.108611345371248,
+    "w": 1.8170705511710794,
+    "h": 2.897907918358442,
+    "text": "WhatsApp (groups, \nforwards, personal \nchats)",
+    "color": "#66d575"
+  },
+  {
+    "x": 23.950801934826885,
+    "y": 27.16130058025049,
+    "w": 1.7844839931262728,
+    "h": 2.7925294485999532,
+    "text": "google searc h\n\ngoogle maps",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 23.934508655804482,
+    "y": 27.108611345371248,
+    "w": 1.8170705511710794,
+    "h": 2.897907918358442,
+    "text": "google searc h\n\ngoogle maps",
+    "color": "#66d575"
+  },
+  {
+    "x": 25.99560845213849,
+    "y": 27.16130058025049,
+    "w": 1.6082950133655805,
+    "h": 2.7925294485999532,
+    "text": "Instagram / social \nmedia pages",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 25.979315173116092,
+    "y": 27.108611345371248,
+    "w": 1.640881571410387,
+    "h": 2.897907918358442,
+    "text": "Instagram / social \nmedia pages",
+    "color": "#66d575"
+  },
+  {
+    "x": 27.861188900203665,
+    "y": 27.16130058025049,
+    "w": 1.6082950133655805,
+    "h": 2.7925294485999532,
+    "text": "Offline discovery \n(boards, banners, \npamphlets)",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 27.844895621181266,
+    "y": 27.108611345371248,
+    "w": 1.640881571410387,
+    "h": 2.897907918358442,
+    "text": "Offline discovery \n(boards, banners, \npamphlets)",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.0404149694501,
+    "y": 18.810056851890252,
+    "w": 4.345166115071283,
+    "h": 4.2151387903395525,
+    "text": "Messages parents on WhatsApp ( \u201cany good classes?\u201d)\n\nGoogles \u201cclasses near me\u201d\n\nScrolls Instagram pages of classes",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 18.75736761701101,
+    "w": 4.377752673116089,
+    "h": 4.3205172600980415,
+    "text": "Messages parents on WhatsApp ( \u201cany good classes?\u201d)\n\nGoogles \u201cclasses near me\u201d\n\nScrolls Instagram pages of classes",
+    "color": "#66d575"
+  },
+  {
+    "x": 24.81253182281059,
+    "y": 18.810056851890252,
+    "w": 4.669832373345214,
+    "h": 4.2151387903395525,
+    "text": "Saves 2\u20133 options mentally or in chat\n\nNotices boards while driving/walking\n\nForwards class details to spouse/family",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 24.79623854378819,
+    "y": 18.75736761701101,
+    "w": 4.702418931390021,
+    "h": 4.3205172600980415,
+    "text": "Saves 2\u20133 options mentally or in chat\n\nNotices boards while driving/walking\n\nForwards class details to spouse/family",
+    "color": "#66d575"
+  },
+  {
+    "x": 20.024121690427698,
+    "y": 11.31460155567024,
+    "w": 1.9940212894602853,
+    "h": 3.2276674696972583,
+    "text": "Asks friends, family, other \nparents",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 20.007828411405296,
+    "y": 11.261912320790996,
+    "w": 2.0266078475050917,
+    "h": 3.333045939455747,
+    "text": "Asks friends, family, other \nparents",
+    "color": "#66d575"
+  },
+  {
+    "x": 22.36976514765784,
+    "y": 11.301840881597924,
+    "w": 1.2907729760692463,
+    "h": 3.2276674696972583,
+    "text": "Searches on \nGoogle",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 22.353471868635438,
+    "y": 11.24915164671868,
+    "w": 1.323359534114053,
+    "h": 3.333045939455747,
+    "text": "Searches on \nGoogle",
+    "color": "#66d575"
+  },
+  {
+    "x": 23.865278131364562,
+    "y": 11.301840881597924,
+    "w": 1.4243014893075356,
+    "h": 3.2276674696972583,
+    "text": "checks nearby \nclasses",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 23.84898485234216,
+    "y": 11.24915164671868,
+    "w": 1.4568880473523422,
+    "h": 3.333045939455747,
+    "text": "checks nearby \nclasses",
+    "color": "#66d575"
+  },
+  {
+    "x": 25.494335539714868,
+    "y": 11.301840881597924,
+    "w": 1.9940212894602853,
+    "h": 3.2276674696972583,
+    "text": "looks at instagram / \nwhatsapp forwards",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 25.47804226069246,
+    "y": 11.24915164671868,
+    "w": 2.0266078475050917,
+    "h": 3.333045939455747,
+    "text": "looks at instagram / \nwhatsapp forwards",
+    "color": "#66d575"
+  },
+  {
+    "x": 27.69310081466395,
+    "y": 11.301840881597924,
+    "w": 1.7892773039714867,
+    "h": 3.2276674696972583,
+    "text": "Notices banners, \npamphlets, boards",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 27.676807535641544,
+    "y": 11.24915164671868,
+    "w": 1.8218638620162935,
+    "h": 3.333045939455747,
+    "text": "Notices banners, \npamphlets, boards",
+    "color": "#66d575"
+  },
+  {
+    "x": 22.104999363543786,
+    "y": 34.08993496687113,
+    "w": 1.5902236348014256,
+    "h": 2.344670952126376,
+    "text": "overwhelmed",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 22.088706084521384,
+    "y": 34.03724573199188,
+    "w": 1.6228101928462322,
+    "h": 2.4500494218848647,
+    "text": "overwhelmed",
+    "color": "#66d575"
+  },
+  {
+    "x": 24.169583757637476,
+    "y": 34.08993496687113,
+    "w": 1.6082950133655805,
+    "h": 2.344670952126376,
+    "text": "confused",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 24.153290478615073,
+    "y": 34.03724573199188,
+    "w": 1.640881571410387,
+    "h": 2.4500494218848647,
+    "text": "confused",
+    "color": "#66d575"
+  },
+  {
+    "x": 26.252227596741346,
+    "y": 34.08993496687113,
+    "w": 1.3778938868380857,
+    "h": 2.344670952126376,
+    "text": "unsure",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 26.23593431771894,
+    "y": 34.03724573199188,
+    "w": 1.410480444882892,
+    "h": 2.4500494218848647,
+    "text": "unsure",
+    "color": "#66d575"
+  },
+  {
+    "x": 28.10447428716904,
+    "y": 34.08993496687113,
+    "w": 1.3778938868380857,
+    "h": 2.344670952126376,
+    "text": "lost",
+    "color": "#cdf4d3"
+  },
+  {
+    "x": 28.08818100814664,
+    "y": 34.03724573199188,
+    "w": 1.410480444882892,
+    "h": 2.4500494218848647,
+    "text": "lost",
+    "color": "#66d575"
+  }
+]
