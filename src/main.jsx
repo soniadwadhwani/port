@@ -1,3 +1,4 @@
+import EnrolMeGrowth from './EnrolMeGrowth.jsx'
 import EnrolMeSolutioning from './EnrolMeSolutioning.jsx'
 import EnrolMePrioritisation from './EnrolMePrioritisation.jsx'
 import EnrolMeIdeaWall from './EnrolMeIdeaWall.jsx'
@@ -1231,7 +1232,7 @@ function EnrolMeCasePlaceholder({ project }) {
         <header><p className="saarthi-overline">{phase.label}</p><h3 id={`enrolme-${phase.id}-title`}>{phase.title}</h3></header>
         <div className="enrolme-skeleton-sections">{phase.sections.map(title => <details className="enrolme-skeleton-disclosure" key={title}>
           <summary><span>{title}</span><span className="enrolme-skeleton-toggle" aria-hidden="true" /></summary>
-          {phase.id === 'context' ? <EnrolMeBusinessContext section={title} /> : phase.id === 'research' ? <EnrolMeResearch section={title} /> : phase.id === 'synthesis' ? <EnrolMeSynthesis section={title} /> : title === 'Idea refinement, prioritisation & implementation order' ? <EnrolMePrioritisation /> : phase.id === 'solutioning' ? <EnrolMeSolutioning section={title} /> : title === 'Concept Features — Value Proposition — Business Impact' ? <EnrolMeConceptImpact /> : <div className="enrolme-skeleton-slot"><span>{title}</span><small>Content / visual placeholder</small></div>}
+          {phase.id === 'context' ? <EnrolMeBusinessContext section={title} /> : phase.id === 'research' ? <EnrolMeResearch section={title} /> : phase.id === 'synthesis' ? <EnrolMeSynthesis section={title} /> : title === 'Idea refinement, prioritisation & implementation order' ? <EnrolMePrioritisation /> : phase.id === 'solutioning' ? <EnrolMeSolutioning section={title} /> : title === 'Concept Features — Value Proposition — Business Impact' ? <EnrolMeConceptImpact /> : phase.id === 'growth' ? <EnrolMeGrowth section={title} /> : <div className="enrolme-skeleton-slot"><span>{title}</span><small>Content / visual placeholder</small></div>}
         </details>)}</div>
       </section>)}</div>
     </section>

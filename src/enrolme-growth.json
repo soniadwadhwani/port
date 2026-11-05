@@ -1,0 +1,25 @@
+{
+ "roadmap":[
+  {"phase":"Phase 1- Foundation","time":"0–3 Months","goal":"Increase conversions, discovery, retention, trust","groups":[
+   {"title":"A- Parent/Consumer Experience","items":["Discovery UX like Zomato for classes: Visual browsing, cards, compare options, modern feel.","Remove forced pre-selection fields: Let users browse first, decide later.","Smart optional filters: Age, fees, distance, timing, category.","Auto detect location + easy manual switch","Nearby classes first","Trusted reviews from contacts: Huge trust lever.","Full parent app UX redesign","Better onboarding flow: Quick onboarding + intent capture.","Better search relevance"]},
+   {"title":"B- Trust & Branding","items":["Parent testimonials","Coach testimonials","Video testimonials","Strong new brand identity","Unified design system (app + website)"]},
+   {"title":"C- Organizer/Institute Side","items":["Better dashboard UX","Better charts / reports","Faster admission management","Better parent communication tools","Automated reminders / follow-ups"]},
+   {"title":"D- Growth","items":["Parent referral program"]}
+  ]},
+  {"phase":"Phase 2- Growth","time":"6–12 Months","goal":"Monetize and scale partnerships","groups":[
+   {"title":"Monetization Layer","items":["Lead management CRM for institutes","Sponsored listings","Premium visibility plans","Subscription model for institutes"]},
+   {"title":"Scale Layer","items":["Partnerships with schools / societies","Coach profiles like LinkedIn"]}
+  ]},
+  {"phase":"Phase 3- Scale","time":"1–2 Years","goal":"Build intelligent ecosystem + geographic expansion","groups":[
+   {"title":"Intelligence + Ecosystem","items":["AI recommendation engine: Suggest best classes by child age, goals, location.","Community layer for parents: Reviews, forums, recommendations.","Hyperlocal city expansion engine: Mumbai → Pune → Bangalore etc.","Franchise / SaaS model: License platform to cities / activity networks."]}
+  ]}
+ ],
+ "marketing":[
+  {"letter":"P","name":"Paid","cards":[["High-Intent Search Ads","Keywords:\n“classes near me”\n“best tuition in [city]”\n“dance classes for beginners”\nLanding: Instant discovery feed"],["Social Media Ads","Short reels:\n“How parents choose the wrong classes”\n“3 things to check before enrolling”\nCTA: Explore nearby classes"],["Hyperlocal Ads","Geo-targeted (schools/societies)\nMessaging: “Classes near you are filling fast”"]]},
+  {"letter":"E","name":"Earned","cards":[["Parent & Coach Stories","Decision journeys\nReviews & testimonials"],["Local PR Features","Articles:\n“How parents in Mumbai are choosing classes differently”\nPosition Enrol-Me as insight source"],["Partnerships","Schools\nSocieties\nActivity centers"]]},
+  {"letter":"S","name":"Shared","cards":[["Parent Community Circles","In-app sharing:\nReviews\nRecommendations"],["Referral Loops","“Invite a parent → both benefit”\nSocial proof: “3 people from your society joined”"],["UGC","Parents post:\nChild achievements\nClass experiences"]]},
+  {"letter":"O","name":"Owned","cards":[["App Experience","Discovery feed\nReviews\nJourney tracker"],["Email / Push","Weekly:\n“Top classes near you”\n“Trending this week”"],["Content Hub","Blogs / guides:\n“How to choose the right class”\n“Best age to start coding/dance/etc.”"]]}
+ ],
+ "funnel":[["Top Funnel","Reels: “How to choose the right class”","Parent stories","Short educational content"],["Mid Funnel","Comparisons","Testimonials","Coach videos"],["Bottom Funnel","Offers","Demo bookings","Urgency nudges"]],
+ "branding":[["Brand Identity","Modern, trustworthy, and approachable visual language"],["Tone of Voice","Friendly, helpful, and empowering communication"],["Trust Positioning","Verified, transparent, and community-driven platform"]]
+}
