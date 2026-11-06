@@ -1489,3 +1489,35 @@ html,body,#root{background:#F3F7F6}
 .saarthi-case-study .saarthi-blueprint-node.is-stage{background:#efd0c5;font-size:.8cqw}
 .saarthi-case-study .saarthi-blueprint-board>.saarthi-blueprint-art{pointer-events:none}
 .saarthi-case-study .saarthi-blueprint-box{z-index:2}
+
+/* Breathing space between the homepage sticky wall and selected projects. */
+.about-home-scroll .about-sticky-wall{margin-bottom:calc(clamp(78px,8.925vw,117.6px) - clamp(207px,20.25vw,252px) + 68px)}
+.about-home-scroll + .project-scroll-section .project-carousel{padding-top:0}
+@media(max-width:900px){.about-home-scroll .about-sticky-wall{margin-bottom:calc(clamp(76px,11.9vw,112px) - 184px)}}
+@media(max-width:600px){.about-home-scroll .about-sticky-wall{margin-bottom:calc(23.22vw - 99.9px)}}
+
+/* Saarthi: clear hierarchy between phases, artifact headings, and their content. */
+.saarthi-case-study .saarthi-phase-disclosure > .saarthi-process-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;max-width:none;margin:0;list-style:none;cursor:pointer;padding:0}
+.saarthi-case-study .saarthi-phase-disclosure > summary::-webkit-details-marker{display:none}
+.saarthi-case-study .saarthi-phase-heading-copy{max-width:760px}
+.saarthi-case-study .saarthi-phase-disclosure > summary:focus-visible{outline:2px solid var(--accent);outline-offset:8px}
+.saarthi-case-study .saarthi-phase-disclosure[open] > summary{margin-bottom:36px}
+.saarthi-case-study .saarthi-phase-toggle{position:relative;flex-shrink:0;width:32px;height:32px;margin-top:8px;color:#756383}
+.saarthi-case-study .saarthi-phase-toggle:before,.saarthi-case-study .saarthi-phase-toggle:after{content:'';position:absolute;width:14px;height:1px;background:currentColor;top:15px;left:8px}
+.saarthi-case-study .saarthi-phase-toggle:after{transform:rotate(90deg);transition:transform .2s}
+.saarthi-case-study .saarthi-phase-disclosure[open] > summary .saarthi-phase-toggle:after{transform:rotate(0)}
+.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure{border-color:#c9bfd2}
+.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure > summary{padding:24px 0;font-size:1.1rem;font-weight:400;line-height:inherit;color:inherit;transition:background .18s}
+.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure[open] > summary{background:#e7e1ed;border-left:3px solid #9480a5;padding:23px 20px 23px 17px;margin-bottom:28px;font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600;line-height:1.3;color:#59476b}
+.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure[open] > summary:hover{background:#ebe6ef}
+.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure[open]{padding-bottom:24px}
+@media(max-width:700px){.saarthi-case-study .saarthi-phase-disclosure[open] > summary{margin-bottom:26px}.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure > summary{padding:24px 0}.saarthi-case-study .saarthi-process-artifacts .saarthi-spectrum-disclosure[open] > summary{padding:20px 14px 20px 11px;margin-bottom:22px}}
+
+/* Photo note beside the homepage introduction, with its own layout space. */
+.about-home-scroll .about-home-intro{display:grid;grid-template-columns:minmax(0,1fr) clamp(150px,17vw,200px);align-items:start;gap:clamp(28px,5vw,72px)}
+.about-home-scroll .about-home-intro-copy{min-width:0}
+.about-home-scroll .about-photo-sticky{position:relative;width:100%;margin:8px 0 0;padding:10px 10px 19px;background:#f4e5b3;box-shadow:0 8px 18px rgb(16 23 23 / .12);transform:rotate(5deg);transition:transform .2s,box-shadow .2s}
+.about-home-scroll .about-photo-sticky img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.about-home-scroll .about-photo-sticky:hover{transform:rotate(2deg) translateY(-4px);box-shadow:0 14px 25px rgb(16 23 23 / .16)}
+@media(max-width:600px){.about-home-scroll .about-home-intro{grid-template-columns:minmax(0,1fr) 104px;gap:20px;margin-bottom:44px}.about-home-scroll .about-photo-sticky{padding:7px 7px 14px}}
+@media(prefers-reduced-motion:reduce){.about-home-scroll .about-photo-sticky{transition:none}}

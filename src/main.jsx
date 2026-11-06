@@ -242,10 +242,15 @@ function AboutPreview() {
   }, [selectedNote])
   return <section className="about about-home-scroll" id="about" aria-labelledby="about-home-title">
     <div className="about-home-intro">
+      <div className="about-home-intro-copy">
       <h2 id="about-home-title">Hi, I’m Sonia.</h2>
       <p className="about-home-meta">Experience Design · Psychology</p>
       <p className="about-home-description">I explore how people, technology, and everyday systems shape our experience.</p>
       <a className="about-home-more" href="/about.html">Explore my About Me page ↗</a>
+      </div>
+      <figure className="about-photo-sticky">
+        <img src="/assets/sonia-home-photo.png" alt="Sonia smiling beneath pink blossoms" draggable="false" />
+      </figure>
     </div>
     <div className="about-sticky-wall" aria-label="Sonia’s ideas" ref={stickyWallRef}>
       {aboutNotes.map((note, index) => <button className={`about-sticky about-sticky--${index % 4 + 1} about-sticky-note--${index + 1}`} style={stickyPositions[index]} type="button" key={index} onPointerDown={(event) => startStickyDrag(event, index)} onPointerMove={moveSticky} onPointerUp={finishStickyDrag} onPointerCancel={finishStickyDrag} onClick={(event) => handleStickyClick(event, note)} aria-label={`${note.number ? `${note.number} ` : ''}${note.title}. Click for details or drag to move.`} aria-haspopup="dialog">
@@ -909,18 +914,18 @@ function SaarthiCaseStudy({ project }) {
 
     <section className="saarthi-journey case-wrap" aria-labelledby="saarthi-journey-title">
       <div className="saarthi-section-heading"><p className="saarthi-overline">THE JOURNEY OF MAKING SAARTHI</p><h2 id="saarthi-journey-title">From understanding the challenges of temple visits to designing a service that brings people, information, and infrastructure together.</h2></div>
-      <div className="saarthi-stages">{stages.map(stage => <section className="saarthi-process-section" key={stage.id} aria-labelledby={`saarthi-${stage.id}-title`}>
-        <header className="saarthi-process-heading">
+      <div className="saarthi-stages">{stages.map(stage => <details className="saarthi-process-section saarthi-phase-disclosure" key={stage.id} aria-labelledby={`saarthi-${stage.id}-title`}>
+        <summary className="saarthi-process-heading"><div className="saarthi-phase-heading-copy">
           <p className="saarthi-overline">{stage.phase}</p>
           <h3 id={`saarthi-${stage.id}-title`}>{stage.title}</h3>
           {stage.headline && <h4>{stage.headline}</h4>}
-        </header>
+        </div><span className="saarthi-phase-toggle" aria-hidden="true" /></summary>
 
         <div className="saarthi-process-artifacts">{stage.artifacts.map(label => <div className="saarthi-process-artifact" key={label}>
           {!['Spectrum analysis', 'Stakeholders', 'Hypothesis', 'Persona', 'As-is journey map', 'Affinity map', 'Insights', 'Narrative', 'Storyboard', 'Service blueprint', 'Brand architecture', 'Service touch points'].includes(label) && <h4>{label}</h4>}
           {stage.id === 'research' && label === 'Spectrum analysis' ? <SaarthiSpectrum /> : stage.id === 'research' && label === 'Stakeholders' ? <SaarthiStakeholderMap /> : stage.id === 'research' && label === 'Hypothesis' ? <SaarthiHypothesis /> : label === 'Brand architecture' ? <SaarthiBrandArchitecture /> : label === 'Service blueprint' ? <SaarthiBlueprint /> : label === 'Storyboard' ? <SaarthiStoryboard /> : label === 'Narrative' ? <SaarthiNarrative /> : label === 'Insights' ? <SaarthiInsights /> : label === 'Affinity map' ? <SaarthiAffinity /> : label === 'Persona' ? <SaarthiPersona /> : label === 'As-is journey map' ? <SaarthiAsIsJourney /> : label === 'Service touch points' ? <SaarthiServiceTouchpoints /> : <SaarthiArtifact label={label} />}
         </div>)}</div>
-      </section>)}</div>
+      </details>)}</div>
     </section>
 
     <section className="saarthi-film case-wrap" aria-labelledby="saarthi-film-title">
@@ -1385,7 +1390,10 @@ const projectCategories = [
 function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null)
   const resultsRef = useRef(null)
-  const visibleProjects = selectedCategory ? projects.filter(project => selectedCategory.projects.includes(project.number)) : projects
+  // Temporarily show only completed case studies on the Projects page.
+  const publishedProjects = projects.filter(project => ['01', '03'].includes(project.number))
+  const availableCategories = projectCategories.filter(category => publishedProjects.some(project => category.projects.includes(project.number)))
+  const visibleProjects = selectedCategory ? publishedProjects.filter(project => selectedCategory.projects.includes(project.number)) : publishedProjects
   useEffect(() => {
     if (selectedCategory) resultsRef.current?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' })
   }, [selectedCategory])
@@ -1396,7 +1404,7 @@ function ProjectsPage() {
         <h1>Selected Projects</h1>
         <nav className="projects-category-links" aria-label="Project categories">
           <button type="button" aria-pressed={!selectedCategory} onClick={() => setSelectedCategory(null)}>All projects</button>
-          {projectCategories.map(category => <button type="button" key={category.name} aria-pressed={selectedCategory === category} onClick={() => {
+          {availableCategories.map(category => <button type="button" key={category.name} aria-pressed={selectedCategory === category} onClick={() => {
             setSelectedCategory(category)
             if (selectedCategory === category) resultsRef.current?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
           }}>{category.name}</button>)}
@@ -1429,7 +1437,9 @@ function App() {
   if (window.location.pathname.endsWith('/projects.html')) return <ProjectsPage />
   if (window.location.pathname.endsWith('/about.html')) return <AboutPage />
   if (window.location.pathname.endsWith('/project.html')) return <ProjectDetailsPage />
-  return <main><Hero /><AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main>
+  // Temporarily hide the video hero; enable this flag to restore it.
+  const showHomeHero = false
+  return <main>{showHomeHero ? <Hero /> : <header id="top"><Navigation /></header>}<AboutPreview /><SelectedProjects /><CreativeExplorations /><ContactFooter /></main>
 }
 
 createRoot(document.getElementById('root')).render(<App />)
