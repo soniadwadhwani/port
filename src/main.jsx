@@ -244,8 +244,8 @@ function AboutPreview() {
     <div className="about-home-intro">
       <div className="about-home-intro-copy">
       <h2 id="about-home-title">Hi, I’m Sonia.</h2>
-      <p className="about-home-meta">Experience Design · Psychology</p>
       <p className="about-home-description">I explore how people, technology, and everyday systems shape our experience.</p>
+      <p className="about-home-meta">Experience Design · Psychology</p>
       <a className="about-home-more" href="/about.html">Explore my About Me page ↗</a>
       </div>
       <figure className="about-photo-sticky">
